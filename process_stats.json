@@ -1,0 +1,85 @@
+{
+  "overview": {
+    "total_cases": 251734,
+    "total_events": 1595923,
+    "total_activities": 42,
+    "total_resources": 628,
+    "date_range": {
+      "start": "1948-01-26 22:59:00+00:00",
+      "end": "2020-04-09 21:59:00+00:00"
+    }
+  },
+  "case_duration": {
+    "avg_hours": 1716.59,
+    "median_hours": 1537.06,
+    "min_hours": 0.0,
+    "max_hours": 616093.15
+  },
+  "optimization_score": 81,
+  "score_breakdown": {
+    "conformance_points": 40.0,
+    "bottleneck_points": 12.0,
+    "resource_balance_points": 28.7
+  },
+  "conformance": {
+    "fitness": 1.0,
+    "fully_fitting_traces": 251601,
+    "partially_fitting_traces": 133,
+    "non_fitting_traces": 0,
+    "total_traces": 251734,
+    "fitness_percentage": 100.0
+  },
+  "top_bottleneck": {
+    "activity": "SRM: Transfer Failed (E.Sys.)",
+    "avg_duration_hours": 2482.98,
+    "frequency": 45,
+    "bottleneck_score": 0.6
+  },
+  "dfg_summary": {
+    "total_edges": 498,
+    "start_activities": [
+      "SRM: Created",
+      "Vendor creates invoice",
+      "Vendor creates debit memo",
+      "Create Purchase Order Item",
+      "Create Purchase Requisition Item",
+      "Change Approval for Purchase Order",
+      "Change Currency",
+      "Release Purchase Order"
+    ],
+    "end_activities": [
+      "Clear Invoice",
+      "SRM: Transfer Failed (E.Sys.)",
+      "SRM: Change was Transmitted",
+      "Change Delivery Indicator",
+      "SRM: In Transfer to Execution Syst.",
+      "Record Service Entry Sheet",
+      "Create Purchase Order Item",
+      "Record Invoice Receipt",
+      "SRM: Transaction Completed",
+      "Vendor creates debit memo",
+      "Record Goods Receipt",
+      "Change Final Invoice Indicator",
+      "Delete Purchase Order Item",
+      "Remove Payment Block",
+      "Cancel Invoice Receipt",
+      "Cancel Goods Receipt",
+      "Change Price",
+      "SRM: Deleted",
+      "Change Quantity",
+      "Set Payment Block",
+      "Block Purchase Order Item",
+      "Receive Order Confirmation",
+      "Reactivate Purchase Order Item",
+      "Change Approval for Purchase Order",
+      "Change Currency",
+      "Cancel Subsequent Invoice",
+      "Vendor creates invoice",
+      "Update Order Confirmation",
+      "Change Storage Location",
+      "Record Subsequent Invoice",
+      "Release Purchase Order",
+      "Change payment term"
+    ]
+  }
+}

@@ -1,0 +1,23 @@
+{
+  "tests": [
+    {
+      "category": "General Assessment",
+      "score": 98,
+      "reason": "The student answer comprehensively covers all expected concepts (bottleneck analysis, conformance score, process health assessment) with excellent detail. It explicitly states a '100% Conformance Fitness' (conformance score) and provides a clear, nuanced process health assessment, distinguishing between structural organization and operational efficiency. The analysis of bottlenecks is extensive, identifying specific activities and process flows causing delays. The answer is exceptionally well-grounded in data, citing numerous specific numbers, percentages, durations, frequencies, values, and activity names from the implied process mining data. The detailed breakdown and actionable recommendations demonstrate a deep understanding. A very slight deduction is for the 'Optimization Score of 81/100' which is stated but not explicitly defined as a standard concept like conformance or bottleneck severity, though it contributes to the overall health assessment and is grounded in a number.",
+      "response_snippet": "Based on the data, your processes are **highly conformant to their design (100% Conformance Fitness)..."
+    },
+    {
+      "category": "Bottleneck Detection",
+      "score": 98,
+      "reason": "The student's answer perfectly covers the expected concepts by identifying 'SRM: Transfer Failed' and discussing its delay (average duration) and frequency. It further demonstrates a sophisticated understanding by differentiating between 'biggest per occurrence' and 'biggest overall cumulative impact', grounding both arguments solidly in specific data (numbers and names) provided in the problem context. This answer is comprehensive, accurate, and insightful.",
+      "response_snippet": "Based on the provided data, the activity with the **biggest bottleneck score** is:\n\n1.  **\"SRM: Tran..."
+    },
+    {
+      "category": "Actionable Suggestions",
+      "score": 98,
+      "reason": "The student's answer is exceptional. It covers all expected concepts (automation, specific process changes, and implicitly reassigning via a 'Dedicated Exception Handling Team') with great detail and actionable steps. Crucially, it is meticulously grounded in the provided data points, using specific frequencies, durations, bottleneck scores, and system names to justify each proposed action. The structure is clear, and the explanation of 'why' each action matters is compelling.",
+      "response_snippet": "To improve throughput, you must address the activities and process flows that introduce the most sig..."
+    }
+  ],
+  "average_score": 98.0
+}

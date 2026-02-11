@@ -1,0 +1,6120 @@
+{
+  "bottlenecks": [
+    {
+      "activity": "SRM: Transfer Failed (E.Sys.)",
+      "frequency": 45,
+      "avg_duration_hours": 2482.98,
+      "median_duration_hours": 2482.98,
+      "max_duration_hours": 2482.98,
+      "total_duration_hours": 2482.98,
+      "avg_value_eur": 499048.96,
+      "total_value_eur": 22457203.0,
+      "bottleneck_score": 0.6
+    },
+    {
+      "activity": "Record Invoice Receipt",
+      "frequency": 228760,
+      "avg_duration_hours": 809.89,
+      "median_duration_hours": 569.02,
+      "max_duration_hours": 7977.25,
+      "total_duration_hours": 166569237.4,
+      "avg_value_eur": 26094.48,
+      "total_value_eur": 5969372948.0,
+      "bottleneck_score": 0.487
+    },
+    {
+      "activity": "Record Goods Receipt",
+      "frequency": 314097,
+      "avg_duration_hours": 233.2,
+      "median_duration_hours": 23.35,
+      "max_duration_hours": 7974.32,
+      "total_duration_hours": 67936934.75,
+      "avg_value_eur": 23536.27,
+      "total_value_eur": 7392672417.0,
+      "bottleneck_score": 0.456
+    },
+    {
+      "activity": "SRM: Transaction Completed",
+      "frequency": 8,
+      "avg_duration_hours": 1870.6,
+      "median_duration_hours": 1870.6,
+      "max_duration_hours": 3741.2,
+      "total_duration_hours": 3741.2,
+      "avg_value_eur": 75282.75,
+      "total_value_eur": 602262.0,
+      "bottleneck_score": 0.452
+    },
+    {
+      "activity": "Clear Invoice",
+      "frequency": 194393,
+      "avg_duration_hours": 809.73,
+      "median_duration_hours": 186.0,
+      "max_duration_hours": 13114.2,
+      "total_duration_hours": 10579084.87,
+      "avg_value_eur": 12814.38,
+      "total_value_eur": 2491026436.0,
+      "bottleneck_score": 0.443
+    },
+    {
+      "activity": "Create Purchase Order Item",
+      "frequency": 251734,
+      "avg_duration_hours": 270.59,
+      "median_duration_hours": 139.23,
+      "max_duration_hours": 8877.18,
+      "total_duration_hours": 66913926.87,
+      "avg_value_eur": 3959.81,
+      "total_value_eur": 996818747.0,
+      "bottleneck_score": 0.386
+    },
+    {
+      "activity": "Vendor creates invoice",
+      "frequency": 219919,
+      "avg_duration_hours": 211.85,
+      "median_duration_hours": 59.17,
+      "max_duration_hours": 217356.05,
+      "total_duration_hours": 46576393.37,
+      "avg_value_eur": 14086.3,
+      "total_value_eur": 3097845536.0,
+      "bottleneck_score": 0.331
+    },
+    {
+      "activity": "Remove Payment Block",
+      "frequency": 57136,
+      "avg_duration_hours": 844.17,
+      "median_duration_hours": 550.35,
+      "max_duration_hours": 5577.03,
+      "total_duration_hours": 43676371.42,
+      "avg_value_eur": 9536.22,
+      "total_value_eur": 544861709.0,
+      "bottleneck_score": 0.277
+    },
+    {
+      "activity": "Vendor creates debit memo",
+      "frequency": 6255,
+      "avg_duration_hours": 1001.0,
+      "median_duration_hours": 59.37,
+      "max_duration_hours": 613567.52,
+      "total_duration_hours": 6256230.77,
+      "avg_value_eur": 53213.26,
+      "total_value_eur": 332848962.0,
+      "bottleneck_score": 0.25
+    },
+    {
+      "activity": "Record Service Entry Sheet",
+      "frequency": 164975,
+      "avg_duration_hours": 7.7,
+      "median_duration_hours": 0.0,
+      "max_duration_hours": 8110.68,
+      "total_duration_hours": 1262737.48,
+      "avg_value_eur": 29594.96,
+      "total_value_eur": 4882428221.0,
+      "bottleneck_score": 0.212
+    },
+    {
+      "activity": "Change Approval for Purchase Order",
+      "frequency": 7541,
+      "avg_duration_hours": 551.03,
+      "median_duration_hours": 104.97,
+      "max_duration_hours": 7571.38,
+      "total_duration_hours": 3413612.83,
+      "avg_value_eur": 13285.87,
+      "total_value_eur": 100188736.0,
+      "bottleneck_score": 0.143
+    },
+    {
+      "activity": "Cancel Goods Receipt",
+      "frequency": 3096,
+      "avg_duration_hours": 575.52,
+      "median_duration_hours": 14.48,
+      "max_duration_hours": 8375.92,
+      "total_duration_hours": 1528574.5,
+      "avg_value_eur": 150353.58,
+      "total_value_eur": 465494674.0,
+      "bottleneck_score": 0.143
+    },
+    {
+      "activity": "Change payment term",
+      "frequency": 7,
+      "avg_duration_hours": 572.97,
+      "median_duration_hours": 464.38,
+      "max_duration_hours": 1607.73,
+      "total_duration_hours": 3437.83,
+      "avg_value_eur": 5775.86,
+      "total_value_eur": 40431.0,
+      "bottleneck_score": 0.138
+    },
+    {
+      "activity": "Record Subsequent Invoice",
+      "frequency": 167,
+      "avg_duration_hours": 429.84,
+      "median_duration_hours": 168.37,
+      "max_duration_hours": 3025.17,
+      "total_duration_hours": 67914.75,
+      "avg_value_eur": 15429.92,
+      "total_value_eur": 2576797.0,
+      "bottleneck_score": 0.104
+    },
+    {
+      "activity": "Receive Order Confirmation",
+      "frequency": 32065,
+      "avg_duration_hours": 198.99,
+      "median_duration_hours": 130.77,
+      "max_duration_hours": 4380.03,
+      "total_duration_hours": 6334366.05,
+      "avg_value_eur": 5679.81,
+      "total_value_eur": 182123084.0,
+      "bottleneck_score": 0.089
+    },
+    {
+      "activity": "Change Delivery Indicator",
+      "frequency": 3289,
+      "avg_duration_hours": 337.86,
+      "median_duration_hours": 65.22,
+      "max_duration_hours": 4834.47,
+      "total_duration_hours": 868633.88,
+      "avg_value_eur": 7077.29,
+      "total_value_eur": 23277193.0,
+      "bottleneck_score": 0.086
+    },
+    {
+      "activity": "Change Price",
+      "frequency": 12423,
+      "avg_duration_hours": 286.26,
+      "median_duration_hours": 74.58,
+      "max_duration_hours": 6121.37,
+      "total_duration_hours": 3404781.42,
+      "avg_value_eur": 19543.95,
+      "total_value_eur": 242794519.0,
+      "bottleneck_score": 0.085
+    },
+    {
+      "activity": "Change Currency",
+      "frequency": 35,
+      "avg_duration_hours": 318.48,
+      "median_duration_hours": 34.63,
+      "max_duration_hours": 2950.77,
+      "total_duration_hours": 10828.35,
+      "avg_value_eur": 16260.6,
+      "total_value_eur": 569121.0,
+      "bottleneck_score": 0.077
+    },
+    {
+      "activity": "Change Quantity",
+      "frequency": 21449,
+      "avg_duration_hours": 202.68,
+      "median_duration_hours": 38.14,
+      "max_duration_hours": 7366.27,
+      "total_duration_hours": 4240794.18,
+      "avg_value_eur": 7601.69,
+      "total_value_eur": 163048593.0,
+      "bottleneck_score": 0.076
+    },
+    {
+      "activity": "Set Payment Block",
+      "frequency": 124,
+      "avg_duration_hours": 300.3,
+      "median_duration_hours": 242.5,
+      "max_duration_hours": 1517.68,
+      "total_duration_hours": 18919.2,
+      "avg_value_eur": 37404.47,
+      "total_value_eur": 4638154.0,
+      "bottleneck_score": 0.073
+    },
+    {
+      "activity": "Change Final Invoice Indicator",
+      "frequency": 11,
+      "avg_duration_hours": 298.29,
+      "median_duration_hours": 383.55,
+      "max_duration_hours": 413.53,
+      "total_duration_hours": 2386.3,
+      "avg_value_eur": 1951.91,
+      "total_value_eur": 21471.0,
+      "bottleneck_score": 0.072
+    },
+    {
+      "activity": "Cancel Subsequent Invoice",
+      "frequency": 491,
+      "avg_duration_hours": 290.17,
+      "median_duration_hours": 26.55,
+      "max_duration_hours": 2546.95,
+      "total_duration_hours": 135509.97,
+      "avg_value_eur": 21612.83,
+      "total_value_eur": 10611899.0,
+      "bottleneck_score": 0.071
+    },
+    {
+      "activity": "Create Purchase Requisition Item",
+      "frequency": 46592,
+      "avg_duration_hours": 22.57,
+      "median_duration_hours": 10.88,
+      "max_duration_hours": 10639.58,
+      "total_duration_hours": 1051479.73,
+      "avg_value_eur": 4046.85,
+      "total_value_eur": 188550948.0,
+      "bottleneck_score": 0.065
+    },
+    {
+      "activity": "Update Order Confirmation",
+      "frequency": 244,
+      "avg_duration_hours": 232.52,
+      "median_duration_hours": 163.97,
+      "max_duration_hours": 1677.15,
+      "total_duration_hours": 56036.48,
+      "avg_value_eur": 22546.82,
+      "total_value_eur": 5501424.0,
+      "bottleneck_score": 0.056
+    },
+    {
+      "activity": "Change Storage Location",
+      "frequency": 415,
+      "avg_duration_hours": 197.57,
+      "median_duration_hours": 48.75,
+      "max_duration_hours": 6791.28,
+      "total_duration_hours": 78041.68,
+      "avg_value_eur": 12472.48,
+      "total_value_eur": 5176078.0,
+      "bottleneck_score": 0.048
+    },
+    {
+      "activity": "Reactivate Purchase Order Item",
+      "frequency": 543,
+      "avg_duration_hours": 184.0,
+      "median_duration_hours": 5.98,
+      "max_duration_hours": 2824.93,
+      "total_duration_hours": 97333.6,
+      "avg_value_eur": 4833.5,
+      "total_value_eur": 2624588.0,
+      "bottleneck_score": 0.045
+    },
+    {
+      "activity": "Cancel Invoice Receipt",
+      "frequency": 7096,
+      "avg_duration_hours": 115.7,
+      "median_duration_hours": 0.07,
+      "max_duration_hours": 3891.63,
+      "total_duration_hours": 665064.62,
+      "avg_value_eur": 70123.39,
+      "total_value_eur": 497595560.0,
+      "bottleneck_score": 0.037
+    },
+    {
+      "activity": "Delete Purchase Order Item",
+      "frequency": 8875,
+      "avg_duration_hours": 75.82,
+      "median_duration_hours": 0.0,
+      "max_duration_hours": 3408.9,
+      "total_duration_hours": 57016.17,
+      "avg_value_eur": 6489.1,
+      "total_value_eur": 57590774.0,
+      "bottleneck_score": 0.03
+    },
+    {
+      "activity": "Block Purchase Order Item",
+      "frequency": 514,
+      "avg_duration_hours": 117.76,
+      "median_duration_hours": 2.3,
+      "max_duration_hours": 3742.97,
+      "total_duration_hours": 40863.27,
+      "avg_value_eur": 3574.47,
+      "total_value_eur": 1837277.0,
+      "bottleneck_score": 0.029
+    },
+    {
+      "activity": "SRM: Change was Transmitted",
+      "frequency": 1440,
+      "avg_duration_hours": 103.37,
+      "median_duration_hours": 0.0,
+      "max_duration_hours": 4701.07,
+      "total_duration_hours": 144000.85,
+      "avg_value_eur": 32817.91,
+      "total_value_eur": 47257797.0,
+      "bottleneck_score": 0.027
+    },
+    {
+      "activity": "Release Purchase Order",
+      "frequency": 1610,
+      "avg_duration_hours": 65.7,
+      "median_duration_hours": 0.17,
+      "max_duration_hours": 988.6,
+      "total_duration_hours": 105714.75,
+      "avg_value_eur": 8917.44,
+      "total_value_eur": 14357078.0,
+      "bottleneck_score": 0.018
+    },
+    {
+      "activity": "SRM: Held",
+      "frequency": 6,
+      "avg_duration_hours": 71.18,
+      "median_duration_hours": 33.28,
+      "max_duration_hours": 292.97,
+      "total_duration_hours": 427.05,
+      "avg_value_eur": 979.17,
+      "total_value_eur": 5875.0,
+      "bottleneck_score": 0.017
+    },
+    {
+      "activity": "SRM: Deleted",
+      "frequency": 188,
+      "avg_duration_hours": 26.58,
+      "median_duration_hours": 0.0,
+      "max_duration_hours": 573.93,
+      "total_duration_hours": 4757.22,
+      "avg_value_eur": 369973.23,
+      "total_value_eur": 69554967.0,
+      "bottleneck_score": 0.007
+    },
+    {
+      "activity": "SRM: Document Completed",
+      "frequency": 1628,
+      "avg_duration_hours": 3.29,
+      "median_duration_hours": 0.0,
+      "max_duration_hours": 1584.52,
+      "total_duration_hours": 5350.98,
+      "avg_value_eur": 71752.31,
+      "total_value_eur": 116812764.0,
+      "bottleneck_score": 0.003
+    },
+    {
+      "activity": "SRM: In Transfer to Execution Syst.",
+      "frequency": 1765,
+      "avg_duration_hours": 4.32,
+      "median_duration_hours": 0.0,
+      "max_duration_hours": 1473.82,
+      "total_duration_hours": 7493.25,
+      "avg_value_eur": 83091.84,
+      "total_value_eur": 146657102.0,
+      "bottleneck_score": 0.003
+    },
+    {
+      "activity": "SRM: Awaiting Approval",
+      "frequency": 1628,
+      "avg_duration_hours": 0.0,
+      "median_duration_hours": 0.0,
+      "max_duration_hours": 0.0,
+      "total_duration_hours": 0.0,
+      "avg_value_eur": 71752.31,
+      "total_value_eur": 116812764.0,
+      "bottleneck_score": 0.002
+    },
+    {
+      "activity": "SRM: Complete",
+      "frequency": 1628,
+      "avg_duration_hours": 0.0,
+      "median_duration_hours": 0.0,
+      "max_duration_hours": 0.0,
+      "total_duration_hours": 0.0,
+      "avg_value_eur": 71752.31,
+      "total_value_eur": 116812764.0,
+      "bottleneck_score": 0.002
+    },
+    {
+      "activity": "SRM: Created",
+      "frequency": 1628,
+      "avg_duration_hours": 1.54,
+      "median_duration_hours": 2.0,
+      "max_duration_hours": 2.45,
+      "total_duration_hours": 2508.2,
+      "avg_value_eur": 71752.31,
+      "total_value_eur": 116812764.0,
+      "bottleneck_score": 0.002
+    },
+    {
+      "activity": "SRM: Ordered",
+      "frequency": 1628,
+      "avg_duration_hours": 0.02,
+      "median_duration_hours": 0.0,
+      "max_duration_hours": 30.73,
+      "total_duration_hours": 31.3,
+      "avg_value_eur": 71752.31,
+      "total_value_eur": 116812764.0,
+      "bottleneck_score": 0.002
+    },
+    {
+      "activity": "Change Rejection Indicator",
+      "frequency": 2,
+      "avg_duration_hours": 2.98,
+      "median_duration_hours": 2.98,
+      "max_duration_hours": 5.97,
+      "total_duration_hours": 5.97,
+      "avg_value_eur": 260.0,
+      "total_value_eur": 520.0,
+      "bottleneck_score": 0.001
+    },
+    {
+      "activity": "Release Purchase Requisition",
+      "frequency": 467,
+      "avg_duration_hours": 1.56,
+      "median_duration_hours": 0.05,
+      "max_duration_hours": 642.53,
+      "total_duration_hours": 730.4,
+      "avg_value_eur": 4981.8,
+      "total_value_eur": 2326499.0,
+      "bottleneck_score": 0.001
+    },
+    {
+      "activity": "SRM: Incomplete",
+      "frequency": 6,
+      "avg_duration_hours": 0.0,
+      "median_duration_hours": 0.0,
+      "max_duration_hours": 0.0,
+      "total_duration_hours": 0.0,
+      "avg_value_eur": 979.17,
+      "total_value_eur": 5875.0,
+      "bottleneck_score": 0.0
+    }
+  ],
+  "resources": [
+    {
+      "resource": "NONE",
+      "events_handled": 399090,
+      "unique_activities": 4,
+      "unique_cases": 213325,
+      "activity_diversity": 0.095,
+      "utilization": 1.0,
+      "total_value_handled": 8391556399.0
+    },
+    {
+      "resource": "user_002",
+      "events_handled": 166353,
+      "unique_activities": 1,
+      "unique_cases": 160491,
+      "activity_diversity": 0.024,
+      "utilization": 0.417,
+      "total_value_handled": 1919469583.0
+    },
+    {
+      "resource": "user_029",
+      "events_handled": 71539,
+      "unique_activities": 4,
+      "unique_cases": 69881,
+      "activity_diversity": 0.095,
+      "utilization": 0.179,
+      "total_value_handled": 218357152.0
+    },
+    {
+      "resource": "user_020",
+      "events_handled": 39770,
+      "unique_activities": 5,
+      "unique_cases": 38371,
+      "activity_diversity": 0.119,
+      "utilization": 0.1,
+      "total_value_handled": 627713590.0
+    },
+    {
+      "resource": "batch_06",
+      "events_handled": 38100,
+      "unique_activities": 3,
+      "unique_cases": 9631,
+      "activity_diversity": 0.071,
+      "utilization": 0.095,
+      "total_value_handled": 194339881.0
+    },
+    {
+      "resource": "user_013",
+      "events_handled": 35069,
+      "unique_activities": 5,
+      "unique_cases": 32421,
+      "activity_diversity": 0.119,
+      "utilization": 0.088,
+      "total_value_handled": 1254578488.0
+    },
+    {
+      "resource": "user_001",
+      "events_handled": 34563,
+      "unique_activities": 5,
+      "unique_cases": 31834,
+      "activity_diversity": 0.119,
+      "utilization": 0.087,
+      "total_value_handled": 1553921634.0
+    },
+    {
+      "resource": "user_012",
+      "events_handled": 32707,
+      "unique_activities": 5,
+      "unique_cases": 30452,
+      "activity_diversity": 0.119,
+      "utilization": 0.082,
+      "total_value_handled": 1193945412.0
+    },
+    {
+      "resource": "user_019",
+      "events_handled": 29764,
+      "unique_activities": 5,
+      "unique_cases": 28720,
+      "activity_diversity": 0.119,
+      "utilization": 0.075,
+      "total_value_handled": 512301962.0
+    },
+    {
+      "resource": "user_235",
+      "events_handled": 28336,
+      "unique_activities": 5,
+      "unique_cases": 27402,
+      "activity_diversity": 0.119,
+      "utilization": 0.071,
+      "total_value_handled": 100814113.0
+    },
+    {
+      "resource": "user_015",
+      "events_handled": 27941,
+      "unique_activities": 7,
+      "unique_cases": 23184,
+      "activity_diversity": 0.167,
+      "utilization": 0.07,
+      "total_value_handled": 612932101.0
+    },
+    {
+      "resource": "batch_00",
+      "events_handled": 27934,
+      "unique_activities": 18,
+      "unique_cases": 14604,
+      "activity_diversity": 0.429,
+      "utilization": 0.07,
+      "total_value_handled": 731481967.0
+    },
+    {
+      "resource": "batch_02",
+      "events_handled": 27933,
+      "unique_activities": 6,
+      "unique_cases": 20021,
+      "activity_diversity": 0.143,
+      "utilization": 0.07,
+      "total_value_handled": 168620099.0
+    },
+    {
+      "resource": "user_006",
+      "events_handled": 17636,
+      "unique_activities": 7,
+      "unique_cases": 16101,
+      "activity_diversity": 0.167,
+      "utilization": 0.044,
+      "total_value_handled": 200555619.0
+    },
+    {
+      "resource": "user_040",
+      "events_handled": 17627,
+      "unique_activities": 7,
+      "unique_cases": 16444,
+      "activity_diversity": 0.167,
+      "utilization": 0.044,
+      "total_value_handled": 11484412.0
+    },
+    {
+      "resource": "batch_03",
+      "events_handled": 17384,
+      "unique_activities": 3,
+      "unique_cases": 16903,
+      "activity_diversity": 0.071,
+      "utilization": 0.044,
+      "total_value_handled": 111075880.0
+    },
+    {
+      "resource": "user_057",
+      "events_handled": 16089,
+      "unique_activities": 9,
+      "unique_cases": 14545,
+      "activity_diversity": 0.214,
+      "utilization": 0.04,
+      "total_value_handled": 10880036.0
+    },
+    {
+      "resource": "batch_07",
+      "events_handled": 15189,
+      "unique_activities": 2,
+      "unique_cases": 1605,
+      "activity_diversity": 0.048,
+      "utilization": 0.038,
+      "total_value_handled": 167507465.0
+    },
+    {
+      "resource": "user_036",
+      "events_handled": 14745,
+      "unique_activities": 7,
+      "unique_cases": 13919,
+      "activity_diversity": 0.167,
+      "utilization": 0.037,
+      "total_value_handled": 14053373.0
+    },
+    {
+      "resource": "user_005",
+      "events_handled": 14672,
+      "unique_activities": 1,
+      "unique_cases": 14464,
+      "activity_diversity": 0.024,
+      "utilization": 0.037,
+      "total_value_handled": 222877759.0
+    },
+    {
+      "resource": "user_045",
+      "events_handled": 13652,
+      "unique_activities": 8,
+      "unique_cases": 11985,
+      "activity_diversity": 0.19,
+      "utilization": 0.034,
+      "total_value_handled": 20961810.0
+    },
+    {
+      "resource": "user_038",
+      "events_handled": 13316,
+      "unique_activities": 6,
+      "unique_cases": 11944,
+      "activity_diversity": 0.143,
+      "utilization": 0.033,
+      "total_value_handled": 6931590.0
+    },
+    {
+      "resource": "user_030",
+      "events_handled": 12761,
+      "unique_activities": 3,
+      "unique_cases": 12299,
+      "activity_diversity": 0.071,
+      "utilization": 0.032,
+      "total_value_handled": 86007977.0
+    },
+    {
+      "resource": "user_451",
+      "events_handled": 10874,
+      "unique_activities": 1,
+      "unique_cases": 10874,
+      "activity_diversity": 0.024,
+      "utilization": 0.027,
+      "total_value_handled": 7582099.0
+    },
+    {
+      "resource": "user_060",
+      "events_handled": 10132,
+      "unique_activities": 13,
+      "unique_cases": 7885,
+      "activity_diversity": 0.31,
+      "utilization": 0.025,
+      "total_value_handled": 35355562.0
+    },
+    {
+      "resource": "user_084",
+      "events_handled": 9064,
+      "unique_activities": 12,
+      "unique_cases": 3650,
+      "activity_diversity": 0.286,
+      "utilization": 0.023,
+      "total_value_handled": 119916894.0
+    },
+    {
+      "resource": "user_034",
+      "events_handled": 8991,
+      "unique_activities": 2,
+      "unique_cases": 8818,
+      "activity_diversity": 0.048,
+      "utilization": 0.023,
+      "total_value_handled": 23524385.0
+    },
+    {
+      "resource": "user_058",
+      "events_handled": 8008,
+      "unique_activities": 2,
+      "unique_cases": 7862,
+      "activity_diversity": 0.048,
+      "utilization": 0.02,
+      "total_value_handled": 5431811.0
+    },
+    {
+      "resource": "user_007",
+      "events_handled": 7853,
+      "unique_activities": 4,
+      "unique_cases": 7645,
+      "activity_diversity": 0.095,
+      "utilization": 0.02,
+      "total_value_handled": 112250501.0
+    },
+    {
+      "resource": "user_042",
+      "events_handled": 7674,
+      "unique_activities": 6,
+      "unique_cases": 7073,
+      "activity_diversity": 0.143,
+      "utilization": 0.019,
+      "total_value_handled": 6992504.0
+    },
+    {
+      "resource": "user_059",
+      "events_handled": 7639,
+      "unique_activities": 13,
+      "unique_cases": 6166,
+      "activity_diversity": 0.31,
+      "utilization": 0.019,
+      "total_value_handled": 24082920.0
+    },
+    {
+      "resource": "user_178",
+      "events_handled": 7383,
+      "unique_activities": 7,
+      "unique_cases": 6760,
+      "activity_diversity": 0.167,
+      "utilization": 0.018,
+      "total_value_handled": 15027641.0
+    },
+    {
+      "resource": "user_031",
+      "events_handled": 7210,
+      "unique_activities": 2,
+      "unique_cases": 6635,
+      "activity_diversity": 0.048,
+      "utilization": 0.018,
+      "total_value_handled": 34245134.0
+    },
+    {
+      "resource": "user_107",
+      "events_handled": 7150,
+      "unique_activities": 2,
+      "unique_cases": 7073,
+      "activity_diversity": 0.048,
+      "utilization": 0.018,
+      "total_value_handled": 3874436.0
+    },
+    {
+      "resource": "user_089",
+      "events_handled": 6713,
+      "unique_activities": 10,
+      "unique_cases": 5341,
+      "activity_diversity": 0.238,
+      "utilization": 0.017,
+      "total_value_handled": 19523917.0
+    },
+    {
+      "resource": "user_075",
+      "events_handled": 6603,
+      "unique_activities": 8,
+      "unique_cases": 5791,
+      "activity_diversity": 0.19,
+      "utilization": 0.017,
+      "total_value_handled": 29840832.0
+    },
+    {
+      "resource": "user_064",
+      "events_handled": 6573,
+      "unique_activities": 11,
+      "unique_cases": 4344,
+      "activity_diversity": 0.262,
+      "utilization": 0.016,
+      "total_value_handled": 135628643.0
+    },
+    {
+      "resource": "user_147",
+      "events_handled": 6513,
+      "unique_activities": 8,
+      "unique_cases": 5781,
+      "activity_diversity": 0.19,
+      "utilization": 0.016,
+      "total_value_handled": 10587934.0
+    },
+    {
+      "resource": "batch_12",
+      "events_handled": 5988,
+      "unique_activities": 1,
+      "unique_cases": 5738,
+      "activity_diversity": 0.024,
+      "utilization": 0.015,
+      "total_value_handled": 15553919.0
+    },
+    {
+      "resource": "user_077",
+      "events_handled": 5837,
+      "unique_activities": 4,
+      "unique_cases": 4917,
+      "activity_diversity": 0.095,
+      "utilization": 0.015,
+      "total_value_handled": 46492191.0
+    },
+    {
+      "resource": "user_167",
+      "events_handled": 5779,
+      "unique_activities": 8,
+      "unique_cases": 4104,
+      "activity_diversity": 0.19,
+      "utilization": 0.014,
+      "total_value_handled": 14035870.0
+    },
+    {
+      "resource": "user_066",
+      "events_handled": 5712,
+      "unique_activities": 12,
+      "unique_cases": 4765,
+      "activity_diversity": 0.286,
+      "utilization": 0.014,
+      "total_value_handled": 22486565.0
+    },
+    {
+      "resource": "user_200",
+      "events_handled": 5699,
+      "unique_activities": 3,
+      "unique_cases": 554,
+      "activity_diversity": 0.071,
+      "utilization": 0.014,
+      "total_value_handled": 744806875.0
+    },
+    {
+      "resource": "user_079",
+      "events_handled": 5261,
+      "unique_activities": 9,
+      "unique_cases": 4813,
+      "activity_diversity": 0.214,
+      "utilization": 0.013,
+      "total_value_handled": 17085674.0
+    },
+    {
+      "resource": "user_023",
+      "events_handled": 5137,
+      "unique_activities": 2,
+      "unique_cases": 5110,
+      "activity_diversity": 0.048,
+      "utilization": 0.013,
+      "total_value_handled": 111736070.0
+    },
+    {
+      "resource": "user_004",
+      "events_handled": 5050,
+      "unique_activities": 5,
+      "unique_cases": 4271,
+      "activity_diversity": 0.119,
+      "utilization": 0.013,
+      "total_value_handled": 247523668.0
+    },
+    {
+      "resource": "user_102",
+      "events_handled": 4931,
+      "unique_activities": 7,
+      "unique_cases": 4291,
+      "activity_diversity": 0.167,
+      "utilization": 0.012,
+      "total_value_handled": 16173628.0
+    },
+    {
+      "resource": "user_142",
+      "events_handled": 4845,
+      "unique_activities": 9,
+      "unique_cases": 4112,
+      "activity_diversity": 0.214,
+      "utilization": 0.012,
+      "total_value_handled": 19491667.0
+    },
+    {
+      "resource": "user_062",
+      "events_handled": 4731,
+      "unique_activities": 1,
+      "unique_cases": 4583,
+      "activity_diversity": 0.024,
+      "utilization": 0.012,
+      "total_value_handled": 15106121.0
+    },
+    {
+      "resource": "user_068",
+      "events_handled": 4625,
+      "unique_activities": 8,
+      "unique_cases": 4042,
+      "activity_diversity": 0.19,
+      "utilization": 0.012,
+      "total_value_handled": 17555678.0
+    },
+    {
+      "resource": "user_070",
+      "events_handled": 4491,
+      "unique_activities": 10,
+      "unique_cases": 3851,
+      "activity_diversity": 0.238,
+      "utilization": 0.011,
+      "total_value_handled": 15032572.0
+    },
+    {
+      "resource": "user_286",
+      "events_handled": 4461,
+      "unique_activities": 10,
+      "unique_cases": 3807,
+      "activity_diversity": 0.238,
+      "utilization": 0.011,
+      "total_value_handled": 11793083.0
+    },
+    {
+      "resource": "user_158",
+      "events_handled": 4461,
+      "unique_activities": 8,
+      "unique_cases": 4077,
+      "activity_diversity": 0.19,
+      "utilization": 0.011,
+      "total_value_handled": 15779719.0
+    },
+    {
+      "resource": "user_065",
+      "events_handled": 4446,
+      "unique_activities": 7,
+      "unique_cases": 4235,
+      "activity_diversity": 0.167,
+      "utilization": 0.011,
+      "total_value_handled": 29854604.0
+    },
+    {
+      "resource": "user_056",
+      "events_handled": 4379,
+      "unique_activities": 1,
+      "unique_cases": 4206,
+      "activity_diversity": 0.024,
+      "utilization": 0.011,
+      "total_value_handled": 14356391.0
+    },
+    {
+      "resource": "batch_05",
+      "events_handled": 4347,
+      "unique_activities": 2,
+      "unique_cases": 4266,
+      "activity_diversity": 0.048,
+      "utilization": 0.011,
+      "total_value_handled": 14816785.0
+    },
+    {
+      "resource": "user_188",
+      "events_handled": 4333,
+      "unique_activities": 2,
+      "unique_cases": 4108,
+      "activity_diversity": 0.048,
+      "utilization": 0.011,
+      "total_value_handled": 21728725.0
+    },
+    {
+      "resource": "user_095",
+      "events_handled": 4267,
+      "unique_activities": 10,
+      "unique_cases": 3399,
+      "activity_diversity": 0.238,
+      "utilization": 0.011,
+      "total_value_handled": 44649675.0
+    },
+    {
+      "resource": "user_172",
+      "events_handled": 4157,
+      "unique_activities": 7,
+      "unique_cases": 3625,
+      "activity_diversity": 0.167,
+      "utilization": 0.01,
+      "total_value_handled": 11383982.0
+    },
+    {
+      "resource": "user_063",
+      "events_handled": 3980,
+      "unique_activities": 14,
+      "unique_cases": 3058,
+      "activity_diversity": 0.333,
+      "utilization": 0.01,
+      "total_value_handled": 77122873.0
+    },
+    {
+      "resource": "user_097",
+      "events_handled": 3934,
+      "unique_activities": 9,
+      "unique_cases": 3425,
+      "activity_diversity": 0.214,
+      "utilization": 0.01,
+      "total_value_handled": 6539409.0
+    },
+    {
+      "resource": "batch_17",
+      "events_handled": 3917,
+      "unique_activities": 1,
+      "unique_cases": 3917,
+      "activity_diversity": 0.024,
+      "utilization": 0.01,
+      "total_value_handled": 22609776.0
+    },
+    {
+      "resource": "user_061",
+      "events_handled": 3911,
+      "unique_activities": 1,
+      "unique_cases": 3630,
+      "activity_diversity": 0.024,
+      "utilization": 0.01,
+      "total_value_handled": 6393241.0
+    },
+    {
+      "resource": "user_152",
+      "events_handled": 3860,
+      "unique_activities": 2,
+      "unique_cases": 3781,
+      "activity_diversity": 0.048,
+      "utilization": 0.01,
+      "total_value_handled": 10798573.0
+    },
+    {
+      "resource": "user_080",
+      "events_handled": 3803,
+      "unique_activities": 2,
+      "unique_cases": 3739,
+      "activity_diversity": 0.048,
+      "utilization": 0.01,
+      "total_value_handled": 15145554.0
+    },
+    {
+      "resource": "user_168",
+      "events_handled": 3803,
+      "unique_activities": 3,
+      "unique_cases": 3723,
+      "activity_diversity": 0.071,
+      "utilization": 0.01,
+      "total_value_handled": 10019740.0
+    },
+    {
+      "resource": "user_000",
+      "events_handled": 3722,
+      "unique_activities": 8,
+      "unique_cases": 1440,
+      "activity_diversity": 0.19,
+      "utilization": 0.009,
+      "total_value_handled": 1406986278.0
+    },
+    {
+      "resource": "user_033",
+      "events_handled": 3632,
+      "unique_activities": 10,
+      "unique_cases": 3023,
+      "activity_diversity": 0.238,
+      "utilization": 0.009,
+      "total_value_handled": 19964803.0
+    },
+    {
+      "resource": "user_164",
+      "events_handled": 3612,
+      "unique_activities": 7,
+      "unique_cases": 3151,
+      "activity_diversity": 0.167,
+      "utilization": 0.009,
+      "total_value_handled": 8160325.0
+    },
+    {
+      "resource": "user_049",
+      "events_handled": 3552,
+      "unique_activities": 1,
+      "unique_cases": 1016,
+      "activity_diversity": 0.024,
+      "utilization": 0.009,
+      "total_value_handled": 41755086.0
+    },
+    {
+      "resource": "batch_16",
+      "events_handled": 3328,
+      "unique_activities": 1,
+      "unique_cases": 3328,
+      "activity_diversity": 0.024,
+      "utilization": 0.008,
+      "total_value_handled": 14307197.0
+    },
+    {
+      "resource": "batch_10",
+      "events_handled": 3141,
+      "unique_activities": 2,
+      "unique_cases": 911,
+      "activity_diversity": 0.048,
+      "utilization": 0.008,
+      "total_value_handled": 71952532.0
+    },
+    {
+      "resource": "user_086",
+      "events_handled": 3133,
+      "unique_activities": 2,
+      "unique_cases": 2960,
+      "activity_diversity": 0.048,
+      "utilization": 0.008,
+      "total_value_handled": 7649895.0
+    },
+    {
+      "resource": "user_120",
+      "events_handled": 3128,
+      "unique_activities": 2,
+      "unique_cases": 3113,
+      "activity_diversity": 0.048,
+      "utilization": 0.008,
+      "total_value_handled": 1541764.0
+    },
+    {
+      "resource": "user_252",
+      "events_handled": 3056,
+      "unique_activities": 8,
+      "unique_cases": 2248,
+      "activity_diversity": 0.19,
+      "utilization": 0.008,
+      "total_value_handled": 15074819.0
+    },
+    {
+      "resource": "user_085",
+      "events_handled": 3029,
+      "unique_activities": 6,
+      "unique_cases": 2512,
+      "activity_diversity": 0.143,
+      "utilization": 0.008,
+      "total_value_handled": 5499702.0
+    },
+    {
+      "resource": "user_067",
+      "events_handled": 2944,
+      "unique_activities": 1,
+      "unique_cases": 2943,
+      "activity_diversity": 0.024,
+      "utilization": 0.007,
+      "total_value_handled": 1067346.0
+    },
+    {
+      "resource": "user_052",
+      "events_handled": 2923,
+      "unique_activities": 5,
+      "unique_cases": 2588,
+      "activity_diversity": 0.119,
+      "utilization": 0.007,
+      "total_value_handled": 9464655.0
+    },
+    {
+      "resource": "user_370",
+      "events_handled": 2900,
+      "unique_activities": 10,
+      "unique_cases": 2633,
+      "activity_diversity": 0.238,
+      "utilization": 0.007,
+      "total_value_handled": 12303602.0
+    },
+    {
+      "resource": "user_127",
+      "events_handled": 2799,
+      "unique_activities": 2,
+      "unique_cases": 2644,
+      "activity_diversity": 0.048,
+      "utilization": 0.007,
+      "total_value_handled": 15624364.0
+    },
+    {
+      "resource": "user_043",
+      "events_handled": 2780,
+      "unique_activities": 7,
+      "unique_cases": 2298,
+      "activity_diversity": 0.167,
+      "utilization": 0.007,
+      "total_value_handled": 12876698.0
+    },
+    {
+      "resource": "user_096",
+      "events_handled": 2776,
+      "unique_activities": 2,
+      "unique_cases": 2737,
+      "activity_diversity": 0.048,
+      "utilization": 0.007,
+      "total_value_handled": 26765000.0
+    },
+    {
+      "resource": "user_071",
+      "events_handled": 2745,
+      "unique_activities": 2,
+      "unique_cases": 2522,
+      "activity_diversity": 0.048,
+      "utilization": 0.007,
+      "total_value_handled": 27655256.0
+    },
+    {
+      "resource": "user_104",
+      "events_handled": 2721,
+      "unique_activities": 2,
+      "unique_cases": 2653,
+      "activity_diversity": 0.048,
+      "utilization": 0.007,
+      "total_value_handled": 27147298.0
+    },
+    {
+      "resource": "user_094",
+      "events_handled": 2717,
+      "unique_activities": 2,
+      "unique_cases": 2652,
+      "activity_diversity": 0.048,
+      "utilization": 0.007,
+      "total_value_handled": 6803980.0
+    },
+    {
+      "resource": "user_053",
+      "events_handled": 2681,
+      "unique_activities": 2,
+      "unique_cases": 2610,
+      "activity_diversity": 0.048,
+      "utilization": 0.007,
+      "total_value_handled": 6414500.0
+    },
+    {
+      "resource": "user_148",
+      "events_handled": 2517,
+      "unique_activities": 11,
+      "unique_cases": 1327,
+      "activity_diversity": 0.262,
+      "utilization": 0.006,
+      "total_value_handled": 25313937.0
+    },
+    {
+      "resource": "user_047",
+      "events_handled": 2502,
+      "unique_activities": 1,
+      "unique_cases": 2459,
+      "activity_diversity": 0.024,
+      "utilization": 0.006,
+      "total_value_handled": 1541778.0
+    },
+    {
+      "resource": "batch_01",
+      "events_handled": 2496,
+      "unique_activities": 2,
+      "unique_cases": 2482,
+      "activity_diversity": 0.048,
+      "utilization": 0.006,
+      "total_value_handled": 14529085.0
+    },
+    {
+      "resource": "batch_04",
+      "events_handled": 2480,
+      "unique_activities": 1,
+      "unique_cases": 2480,
+      "activity_diversity": 0.024,
+      "utilization": 0.006,
+      "total_value_handled": 4494439.0
+    },
+    {
+      "resource": "user_044",
+      "events_handled": 2395,
+      "unique_activities": 2,
+      "unique_cases": 2186,
+      "activity_diversity": 0.048,
+      "utilization": 0.006,
+      "total_value_handled": 12097871.0
+    },
+    {
+      "resource": "user_374",
+      "events_handled": 2341,
+      "unique_activities": 1,
+      "unique_cases": 2341,
+      "activity_diversity": 0.024,
+      "utilization": 0.006,
+      "total_value_handled": 2365238.0
+    },
+    {
+      "resource": "user_048",
+      "events_handled": 2294,
+      "unique_activities": 1,
+      "unique_cases": 522,
+      "activity_diversity": 0.024,
+      "utilization": 0.006,
+      "total_value_handled": 32762687.0
+    },
+    {
+      "resource": "user_109",
+      "events_handled": 2290,
+      "unique_activities": 7,
+      "unique_cases": 1962,
+      "activity_diversity": 0.167,
+      "utilization": 0.006,
+      "total_value_handled": 7514588.0
+    },
+    {
+      "resource": "user_243",
+      "events_handled": 2277,
+      "unique_activities": 8,
+      "unique_cases": 1961,
+      "activity_diversity": 0.19,
+      "utilization": 0.006,
+      "total_value_handled": 25787420.0
+    },
+    {
+      "resource": "user_190",
+      "events_handled": 2231,
+      "unique_activities": 2,
+      "unique_cases": 2151,
+      "activity_diversity": 0.048,
+      "utilization": 0.006,
+      "total_value_handled": 11038563.0
+    },
+    {
+      "resource": "user_050",
+      "events_handled": 2132,
+      "unique_activities": 1,
+      "unique_cases": 2070,
+      "activity_diversity": 0.024,
+      "utilization": 0.005,
+      "total_value_handled": 1641993.0
+    },
+    {
+      "resource": "user_138",
+      "events_handled": 2121,
+      "unique_activities": 6,
+      "unique_cases": 1053,
+      "activity_diversity": 0.143,
+      "utilization": 0.005,
+      "total_value_handled": 1667407.0
+    },
+    {
+      "resource": "user_602",
+      "events_handled": 2101,
+      "unique_activities": 4,
+      "unique_cases": 1044,
+      "activity_diversity": 0.095,
+      "utilization": 0.005,
+      "total_value_handled": 28777328.0
+    },
+    {
+      "resource": "user_078",
+      "events_handled": 2095,
+      "unique_activities": 9,
+      "unique_cases": 1700,
+      "activity_diversity": 0.214,
+      "utilization": 0.005,
+      "total_value_handled": 16279028.0
+    },
+    {
+      "resource": "user_136",
+      "events_handled": 2093,
+      "unique_activities": 7,
+      "unique_cases": 1195,
+      "activity_diversity": 0.167,
+      "utilization": 0.005,
+      "total_value_handled": 28495923.0
+    },
+    {
+      "resource": "user_325",
+      "events_handled": 2091,
+      "unique_activities": 8,
+      "unique_cases": 1726,
+      "activity_diversity": 0.19,
+      "utilization": 0.005,
+      "total_value_handled": 4657010.0
+    },
+    {
+      "resource": "user_046",
+      "events_handled": 2075,
+      "unique_activities": 1,
+      "unique_cases": 2006,
+      "activity_diversity": 0.024,
+      "utilization": 0.005,
+      "total_value_handled": 2011471.0
+    },
+    {
+      "resource": "user_603",
+      "events_handled": 2074,
+      "unique_activities": 1,
+      "unique_cases": 1041,
+      "activity_diversity": 0.024,
+      "utilization": 0.005,
+      "total_value_handled": 28364568.0
+    },
+    {
+      "resource": "user_204",
+      "events_handled": 2053,
+      "unique_activities": 8,
+      "unique_cases": 1848,
+      "activity_diversity": 0.19,
+      "utilization": 0.005,
+      "total_value_handled": 5071590.0
+    },
+    {
+      "resource": "user_087",
+      "events_handled": 2044,
+      "unique_activities": 2,
+      "unique_cases": 1834,
+      "activity_diversity": 0.048,
+      "utilization": 0.005,
+      "total_value_handled": 11144166.0
+    },
+    {
+      "resource": "user_041",
+      "events_handled": 2019,
+      "unique_activities": 2,
+      "unique_cases": 2003,
+      "activity_diversity": 0.048,
+      "utilization": 0.005,
+      "total_value_handled": 968491.0
+    },
+    {
+      "resource": "user_171",
+      "events_handled": 2019,
+      "unique_activities": 9,
+      "unique_cases": 1872,
+      "activity_diversity": 0.214,
+      "utilization": 0.005,
+      "total_value_handled": 27183160.0
+    },
+    {
+      "resource": "batch_08",
+      "events_handled": 1813,
+      "unique_activities": 1,
+      "unique_cases": 1813,
+      "activity_diversity": 0.024,
+      "utilization": 0.005,
+      "total_value_handled": 12891918.0
+    },
+    {
+      "resource": "user_144",
+      "events_handled": 1807,
+      "unique_activities": 3,
+      "unique_cases": 1784,
+      "activity_diversity": 0.071,
+      "utilization": 0.005,
+      "total_value_handled": 1544925.0
+    },
+    {
+      "resource": "user_018",
+      "events_handled": 1786,
+      "unique_activities": 2,
+      "unique_cases": 1782,
+      "activity_diversity": 0.048,
+      "utilization": 0.004,
+      "total_value_handled": 9421443.0
+    },
+    {
+      "resource": "user_105",
+      "events_handled": 1764,
+      "unique_activities": 9,
+      "unique_cases": 1492,
+      "activity_diversity": 0.214,
+      "utilization": 0.004,
+      "total_value_handled": 4227073.0
+    },
+    {
+      "resource": "user_098",
+      "events_handled": 1738,
+      "unique_activities": 2,
+      "unique_cases": 1311,
+      "activity_diversity": 0.048,
+      "utilization": 0.004,
+      "total_value_handled": 24421736.0
+    },
+    {
+      "resource": "user_135",
+      "events_handled": 1688,
+      "unique_activities": 7,
+      "unique_cases": 835,
+      "activity_diversity": 0.167,
+      "utilization": 0.004,
+      "total_value_handled": 6148727.0
+    },
+    {
+      "resource": "batch_11",
+      "events_handled": 1669,
+      "unique_activities": 5,
+      "unique_cases": 1472,
+      "activity_diversity": 0.119,
+      "utilization": 0.004,
+      "total_value_handled": 3284324.0
+    },
+    {
+      "resource": "user_332",
+      "events_handled": 1623,
+      "unique_activities": 4,
+      "unique_cases": 1600,
+      "activity_diversity": 0.095,
+      "utilization": 0.004,
+      "total_value_handled": 1046546.0
+    },
+    {
+      "resource": "user_133",
+      "events_handled": 1616,
+      "unique_activities": 4,
+      "unique_cases": 1424,
+      "activity_diversity": 0.095,
+      "utilization": 0.004,
+      "total_value_handled": 17905056.0
+    },
+    {
+      "resource": "user_453",
+      "events_handled": 1610,
+      "unique_activities": 1,
+      "unique_cases": 1610,
+      "activity_diversity": 0.024,
+      "utilization": 0.004,
+      "total_value_handled": 229637.0
+    },
+    {
+      "resource": "user_195",
+      "events_handled": 1523,
+      "unique_activities": 8,
+      "unique_cases": 586,
+      "activity_diversity": 0.19,
+      "utilization": 0.004,
+      "total_value_handled": 3770419.0
+    },
+    {
+      "resource": "user_088",
+      "events_handled": 1490,
+      "unique_activities": 2,
+      "unique_cases": 1439,
+      "activity_diversity": 0.048,
+      "utilization": 0.004,
+      "total_value_handled": 6647649.0
+    },
+    {
+      "resource": "user_177",
+      "events_handled": 1451,
+      "unique_activities": 9,
+      "unique_cases": 912,
+      "activity_diversity": 0.214,
+      "utilization": 0.004,
+      "total_value_handled": 165820655.0
+    },
+    {
+      "resource": "user_121",
+      "events_handled": 1425,
+      "unique_activities": 7,
+      "unique_cases": 1292,
+      "activity_diversity": 0.167,
+      "utilization": 0.004,
+      "total_value_handled": 18790981.0
+    },
+    {
+      "resource": "user_039",
+      "events_handled": 1418,
+      "unique_activities": 5,
+      "unique_cases": 1378,
+      "activity_diversity": 0.119,
+      "utilization": 0.004,
+      "total_value_handled": 4040389.0
+    },
+    {
+      "resource": "user_035",
+      "events_handled": 1401,
+      "unique_activities": 2,
+      "unique_cases": 1387,
+      "activity_diversity": 0.048,
+      "utilization": 0.004,
+      "total_value_handled": 3360012.0
+    },
+    {
+      "resource": "user_037",
+      "events_handled": 1400,
+      "unique_activities": 5,
+      "unique_cases": 1354,
+      "activity_diversity": 0.119,
+      "utilization": 0.004,
+      "total_value_handled": 11737568.0
+    },
+    {
+      "resource": "user_407",
+      "events_handled": 1371,
+      "unique_activities": 5,
+      "unique_cases": 1174,
+      "activity_diversity": 0.119,
+      "utilization": 0.003,
+      "total_value_handled": 3757791.0
+    },
+    {
+      "resource": "user_137",
+      "events_handled": 1353,
+      "unique_activities": 1,
+      "unique_cases": 1353,
+      "activity_diversity": 0.024,
+      "utilization": 0.003,
+      "total_value_handled": 333459.0
+    },
+    {
+      "resource": "user_091",
+      "events_handled": 1319,
+      "unique_activities": 11,
+      "unique_cases": 943,
+      "activity_diversity": 0.262,
+      "utilization": 0.003,
+      "total_value_handled": 32204963.0
+    },
+    {
+      "resource": "user_134",
+      "events_handled": 1296,
+      "unique_activities": 3,
+      "unique_cases": 1288,
+      "activity_diversity": 0.071,
+      "utilization": 0.003,
+      "total_value_handled": 1062537.0
+    },
+    {
+      "resource": "user_113",
+      "events_handled": 1283,
+      "unique_activities": 1,
+      "unique_cases": 1280,
+      "activity_diversity": 0.024,
+      "utilization": 0.003,
+      "total_value_handled": 2341543.0
+    },
+    {
+      "resource": "user_277",
+      "events_handled": 1277,
+      "unique_activities": 5,
+      "unique_cases": 1230,
+      "activity_diversity": 0.119,
+      "utilization": 0.003,
+      "total_value_handled": 2493011.0
+    },
+    {
+      "resource": "user_249",
+      "events_handled": 1271,
+      "unique_activities": 4,
+      "unique_cases": 91,
+      "activity_diversity": 0.095,
+      "utilization": 0.003,
+      "total_value_handled": 326794583.0
+    },
+    {
+      "resource": "user_201",
+      "events_handled": 1231,
+      "unique_activities": 8,
+      "unique_cases": 1136,
+      "activity_diversity": 0.19,
+      "utilization": 0.003,
+      "total_value_handled": 10816636.0
+    },
+    {
+      "resource": "user_074",
+      "events_handled": 1204,
+      "unique_activities": 1,
+      "unique_cases": 1189,
+      "activity_diversity": 0.024,
+      "utilization": 0.003,
+      "total_value_handled": 2866125.0
+    },
+    {
+      "resource": "user_159",
+      "events_handled": 1177,
+      "unique_activities": 4,
+      "unique_cases": 231,
+      "activity_diversity": 0.095,
+      "utilization": 0.003,
+      "total_value_handled": 4245150.0
+    },
+    {
+      "resource": "user_429",
+      "events_handled": 1123,
+      "unique_activities": 1,
+      "unique_cases": 1123,
+      "activity_diversity": 0.024,
+      "utilization": 0.003,
+      "total_value_handled": 1701628.0
+    },
+    {
+      "resource": "user_257",
+      "events_handled": 1069,
+      "unique_activities": 5,
+      "unique_cases": 960,
+      "activity_diversity": 0.119,
+      "utilization": 0.003,
+      "total_value_handled": 10946624.0
+    },
+    {
+      "resource": "user_449",
+      "events_handled": 1066,
+      "unique_activities": 1,
+      "unique_cases": 1066,
+      "activity_diversity": 0.024,
+      "utilization": 0.003,
+      "total_value_handled": 3041817.0
+    },
+    {
+      "resource": "user_192",
+      "events_handled": 1059,
+      "unique_activities": 4,
+      "unique_cases": 1019,
+      "activity_diversity": 0.095,
+      "utilization": 0.003,
+      "total_value_handled": 4355162.0
+    },
+    {
+      "resource": "user_126",
+      "events_handled": 1057,
+      "unique_activities": 2,
+      "unique_cases": 1006,
+      "activity_diversity": 0.048,
+      "utilization": 0.003,
+      "total_value_handled": 3776595.0
+    },
+    {
+      "resource": "user_008",
+      "events_handled": 1036,
+      "unique_activities": 2,
+      "unique_cases": 1032,
+      "activity_diversity": 0.048,
+      "utilization": 0.003,
+      "total_value_handled": 10023281.0
+    },
+    {
+      "resource": "user_417",
+      "events_handled": 1024,
+      "unique_activities": 5,
+      "unique_cases": 720,
+      "activity_diversity": 0.119,
+      "utilization": 0.003,
+      "total_value_handled": 648525.0
+    },
+    {
+      "resource": "user_110",
+      "events_handled": 1020,
+      "unique_activities": 2,
+      "unique_cases": 29,
+      "activity_diversity": 0.048,
+      "utilization": 0.003,
+      "total_value_handled": 486503251.0
+    },
+    {
+      "resource": "user_157",
+      "events_handled": 1009,
+      "unique_activities": 1,
+      "unique_cases": 1008,
+      "activity_diversity": 0.024,
+      "utilization": 0.003,
+      "total_value_handled": 141114.0
+    },
+    {
+      "resource": "user_153",
+      "events_handled": 986,
+      "unique_activities": 5,
+      "unique_cases": 801,
+      "activity_diversity": 0.119,
+      "utilization": 0.002,
+      "total_value_handled": 2761048.0
+    },
+    {
+      "resource": "user_108",
+      "events_handled": 979,
+      "unique_activities": 7,
+      "unique_cases": 923,
+      "activity_diversity": 0.167,
+      "utilization": 0.002,
+      "total_value_handled": 1574144.0
+    },
+    {
+      "resource": "user_186",
+      "events_handled": 953,
+      "unique_activities": 2,
+      "unique_cases": 845,
+      "activity_diversity": 0.048,
+      "utilization": 0.002,
+      "total_value_handled": 8428504.0
+    },
+    {
+      "resource": "user_117",
+      "events_handled": 922,
+      "unique_activities": 10,
+      "unique_cases": 827,
+      "activity_diversity": 0.238,
+      "utilization": 0.002,
+      "total_value_handled": 2335487.0
+    },
+    {
+      "resource": "user_112",
+      "events_handled": 912,
+      "unique_activities": 4,
+      "unique_cases": 912,
+      "activity_diversity": 0.095,
+      "utilization": 0.002,
+      "total_value_handled": 17583244.0
+    },
+    {
+      "resource": "user_193",
+      "events_handled": 911,
+      "unique_activities": 10,
+      "unique_cases": 657,
+      "activity_diversity": 0.238,
+      "utilization": 0.002,
+      "total_value_handled": 5653092.0
+    },
+    {
+      "resource": "user_258",
+      "events_handled": 906,
+      "unique_activities": 2,
+      "unique_cases": 867,
+      "activity_diversity": 0.048,
+      "utilization": 0.002,
+      "total_value_handled": 6788650.0
+    },
+    {
+      "resource": "user_054",
+      "events_handled": 904,
+      "unique_activities": 5,
+      "unique_cases": 870,
+      "activity_diversity": 0.119,
+      "utilization": 0.002,
+      "total_value_handled": 866422.0
+    },
+    {
+      "resource": "user_335",
+      "events_handled": 887,
+      "unique_activities": 5,
+      "unique_cases": 757,
+      "activity_diversity": 0.119,
+      "utilization": 0.002,
+      "total_value_handled": 1803187.0
+    },
+    {
+      "resource": "user_574",
+      "events_handled": 845,
+      "unique_activities": 5,
+      "unique_cases": 801,
+      "activity_diversity": 0.119,
+      "utilization": 0.002,
+      "total_value_handled": 485612.0
+    },
+    {
+      "resource": "user_072",
+      "events_handled": 830,
+      "unique_activities": 7,
+      "unique_cases": 629,
+      "activity_diversity": 0.167,
+      "utilization": 0.002,
+      "total_value_handled": 3834546.0
+    },
+    {
+      "resource": "user_267",
+      "events_handled": 814,
+      "unique_activities": 5,
+      "unique_cases": 63,
+      "activity_diversity": 0.119,
+      "utilization": 0.002,
+      "total_value_handled": 199746278.0
+    },
+    {
+      "resource": "user_092",
+      "events_handled": 807,
+      "unique_activities": 7,
+      "unique_cases": 708,
+      "activity_diversity": 0.167,
+      "utilization": 0.002,
+      "total_value_handled": 20012958.0
+    },
+    {
+      "resource": "user_359",
+      "events_handled": 801,
+      "unique_activities": 3,
+      "unique_cases": 785,
+      "activity_diversity": 0.071,
+      "utilization": 0.002,
+      "total_value_handled": 8821649.0
+    },
+    {
+      "resource": "user_024",
+      "events_handled": 797,
+      "unique_activities": 1,
+      "unique_cases": 794,
+      "activity_diversity": 0.024,
+      "utilization": 0.002,
+      "total_value_handled": 4922742.0
+    },
+    {
+      "resource": "user_082",
+      "events_handled": 794,
+      "unique_activities": 2,
+      "unique_cases": 708,
+      "activity_diversity": 0.048,
+      "utilization": 0.002,
+      "total_value_handled": 7044692.0
+    },
+    {
+      "resource": "user_156",
+      "events_handled": 790,
+      "unique_activities": 5,
+      "unique_cases": 753,
+      "activity_diversity": 0.119,
+      "utilization": 0.002,
+      "total_value_handled": 394786.0
+    },
+    {
+      "resource": "user_433",
+      "events_handled": 775,
+      "unique_activities": 1,
+      "unique_cases": 775,
+      "activity_diversity": 0.024,
+      "utilization": 0.002,
+      "total_value_handled": 1676843.0
+    },
+    {
+      "resource": "user_211",
+      "events_handled": 774,
+      "unique_activities": 1,
+      "unique_cases": 772,
+      "activity_diversity": 0.024,
+      "utilization": 0.002,
+      "total_value_handled": 518156.0
+    },
+    {
+      "resource": "user_377",
+      "events_handled": 773,
+      "unique_activities": 5,
+      "unique_cases": 704,
+      "activity_diversity": 0.119,
+      "utilization": 0.002,
+      "total_value_handled": 6651761.0
+    },
+    {
+      "resource": "user_262",
+      "events_handled": 772,
+      "unique_activities": 1,
+      "unique_cases": 684,
+      "activity_diversity": 0.024,
+      "utilization": 0.002,
+      "total_value_handled": 1960660.0
+    },
+    {
+      "resource": "user_073",
+      "events_handled": 763,
+      "unique_activities": 2,
+      "unique_cases": 708,
+      "activity_diversity": 0.048,
+      "utilization": 0.002,
+      "total_value_handled": 288719635.0
+    },
+    {
+      "resource": "user_124",
+      "events_handled": 756,
+      "unique_activities": 1,
+      "unique_cases": 756,
+      "activity_diversity": 0.024,
+      "utilization": 0.002,
+      "total_value_handled": 7370892.0
+    },
+    {
+      "resource": "user_141",
+      "events_handled": 749,
+      "unique_activities": 6,
+      "unique_cases": 666,
+      "activity_diversity": 0.143,
+      "utilization": 0.002,
+      "total_value_handled": 2298530.0
+    },
+    {
+      "resource": "user_176",
+      "events_handled": 725,
+      "unique_activities": 9,
+      "unique_cases": 595,
+      "activity_diversity": 0.214,
+      "utilization": 0.002,
+      "total_value_handled": 4393182.0
+    },
+    {
+      "resource": "user_208",
+      "events_handled": 722,
+      "unique_activities": 8,
+      "unique_cases": 378,
+      "activity_diversity": 0.19,
+      "utilization": 0.002,
+      "total_value_handled": 40439381.0
+    },
+    {
+      "resource": "user_162",
+      "events_handled": 711,
+      "unique_activities": 2,
+      "unique_cases": 702,
+      "activity_diversity": 0.048,
+      "utilization": 0.002,
+      "total_value_handled": 7441322.0
+    },
+    {
+      "resource": "user_011",
+      "events_handled": 698,
+      "unique_activities": 4,
+      "unique_cases": 539,
+      "activity_diversity": 0.095,
+      "utilization": 0.002,
+      "total_value_handled": 124524391.0
+    },
+    {
+      "resource": "user_140",
+      "events_handled": 688,
+      "unique_activities": 7,
+      "unique_cases": 121,
+      "activity_diversity": 0.167,
+      "utilization": 0.002,
+      "total_value_handled": 499032153.0
+    },
+    {
+      "resource": "user_263",
+      "events_handled": 685,
+      "unique_activities": 7,
+      "unique_cases": 487,
+      "activity_diversity": 0.167,
+      "utilization": 0.002,
+      "total_value_handled": 3312186.0
+    },
+    {
+      "resource": "user_032",
+      "events_handled": 668,
+      "unique_activities": 1,
+      "unique_cases": 666,
+      "activity_diversity": 0.024,
+      "utilization": 0.002,
+      "total_value_handled": 2497848.0
+    },
+    {
+      "resource": "user_187",
+      "events_handled": 662,
+      "unique_activities": 8,
+      "unique_cases": 524,
+      "activity_diversity": 0.19,
+      "utilization": 0.002,
+      "total_value_handled": 6891618.0
+    },
+    {
+      "resource": "user_524",
+      "events_handled": 649,
+      "unique_activities": 2,
+      "unique_cases": 104,
+      "activity_diversity": 0.048,
+      "utilization": 0.002,
+      "total_value_handled": 928922.0
+    },
+    {
+      "resource": "user_202",
+      "events_handled": 621,
+      "unique_activities": 2,
+      "unique_cases": 434,
+      "activity_diversity": 0.048,
+      "utilization": 0.002,
+      "total_value_handled": 127838775.0
+    },
+    {
+      "resource": "user_432",
+      "events_handled": 615,
+      "unique_activities": 1,
+      "unique_cases": 615,
+      "activity_diversity": 0.024,
+      "utilization": 0.002,
+      "total_value_handled": 1778778.0
+    },
+    {
+      "resource": "user_280",
+      "events_handled": 609,
+      "unique_activities": 4,
+      "unique_cases": 499,
+      "activity_diversity": 0.095,
+      "utilization": 0.002,
+      "total_value_handled": 975151.0
+    },
+    {
+      "resource": "user_322",
+      "events_handled": 608,
+      "unique_activities": 4,
+      "unique_cases": 556,
+      "activity_diversity": 0.095,
+      "utilization": 0.002,
+      "total_value_handled": 3167628.0
+    },
+    {
+      "resource": "user_101",
+      "events_handled": 592,
+      "unique_activities": 2,
+      "unique_cases": 580,
+      "activity_diversity": 0.048,
+      "utilization": 0.001,
+      "total_value_handled": 1674778.0
+    },
+    {
+      "resource": "user_130",
+      "events_handled": 576,
+      "unique_activities": 2,
+      "unique_cases": 553,
+      "activity_diversity": 0.048,
+      "utilization": 0.001,
+      "total_value_handled": 745947.0
+    },
+    {
+      "resource": "user_099",
+      "events_handled": 573,
+      "unique_activities": 2,
+      "unique_cases": 517,
+      "activity_diversity": 0.048,
+      "utilization": 0.001,
+      "total_value_handled": 5940253.0
+    },
+    {
+      "resource": "user_304",
+      "events_handled": 566,
+      "unique_activities": 1,
+      "unique_cases": 24,
+      "activity_diversity": 0.024,
+      "utilization": 0.001,
+      "total_value_handled": 7575679.0
+    },
+    {
+      "resource": "user_446",
+      "events_handled": 557,
+      "unique_activities": 1,
+      "unique_cases": 557,
+      "activity_diversity": 0.024,
+      "utilization": 0.001,
+      "total_value_handled": 208545.0
+    },
+    {
+      "resource": "user_154",
+      "events_handled": 543,
+      "unique_activities": 1,
+      "unique_cases": 543,
+      "activity_diversity": 0.024,
+      "utilization": 0.001,
+      "total_value_handled": 1179985.0
+    },
+    {
+      "resource": "user_250",
+      "events_handled": 536,
+      "unique_activities": 1,
+      "unique_cases": 530,
+      "activity_diversity": 0.024,
+      "utilization": 0.001,
+      "total_value_handled": 865178.0
+    },
+    {
+      "resource": "user_076",
+      "events_handled": 528,
+      "unique_activities": 2,
+      "unique_cases": 476,
+      "activity_diversity": 0.048,
+      "utilization": 0.001,
+      "total_value_handled": 4458658.0
+    },
+    {
+      "resource": "user_161",
+      "events_handled": 499,
+      "unique_activities": 7,
+      "unique_cases": 65,
+      "activity_diversity": 0.167,
+      "utilization": 0.001,
+      "total_value_handled": 401802059.0
+    },
+    {
+      "resource": "user_203",
+      "events_handled": 499,
+      "unique_activities": 7,
+      "unique_cases": 39,
+      "activity_diversity": 0.167,
+      "utilization": 0.001,
+      "total_value_handled": 506887011.0
+    },
+    {
+      "resource": "user_103",
+      "events_handled": 496,
+      "unique_activities": 8,
+      "unique_cases": 378,
+      "activity_diversity": 0.19,
+      "utilization": 0.001,
+      "total_value_handled": 1439148.0
+    },
+    {
+      "resource": "user_234",
+      "events_handled": 495,
+      "unique_activities": 7,
+      "unique_cases": 393,
+      "activity_diversity": 0.167,
+      "utilization": 0.001,
+      "total_value_handled": 13023939.0
+    },
+    {
+      "resource": "user_215",
+      "events_handled": 485,
+      "unique_activities": 7,
+      "unique_cases": 452,
+      "activity_diversity": 0.167,
+      "utilization": 0.001,
+      "total_value_handled": 662624.0
+    },
+    {
+      "resource": "user_210",
+      "events_handled": 477,
+      "unique_activities": 3,
+      "unique_cases": 464,
+      "activity_diversity": 0.071,
+      "utilization": 0.001,
+      "total_value_handled": 278811.0
+    },
+    {
+      "resource": "user_119",
+      "events_handled": 471,
+      "unique_activities": 5,
+      "unique_cases": 359,
+      "activity_diversity": 0.119,
+      "utilization": 0.001,
+      "total_value_handled": 3052561.0
+    },
+    {
+      "resource": "user_196",
+      "events_handled": 469,
+      "unique_activities": 2,
+      "unique_cases": 469,
+      "activity_diversity": 0.048,
+      "utilization": 0.001,
+      "total_value_handled": 2852619.0
+    },
+    {
+      "resource": "user_421",
+      "events_handled": 469,
+      "unique_activities": 1,
+      "unique_cases": 469,
+      "activity_diversity": 0.024,
+      "utilization": 0.001,
+      "total_value_handled": 6788713.0
+    },
+    {
+      "resource": "user_461",
+      "events_handled": 464,
+      "unique_activities": 1,
+      "unique_cases": 464,
+      "activity_diversity": 0.024,
+      "utilization": 0.001,
+      "total_value_handled": 4289360.0
+    },
+    {
+      "resource": "user_375",
+      "events_handled": 458,
+      "unique_activities": 2,
+      "unique_cases": 451,
+      "activity_diversity": 0.048,
+      "utilization": 0.001,
+      "total_value_handled": 607903.0
+    },
+    {
+      "resource": "user_308",
+      "events_handled": 457,
+      "unique_activities": 6,
+      "unique_cases": 453,
+      "activity_diversity": 0.143,
+      "utilization": 0.001,
+      "total_value_handled": 2307363.0
+    },
+    {
+      "resource": "user_100",
+      "events_handled": 449,
+      "unique_activities": 4,
+      "unique_cases": 422,
+      "activity_diversity": 0.095,
+      "utilization": 0.001,
+      "total_value_handled": 2542310.0
+    },
+    {
+      "resource": "user_424",
+      "events_handled": 447,
+      "unique_activities": 7,
+      "unique_cases": 367,
+      "activity_diversity": 0.167,
+      "utilization": 0.001,
+      "total_value_handled": 7534132.0
+    },
+    {
+      "resource": "user_155",
+      "events_handled": 445,
+      "unique_activities": 3,
+      "unique_cases": 434,
+      "activity_diversity": 0.071,
+      "utilization": 0.001,
+      "total_value_handled": 2842106.0
+    },
+    {
+      "resource": "user_372",
+      "events_handled": 443,
+      "unique_activities": 1,
+      "unique_cases": 439,
+      "activity_diversity": 0.024,
+      "utilization": 0.001,
+      "total_value_handled": 237345.0
+    },
+    {
+      "resource": "user_269",
+      "events_handled": 438,
+      "unique_activities": 1,
+      "unique_cases": 96,
+      "activity_diversity": 0.024,
+      "utilization": 0.001,
+      "total_value_handled": 5151809.0
+    },
+    {
+      "resource": "user_198",
+      "events_handled": 431,
+      "unique_activities": 4,
+      "unique_cases": 169,
+      "activity_diversity": 0.095,
+      "utilization": 0.001,
+      "total_value_handled": 6725731.0
+    },
+    {
+      "resource": "user_591",
+      "events_handled": 430,
+      "unique_activities": 7,
+      "unique_cases": 379,
+      "activity_diversity": 0.167,
+      "utilization": 0.001,
+      "total_value_handled": 720680.0
+    },
+    {
+      "resource": "user_327",
+      "events_handled": 426,
+      "unique_activities": 1,
+      "unique_cases": 426,
+      "activity_diversity": 0.024,
+      "utilization": 0.001,
+      "total_value_handled": 96215.0
+    },
+    {
+      "resource": "user_485",
+      "events_handled": 424,
+      "unique_activities": 1,
+      "unique_cases": 424,
+      "activity_diversity": 0.024,
+      "utilization": 0.001,
+      "total_value_handled": 869118.0
+    },
+    {
+      "resource": "user_384",
+      "events_handled": 407,
+      "unique_activities": 1,
+      "unique_cases": 401,
+      "activity_diversity": 0.024,
+      "utilization": 0.001,
+      "total_value_handled": 4046374.0
+    },
+    {
+      "resource": "user_175",
+      "events_handled": 400,
+      "unique_activities": 4,
+      "unique_cases": 392,
+      "activity_diversity": 0.095,
+      "utilization": 0.001,
+      "total_value_handled": 698422.0
+    },
+    {
+      "resource": "user_207",
+      "events_handled": 399,
+      "unique_activities": 10,
+      "unique_cases": 327,
+      "activity_diversity": 0.238,
+      "utilization": 0.001,
+      "total_value_handled": 6319875.0
+    },
+    {
+      "resource": "user_572",
+      "events_handled": 391,
+      "unique_activities": 4,
+      "unique_cases": 369,
+      "activity_diversity": 0.095,
+      "utilization": 0.001,
+      "total_value_handled": 3632922.0
+    },
+    {
+      "resource": "user_051",
+      "events_handled": 387,
+      "unique_activities": 4,
+      "unique_cases": 382,
+      "activity_diversity": 0.095,
+      "utilization": 0.001,
+      "total_value_handled": 807650.0
+    },
+    {
+      "resource": "user_510",
+      "events_handled": 381,
+      "unique_activities": 1,
+      "unique_cases": 381,
+      "activity_diversity": 0.024,
+      "utilization": 0.001,
+      "total_value_handled": 1148505.0
+    },
+    {
+      "resource": "user_081",
+      "events_handled": 380,
+      "unique_activities": 6,
+      "unique_cases": 365,
+      "activity_diversity": 0.143,
+      "utilization": 0.001,
+      "total_value_handled": 6841658.0
+    },
+    {
+      "resource": "user_317",
+      "events_handled": 378,
+      "unique_activities": 1,
+      "unique_cases": 218,
+      "activity_diversity": 0.024,
+      "utilization": 0.001,
+      "total_value_handled": 5144080.0
+    },
+    {
+      "resource": "user_363",
+      "events_handled": 371,
+      "unique_activities": 2,
+      "unique_cases": 338,
+      "activity_diversity": 0.048,
+      "utilization": 0.001,
+      "total_value_handled": 1905509.0
+    },
+    {
+      "resource": "user_436",
+      "events_handled": 368,
+      "unique_activities": 5,
+      "unique_cases": 338,
+      "activity_diversity": 0.119,
+      "utilization": 0.001,
+      "total_value_handled": 49179.0
+    },
+    {
+      "resource": "user_189",
+      "events_handled": 363,
+      "unique_activities": 1,
+      "unique_cases": 360,
+      "activity_diversity": 0.024,
+      "utilization": 0.001,
+      "total_value_handled": 919744.0
+    },
+    {
+      "resource": "batch_13",
+      "events_handled": 362,
+      "unique_activities": 1,
+      "unique_cases": 362,
+      "activity_diversity": 0.024,
+      "utilization": 0.001,
+      "total_value_handled": 1218087.0
+    },
+    {
+      "resource": "user_106",
+      "events_handled": 355,
+      "unique_activities": 11,
+      "unique_cases": 265,
+      "activity_diversity": 0.262,
+      "utilization": 0.001,
+      "total_value_handled": 2939833.0
+    },
+    {
+      "resource": "user_388",
+      "events_handled": 345,
+      "unique_activities": 4,
+      "unique_cases": 300,
+      "activity_diversity": 0.095,
+      "utilization": 0.001,
+      "total_value_handled": 25488135.0
+    },
+    {
+      "resource": "user_214",
+      "events_handled": 342,
+      "unique_activities": 4,
+      "unique_cases": 302,
+      "activity_diversity": 0.095,
+      "utilization": 0.001,
+      "total_value_handled": 4973773.0
+    },
+    {
+      "resource": "user_299",
+      "events_handled": 336,
+      "unique_activities": 4,
+      "unique_cases": 280,
+      "activity_diversity": 0.095,
+      "utilization": 0.001,
+      "total_value_handled": 771919.0
+    },
+    {
+      "resource": "user_251",
+      "events_handled": 325,
+      "unique_activities": 4,
+      "unique_cases": 322,
+      "activity_diversity": 0.095,
+      "utilization": 0.001,
+      "total_value_handled": 141780.0
+    },
+    {
+      "resource": "user_240",
+      "events_handled": 320,
+      "unique_activities": 6,
+      "unique_cases": 313,
+      "activity_diversity": 0.143,
+      "utilization": 0.001,
+      "total_value_handled": 660948.0
+    },
+    {
+      "resource": "user_197",
+      "events_handled": 316,
+      "unique_activities": 1,
+      "unique_cases": 313,
+      "activity_diversity": 0.024,
+      "utilization": 0.001,
+      "total_value_handled": 5415454.0
+    },
+    {
+      "resource": "user_400",
+      "events_handled": 309,
+      "unique_activities": 2,
+      "unique_cases": 307,
+      "activity_diversity": 0.048,
+      "utilization": 0.001,
+      "total_value_handled": 163507.0
+    },
+    {
+      "resource": "user_430",
+      "events_handled": 307,
+      "unique_activities": 5,
+      "unique_cases": 286,
+      "activity_diversity": 0.119,
+      "utilization": 0.001,
+      "total_value_handled": 1045653.0
+    },
+    {
+      "resource": "user_116",
+      "events_handled": 300,
+      "unique_activities": 4,
+      "unique_cases": 41,
+      "activity_diversity": 0.095,
+      "utilization": 0.001,
+      "total_value_handled": 762352035.0
+    },
+    {
+      "resource": "user_311",
+      "events_handled": 296,
+      "unique_activities": 4,
+      "unique_cases": 220,
+      "activity_diversity": 0.095,
+      "utilization": 0.001,
+      "total_value_handled": 3504441.0
+    },
+    {
+      "resource": "user_288",
+      "events_handled": 291,
+      "unique_activities": 4,
+      "unique_cases": 123,
+      "activity_diversity": 0.095,
+      "utilization": 0.001,
+      "total_value_handled": 2357251.0
+    },
+    {
+      "resource": "user_093",
+      "events_handled": 287,
+      "unique_activities": 2,
+      "unique_cases": 223,
+      "activity_diversity": 0.048,
+      "utilization": 0.001,
+      "total_value_handled": 1871703.0
+    },
+    {
+      "resource": "user_027",
+      "events_handled": 279,
+      "unique_activities": 1,
+      "unique_cases": 278,
+      "activity_diversity": 0.024,
+      "utilization": 0.001,
+      "total_value_handled": 15012204.0
+    },
+    {
+      "resource": "user_294",
+      "events_handled": 279,
+      "unique_activities": 5,
+      "unique_cases": 274,
+      "activity_diversity": 0.119,
+      "utilization": 0.001,
+      "total_value_handled": 1152417.0
+    },
+    {
+      "resource": "user_191",
+      "events_handled": 274,
+      "unique_activities": 4,
+      "unique_cases": 244,
+      "activity_diversity": 0.095,
+      "utilization": 0.001,
+      "total_value_handled": 1024492.0
+    },
+    {
+      "resource": "user_184",
+      "events_handled": 273,
+      "unique_activities": 1,
+      "unique_cases": 273,
+      "activity_diversity": 0.024,
+      "utilization": 0.001,
+      "total_value_handled": 2095859.0
+    },
+    {
+      "resource": "user_307",
+      "events_handled": 271,
+      "unique_activities": 2,
+      "unique_cases": 271,
+      "activity_diversity": 0.048,
+      "utilization": 0.001,
+      "total_value_handled": 2182223.0
+    },
+    {
+      "resource": "user_182",
+      "events_handled": 270,
+      "unique_activities": 2,
+      "unique_cases": 265,
+      "activity_diversity": 0.048,
+      "utilization": 0.001,
+      "total_value_handled": 824323.0
+    },
+    {
+      "resource": "user_220",
+      "events_handled": 269,
+      "unique_activities": 1,
+      "unique_cases": 94,
+      "activity_diversity": 0.024,
+      "utilization": 0.001,
+      "total_value_handled": 3546244.0
+    },
+    {
+      "resource": "user_428",
+      "events_handled": 267,
+      "unique_activities": 5,
+      "unique_cases": 247,
+      "activity_diversity": 0.119,
+      "utilization": 0.001,
+      "total_value_handled": 2028919.0
+    },
+    {
+      "resource": "user_069",
+      "events_handled": 266,
+      "unique_activities": 1,
+      "unique_cases": 259,
+      "activity_diversity": 0.024,
+      "utilization": 0.001,
+      "total_value_handled": 2844975.0
+    },
+    {
+      "resource": "user_145",
+      "events_handled": 262,
+      "unique_activities": 1,
+      "unique_cases": 5,
+      "activity_diversity": 0.024,
+      "utilization": 0.001,
+      "total_value_handled": 178692006.0
+    },
+    {
+      "resource": "user_464",
+      "events_handled": 260,
+      "unique_activities": 1,
+      "unique_cases": 260,
+      "activity_diversity": 0.024,
+      "utilization": 0.001,
+      "total_value_handled": 3881650.0
+    },
+    {
+      "resource": "user_115",
+      "events_handled": 256,
+      "unique_activities": 3,
+      "unique_cases": 229,
+      "activity_diversity": 0.071,
+      "utilization": 0.001,
+      "total_value_handled": 2287328.0
+    },
+    {
+      "resource": "user_604",
+      "events_handled": 251,
+      "unique_activities": 1,
+      "unique_cases": 251,
+      "activity_diversity": 0.024,
+      "utilization": 0.001,
+      "total_value_handled": 950041.0
+    },
+    {
+      "resource": "user_222",
+      "events_handled": 251,
+      "unique_activities": 8,
+      "unique_cases": 124,
+      "activity_diversity": 0.19,
+      "utilization": 0.001,
+      "total_value_handled": 13847004.0
+    },
+    {
+      "resource": "user_173",
+      "events_handled": 250,
+      "unique_activities": 5,
+      "unique_cases": 242,
+      "activity_diversity": 0.119,
+      "utilization": 0.001,
+      "total_value_handled": 344190.0
+    },
+    {
+      "resource": "user_180",
+      "events_handled": 235,
+      "unique_activities": 2,
+      "unique_cases": 235,
+      "activity_diversity": 0.048,
+      "utilization": 0.001,
+      "total_value_handled": 333833.0
+    },
+    {
+      "resource": "user_360",
+      "events_handled": 229,
+      "unique_activities": 1,
+      "unique_cases": 55,
+      "activity_diversity": 0.024,
+      "utilization": 0.001,
+      "total_value_handled": 3793450.0
+    },
+    {
+      "resource": "user_480",
+      "events_handled": 224,
+      "unique_activities": 1,
+      "unique_cases": 224,
+      "activity_diversity": 0.024,
+      "utilization": 0.001,
+      "total_value_handled": 94922.0
+    },
+    {
+      "resource": "user_484",
+      "events_handled": 222,
+      "unique_activities": 1,
+      "unique_cases": 222,
+      "activity_diversity": 0.024,
+      "utilization": 0.001,
+      "total_value_handled": 6010339.0
+    },
+    {
+      "resource": "user_273",
+      "events_handled": 219,
+      "unique_activities": 2,
+      "unique_cases": 27,
+      "activity_diversity": 0.048,
+      "utilization": 0.001,
+      "total_value_handled": 94433103.0
+    },
+    {
+      "resource": "user_146",
+      "events_handled": 218,
+      "unique_activities": 6,
+      "unique_cases": 208,
+      "activity_diversity": 0.143,
+      "utilization": 0.001,
+      "total_value_handled": 1335025.0
+    },
+    {
+      "resource": "user_447",
+      "events_handled": 217,
+      "unique_activities": 1,
+      "unique_cases": 217,
+      "activity_diversity": 0.024,
+      "utilization": 0.001,
+      "total_value_handled": 459598.0
+    },
+    {
+      "resource": "user_122",
+      "events_handled": 214,
+      "unique_activities": 8,
+      "unique_cases": 25,
+      "activity_diversity": 0.19,
+      "utilization": 0.001,
+      "total_value_handled": 45501663.0
+    },
+    {
+      "resource": "user_321",
+      "events_handled": 213,
+      "unique_activities": 1,
+      "unique_cases": 213,
+      "activity_diversity": 0.024,
+      "utilization": 0.001,
+      "total_value_handled": 688093.0
+    },
+    {
+      "resource": "user_373",
+      "events_handled": 213,
+      "unique_activities": 1,
+      "unique_cases": 213,
+      "activity_diversity": 0.024,
+      "utilization": 0.001,
+      "total_value_handled": 123850.0
+    },
+    {
+      "resource": "user_128",
+      "events_handled": 213,
+      "unique_activities": 4,
+      "unique_cases": 202,
+      "activity_diversity": 0.095,
+      "utilization": 0.001,
+      "total_value_handled": 0.0
+    },
+    {
+      "resource": "user_457",
+      "events_handled": 211,
+      "unique_activities": 2,
+      "unique_cases": 184,
+      "activity_diversity": 0.048,
+      "utilization": 0.001,
+      "total_value_handled": 2489852.0
+    },
+    {
+      "resource": "user_216",
+      "events_handled": 207,
+      "unique_activities": 4,
+      "unique_cases": 147,
+      "activity_diversity": 0.095,
+      "utilization": 0.001,
+      "total_value_handled": 416452.0
+    },
+    {
+      "resource": "user_233",
+      "events_handled": 205,
+      "unique_activities": 1,
+      "unique_cases": 205,
+      "activity_diversity": 0.024,
+      "utilization": 0.001,
+      "total_value_handled": 8337532.0
+    },
+    {
+      "resource": "user_355",
+      "events_handled": 204,
+      "unique_activities": 2,
+      "unique_cases": 200,
+      "activity_diversity": 0.048,
+      "utilization": 0.001,
+      "total_value_handled": 110922.0
+    },
+    {
+      "resource": "user_450",
+      "events_handled": 201,
+      "unique_activities": 1,
+      "unique_cases": 201,
+      "activity_diversity": 0.024,
+      "utilization": 0.001,
+      "total_value_handled": 246421.0
+    },
+    {
+      "resource": "user_169",
+      "events_handled": 187,
+      "unique_activities": 7,
+      "unique_cases": 150,
+      "activity_diversity": 0.167,
+      "utilization": 0.0,
+      "total_value_handled": 724244.0
+    },
+    {
+      "resource": "user_194",
+      "events_handled": 186,
+      "unique_activities": 7,
+      "unique_cases": 131,
+      "activity_diversity": 0.167,
+      "utilization": 0.0,
+      "total_value_handled": 1205299.0
+    },
+    {
+      "resource": "user_014",
+      "events_handled": 184,
+      "unique_activities": 4,
+      "unique_cases": 40,
+      "activity_diversity": 0.095,
+      "utilization": 0.0,
+      "total_value_handled": 53724044.0
+    },
+    {
+      "resource": "user_592",
+      "events_handled": 183,
+      "unique_activities": 1,
+      "unique_cases": 183,
+      "activity_diversity": 0.024,
+      "utilization": 0.0,
+      "total_value_handled": 90210.0
+    },
+    {
+      "resource": "user_381",
+      "events_handled": 182,
+      "unique_activities": 3,
+      "unique_cases": 166,
+      "activity_diversity": 0.071,
+      "utilization": 0.0,
+      "total_value_handled": 1610975.0
+    },
+    {
+      "resource": "user_509",
+      "events_handled": 182,
+      "unique_activities": 1,
+      "unique_cases": 182,
+      "activity_diversity": 0.024,
+      "utilization": 0.0,
+      "total_value_handled": 87143.0
+    },
+    {
+      "resource": "user_010",
+      "events_handled": 179,
+      "unique_activities": 6,
+      "unique_cases": 42,
+      "activity_diversity": 0.143,
+      "utilization": 0.0,
+      "total_value_handled": 100617758.0
+    },
+    {
+      "resource": "user_306",
+      "events_handled": 178,
+      "unique_activities": 1,
+      "unique_cases": 51,
+      "activity_diversity": 0.024,
+      "utilization": 0.0,
+      "total_value_handled": 2460746.0
+    },
+    {
+      "resource": "user_232",
+      "events_handled": 177,
+      "unique_activities": 1,
+      "unique_cases": 177,
+      "activity_diversity": 0.024,
+      "utilization": 0.0,
+      "total_value_handled": 7411995.0
+    },
+    {
+      "resource": "user_231",
+      "events_handled": 177,
+      "unique_activities": 4,
+      "unique_cases": 155,
+      "activity_diversity": 0.095,
+      "utilization": 0.0,
+      "total_value_handled": 3672423.0
+    },
+    {
+      "resource": "user_353",
+      "events_handled": 176,
+      "unique_activities": 1,
+      "unique_cases": 173,
+      "activity_diversity": 0.024,
+      "utilization": 0.0,
+      "total_value_handled": 651001.0
+    },
+    {
+      "resource": "user_293",
+      "events_handled": 176,
+      "unique_activities": 1,
+      "unique_cases": 176,
+      "activity_diversity": 0.024,
+      "utilization": 0.0,
+      "total_value_handled": 74720.0
+    },
+    {
+      "resource": "user_497",
+      "events_handled": 167,
+      "unique_activities": 1,
+      "unique_cases": 167,
+      "activity_diversity": 0.024,
+      "utilization": 0.0,
+      "total_value_handled": 1487364.0
+    },
+    {
+      "resource": "user_131",
+      "events_handled": 166,
+      "unique_activities": 6,
+      "unique_cases": 28,
+      "activity_diversity": 0.143,
+      "utilization": 0.0,
+      "total_value_handled": 145896734.0
+    },
+    {
+      "resource": "user_283",
+      "events_handled": 163,
+      "unique_activities": 1,
+      "unique_cases": 163,
+      "activity_diversity": 0.024,
+      "utilization": 0.0,
+      "total_value_handled": 6316301.0
+    },
+    {
+      "resource": "user_345",
+      "events_handled": 163,
+      "unique_activities": 1,
+      "unique_cases": 37,
+      "activity_diversity": 0.024,
+      "utilization": 0.0,
+      "total_value_handled": 2868166.0
+    },
+    {
+      "resource": "user_486",
+      "events_handled": 160,
+      "unique_activities": 1,
+      "unique_cases": 160,
+      "activity_diversity": 0.024,
+      "utilization": 0.0,
+      "total_value_handled": 1234449.0
+    },
+    {
+      "resource": "user_238",
+      "events_handled": 160,
+      "unique_activities": 3,
+      "unique_cases": 156,
+      "activity_diversity": 0.071,
+      "utilization": 0.0,
+      "total_value_handled": 21432.0
+    },
+    {
+      "resource": "user_440",
+      "events_handled": 159,
+      "unique_activities": 1,
+      "unique_cases": 159,
+      "activity_diversity": 0.024,
+      "utilization": 0.0,
+      "total_value_handled": 370614.0
+    },
+    {
+      "resource": "user_123",
+      "events_handled": 158,
+      "unique_activities": 1,
+      "unique_cases": 13,
+      "activity_diversity": 0.024,
+      "utilization": 0.0,
+      "total_value_handled": 2407615.0
+    },
+    {
+      "resource": "user_163",
+      "events_handled": 156,
+      "unique_activities": 5,
+      "unique_cases": 125,
+      "activity_diversity": 0.119,
+      "utilization": 0.0,
+      "total_value_handled": 6078109.0
+    },
+    {
+      "resource": "user_185",
+      "events_handled": 156,
+      "unique_activities": 1,
+      "unique_cases": 156,
+      "activity_diversity": 0.024,
+      "utilization": 0.0,
+      "total_value_handled": 1760516.0
+    },
+    {
+      "resource": "user_462",
+      "events_handled": 154,
+      "unique_activities": 1,
+      "unique_cases": 154,
+      "activity_diversity": 0.024,
+      "utilization": 0.0,
+      "total_value_handled": 2100831.0
+    },
+    {
+      "resource": "user_468",
+      "events_handled": 151,
+      "unique_activities": 1,
+      "unique_cases": 151,
+      "activity_diversity": 0.024,
+      "utilization": 0.0,
+      "total_value_handled": 71945.0
+    },
+    {
+      "resource": "user_292",
+      "events_handled": 150,
+      "unique_activities": 2,
+      "unique_cases": 150,
+      "activity_diversity": 0.048,
+      "utilization": 0.0,
+      "total_value_handled": 1757630.0
+    },
+    {
+      "resource": "user_221",
+      "events_handled": 148,
+      "unique_activities": 1,
+      "unique_cases": 83,
+      "activity_diversity": 0.024,
+      "utilization": 0.0,
+      "total_value_handled": 4759246.0
+    },
+    {
+      "resource": "user_181",
+      "events_handled": 145,
+      "unique_activities": 1,
+      "unique_cases": 143,
+      "activity_diversity": 0.024,
+      "utilization": 0.0,
+      "total_value_handled": 174851.0
+    },
+    {
+      "resource": "user_530",
+      "events_handled": 142,
+      "unique_activities": 1,
+      "unique_cases": 142,
+      "activity_diversity": 0.024,
+      "utilization": 0.0,
+      "total_value_handled": 210040.0
+    },
+    {
+      "resource": "user_224",
+      "events_handled": 142,
+      "unique_activities": 3,
+      "unique_cases": 142,
+      "activity_diversity": 0.071,
+      "utilization": 0.0,
+      "total_value_handled": 22961.0
+    },
+    {
+      "resource": "user_139",
+      "events_handled": 140,
+      "unique_activities": 2,
+      "unique_cases": 140,
+      "activity_diversity": 0.048,
+      "utilization": 0.0,
+      "total_value_handled": 670995.0
+    },
+    {
+      "resource": "user_519",
+      "events_handled": 139,
+      "unique_activities": 1,
+      "unique_cases": 139,
+      "activity_diversity": 0.024,
+      "utilization": 0.0,
+      "total_value_handled": 113392.0
+    },
+    {
+      "resource": "user_466",
+      "events_handled": 139,
+      "unique_activities": 2,
+      "unique_cases": 121,
+      "activity_diversity": 0.048,
+      "utilization": 0.0,
+      "total_value_handled": 2523051.0
+    },
+    {
+      "resource": "user_212",
+      "events_handled": 139,
+      "unique_activities": 1,
+      "unique_cases": 49,
+      "activity_diversity": 0.024,
+      "utilization": 0.0,
+      "total_value_handled": 2032312.0
+    },
+    {
+      "resource": "user_320",
+      "events_handled": 136,
+      "unique_activities": 3,
+      "unique_cases": 135,
+      "activity_diversity": 0.071,
+      "utilization": 0.0,
+      "total_value_handled": 62720.0
+    },
+    {
+      "resource": "user_488",
+      "events_handled": 134,
+      "unique_activities": 1,
+      "unique_cases": 134,
+      "activity_diversity": 0.024,
+      "utilization": 0.0,
+      "total_value_handled": 38002.0
+    },
+    {
+      "resource": "user_170",
+      "events_handled": 134,
+      "unique_activities": 2,
+      "unique_cases": 129,
+      "activity_diversity": 0.048,
+      "utilization": 0.0,
+      "total_value_handled": 401240.0
+    },
+    {
+      "resource": "user_239",
+      "events_handled": 132,
+      "unique_activities": 3,
+      "unique_cases": 106,
+      "activity_diversity": 0.071,
+      "utilization": 0.0,
+      "total_value_handled": 889988.0
+    },
+    {
+      "resource": "user_083",
+      "events_handled": 131,
+      "unique_activities": 2,
+      "unique_cases": 131,
+      "activity_diversity": 0.048,
+      "utilization": 0.0,
+      "total_value_handled": 8907257.0
+    },
+    {
+      "resource": "user_218",
+      "events_handled": 130,
+      "unique_activities": 8,
+      "unique_cases": 118,
+      "activity_diversity": 0.19,
+      "utilization": 0.0,
+      "total_value_handled": 179074.0
+    },
+    {
+      "resource": "user_539",
+      "events_handled": 129,
+      "unique_activities": 1,
+      "unique_cases": 129,
+      "activity_diversity": 0.024,
+      "utilization": 0.0,
+      "total_value_handled": 70627.0
+    },
+    {
+      "resource": "user_469",
+      "events_handled": 128,
+      "unique_activities": 2,
+      "unique_cases": 117,
+      "activity_diversity": 0.048,
+      "utilization": 0.0,
+      "total_value_handled": 69737.0
+    },
+    {
+      "resource": "user_223",
+      "events_handled": 123,
+      "unique_activities": 4,
+      "unique_cases": 98,
+      "activity_diversity": 0.095,
+      "utilization": 0.0,
+      "total_value_handled": 15039422.0
+    },
+    {
+      "resource": "user_016",
+      "events_handled": 122,
+      "unique_activities": 6,
+      "unique_cases": 29,
+      "activity_diversity": 0.143,
+      "utilization": 0.0,
+      "total_value_handled": 57689572.0
+    },
+    {
+      "resource": "user_009",
+      "events_handled": 118,
+      "unique_activities": 6,
+      "unique_cases": 25,
+      "activity_diversity": 0.143,
+      "utilization": 0.0,
+      "total_value_handled": 54122363.0
+    },
+    {
+      "resource": "user_003",
+      "events_handled": 116,
+      "unique_activities": 2,
+      "unique_cases": 71,
+      "activity_diversity": 0.048,
+      "utilization": 0.0,
+      "total_value_handled": 45682844.0
+    },
+    {
+      "resource": "user_244",
+      "events_handled": 116,
+      "unique_activities": 4,
+      "unique_cases": 116,
+      "activity_diversity": 0.095,
+      "utilization": 0.0,
+      "total_value_handled": 299007.0
+    },
+    {
+      "resource": "user_439",
+      "events_handled": 116,
+      "unique_activities": 1,
+      "unique_cases": 116,
+      "activity_diversity": 0.024,
+      "utilization": 0.0,
+      "total_value_handled": 101413.0
+    },
+    {
+      "resource": "user_206",
+      "events_handled": 115,
+      "unique_activities": 4,
+      "unique_cases": 24,
+      "activity_diversity": 0.095,
+      "utilization": 0.0,
+      "total_value_handled": 7364288.0
+    },
+    {
+      "resource": "user_392",
+      "events_handled": 115,
+      "unique_activities": 1,
+      "unique_cases": 115,
+      "activity_diversity": 0.024,
+      "utilization": 0.0,
+      "total_value_handled": 149847.0
+    },
+    {
+      "resource": "user_264",
+      "events_handled": 111,
+      "unique_activities": 1,
+      "unique_cases": 111,
+      "activity_diversity": 0.024,
+      "utilization": 0.0,
+      "total_value_handled": 515758.0
+    },
+    {
+      "resource": "user_300",
+      "events_handled": 108,
+      "unique_activities": 1,
+      "unique_cases": 40,
+      "activity_diversity": 0.024,
+      "utilization": 0.0,
+      "total_value_handled": 1422455.0
+    },
+    {
+      "resource": "user_333",
+      "events_handled": 106,
+      "unique_activities": 1,
+      "unique_cases": 44,
+      "activity_diversity": 0.024,
+      "utilization": 0.0,
+      "total_value_handled": 1142342.0
+    },
+    {
+      "resource": "user_272",
+      "events_handled": 105,
+      "unique_activities": 4,
+      "unique_cases": 78,
+      "activity_diversity": 0.095,
+      "utilization": 0.0,
+      "total_value_handled": 4619951.0
+    },
+    {
+      "resource": "user_329",
+      "events_handled": 104,
+      "unique_activities": 1,
+      "unique_cases": 104,
+      "activity_diversity": 0.024,
+      "utilization": 0.0,
+      "total_value_handled": 649924.0
+    },
+    {
+      "resource": "user_349",
+      "events_handled": 103,
+      "unique_activities": 2,
+      "unique_cases": 101,
+      "activity_diversity": 0.048,
+      "utilization": 0.0,
+      "total_value_handled": 461616.0
+    },
+    {
+      "resource": "user_346",
+      "events_handled": 102,
+      "unique_activities": 1,
+      "unique_cases": 78,
+      "activity_diversity": 0.024,
+      "utilization": 0.0,
+      "total_value_handled": 123345.0
+    },
+    {
+      "resource": "user_350",
+      "events_handled": 101,
+      "unique_activities": 2,
+      "unique_cases": 100,
+      "activity_diversity": 0.048,
+      "utilization": 0.0,
+      "total_value_handled": 411270.0
+    },
+    {
+      "resource": "user_358",
+      "events_handled": 99,
+      "unique_activities": 3,
+      "unique_cases": 95,
+      "activity_diversity": 0.071,
+      "utilization": 0.0,
+      "total_value_handled": 588407.0
+    },
+    {
+      "resource": "user_174",
+      "events_handled": 97,
+      "unique_activities": 2,
+      "unique_cases": 95,
+      "activity_diversity": 0.048,
+      "utilization": 0.0,
+      "total_value_handled": 564788.0
+    },
+    {
+      "resource": "user_236",
+      "events_handled": 94,
+      "unique_activities": 1,
+      "unique_cases": 94,
+      "activity_diversity": 0.024,
+      "utilization": 0.0,
+      "total_value_handled": 44832.0
+    },
+    {
+      "resource": "user_435",
+      "events_handled": 94,
+      "unique_activities": 1,
+      "unique_cases": 94,
+      "activity_diversity": 0.024,
+      "utilization": 0.0,
+      "total_value_handled": 318632.0
+    },
+    {
+      "resource": "user_465",
+      "events_handled": 93,
+      "unique_activities": 1,
+      "unique_cases": 93,
+      "activity_diversity": 0.024,
+      "utilization": 0.0,
+      "total_value_handled": 267377.0
+    },
+    {
+      "resource": "user_213",
+      "events_handled": 92,
+      "unique_activities": 4,
+      "unique_cases": 77,
+      "activity_diversity": 0.095,
+      "utilization": 0.0,
+      "total_value_handled": 485793.0
+    },
+    {
+      "resource": "user_118",
+      "events_handled": 90,
+      "unique_activities": 3,
+      "unique_cases": 87,
+      "activity_diversity": 0.071,
+      "utilization": 0.0,
+      "total_value_handled": 1118874.0
+    },
+    {
+      "resource": "user_217",
+      "events_handled": 90,
+      "unique_activities": 1,
+      "unique_cases": 86,
+      "activity_diversity": 0.024,
+      "utilization": 0.0,
+      "total_value_handled": 126922.0
+    },
+    {
+      "resource": "user_441",
+      "events_handled": 90,
+      "unique_activities": 1,
+      "unique_cases": 90,
+      "activity_diversity": 0.024,
+      "utilization": 0.0,
+      "total_value_handled": 433732.0
+    },
+    {
+      "resource": "user_470",
+      "events_handled": 88,
+      "unique_activities": 1,
+      "unique_cases": 88,
+      "activity_diversity": 0.024,
+      "utilization": 0.0,
+      "total_value_handled": 169069.0
+    },
+    {
+      "resource": "user_255",
+      "events_handled": 86,
+      "unique_activities": 1,
+      "unique_cases": 46,
+      "activity_diversity": 0.024,
+      "utilization": 0.0,
+      "total_value_handled": 3028837.0
+    },
+    {
+      "resource": "user_326",
+      "events_handled": 86,
+      "unique_activities": 5,
+      "unique_cases": 66,
+      "activity_diversity": 0.119,
+      "utilization": 0.0,
+      "total_value_handled": 2943220.0
+    },
+    {
+      "resource": "user_266",
+      "events_handled": 85,
+      "unique_activities": 3,
+      "unique_cases": 67,
+      "activity_diversity": 0.071,
+      "utilization": 0.0,
+      "total_value_handled": 12699587.0
+    },
+    {
+      "resource": "user_125",
+      "events_handled": 83,
+      "unique_activities": 5,
+      "unique_cases": 51,
+      "activity_diversity": 0.119,
+      "utilization": 0.0,
+      "total_value_handled": 8783128.0
+    },
+    {
+      "resource": "user_482",
+      "events_handled": 82,
+      "unique_activities": 2,
+      "unique_cases": 71,
+      "activity_diversity": 0.048,
+      "utilization": 0.0,
+      "total_value_handled": 287320.0
+    },
+    {
+      "resource": "user_337",
+      "events_handled": 82,
+      "unique_activities": 1,
+      "unique_cases": 4,
+      "activity_diversity": 0.024,
+      "utilization": 0.0,
+      "total_value_handled": 1199539.0
+    },
+    {
+      "resource": "user_166",
+      "events_handled": 82,
+      "unique_activities": 3,
+      "unique_cases": 5,
+      "activity_diversity": 0.071,
+      "utilization": 0.0,
+      "total_value_handled": 253528900.0
+    },
+    {
+      "resource": "user_090",
+      "events_handled": 81,
+      "unique_activities": 4,
+      "unique_cases": 74,
+      "activity_diversity": 0.095,
+      "utilization": 0.0,
+      "total_value_handled": 661521.0
+    },
+    {
+      "resource": "user_471",
+      "events_handled": 81,
+      "unique_activities": 2,
+      "unique_cases": 66,
+      "activity_diversity": 0.048,
+      "utilization": 0.0,
+      "total_value_handled": 360005.0
+    },
+    {
+      "resource": "user_151",
+      "events_handled": 80,
+      "unique_activities": 4,
+      "unique_cases": 23,
+      "activity_diversity": 0.095,
+      "utilization": 0.0,
+      "total_value_handled": 37863602.0
+    },
+    {
+      "resource": "user_271",
+      "events_handled": 79,
+      "unique_activities": 5,
+      "unique_cases": 73,
+      "activity_diversity": 0.119,
+      "utilization": 0.0,
+      "total_value_handled": 169487.0
+    },
+    {
+      "resource": "user_475",
+      "events_handled": 78,
+      "unique_activities": 1,
+      "unique_cases": 78,
+      "activity_diversity": 0.024,
+      "utilization": 0.0,
+      "total_value_handled": 188050.0
+    },
+    {
+      "resource": "user_179",
+      "events_handled": 78,
+      "unique_activities": 2,
+      "unique_cases": 74,
+      "activity_diversity": 0.048,
+      "utilization": 0.0,
+      "total_value_handled": 2014064.0
+    },
+    {
+      "resource": "user_331",
+      "events_handled": 78,
+      "unique_activities": 1,
+      "unique_cases": 78,
+      "activity_diversity": 0.024,
+      "utilization": 0.0,
+      "total_value_handled": 180792.0
+    },
+    {
+      "resource": "user_319",
+      "events_handled": 78,
+      "unique_activities": 5,
+      "unique_cases": 49,
+      "activity_diversity": 0.119,
+      "utilization": 0.0,
+      "total_value_handled": 597658.0
+    },
+    {
+      "resource": "batch_14",
+      "events_handled": 78,
+      "unique_activities": 1,
+      "unique_cases": 78,
+      "activity_diversity": 0.024,
+      "utilization": 0.0,
+      "total_value_handled": 24917.0
+    },
+    {
+      "resource": "user_411",
+      "events_handled": 77,
+      "unique_activities": 2,
+      "unique_cases": 75,
+      "activity_diversity": 0.048,
+      "utilization": 0.0,
+      "total_value_handled": 608008.0
+    },
+    {
+      "resource": "user_324",
+      "events_handled": 77,
+      "unique_activities": 1,
+      "unique_cases": 77,
+      "activity_diversity": 0.024,
+      "utilization": 0.0,
+      "total_value_handled": 42042.0
+    },
+    {
+      "resource": "user_022",
+      "events_handled": 75,
+      "unique_activities": 6,
+      "unique_cases": 15,
+      "activity_diversity": 0.143,
+      "utilization": 0.0,
+      "total_value_handled": 2996416.0
+    },
+    {
+      "resource": "user_391",
+      "events_handled": 74,
+      "unique_activities": 1,
+      "unique_cases": 14,
+      "activity_diversity": 0.024,
+      "utilization": 0.0,
+      "total_value_handled": 590090.0
+    },
+    {
+      "resource": "user_434",
+      "events_handled": 73,
+      "unique_activities": 2,
+      "unique_cases": 71,
+      "activity_diversity": 0.048,
+      "utilization": 0.0,
+      "total_value_handled": 900684.0
+    },
+    {
+      "resource": "user_369",
+      "events_handled": 71,
+      "unique_activities": 2,
+      "unique_cases": 71,
+      "activity_diversity": 0.048,
+      "utilization": 0.0,
+      "total_value_handled": 104658.0
+    },
+    {
+      "resource": "user_284",
+      "events_handled": 71,
+      "unique_activities": 7,
+      "unique_cases": 64,
+      "activity_diversity": 0.167,
+      "utilization": 0.0,
+      "total_value_handled": 220489.0
+    },
+    {
+      "resource": "user_114",
+      "events_handled": 70,
+      "unique_activities": 1,
+      "unique_cases": 70,
+      "activity_diversity": 0.024,
+      "utilization": 0.0,
+      "total_value_handled": 518527.0
+    },
+    {
+      "resource": "user_352",
+      "events_handled": 70,
+      "unique_activities": 1,
+      "unique_cases": 70,
+      "activity_diversity": 0.024,
+      "utilization": 0.0,
+      "total_value_handled": 465703.0
+    },
+    {
+      "resource": "user_209",
+      "events_handled": 69,
+      "unique_activities": 5,
+      "unique_cases": 62,
+      "activity_diversity": 0.119,
+      "utilization": 0.0,
+      "total_value_handled": 278074.0
+    },
+    {
+      "resource": "user_199",
+      "events_handled": 67,
+      "unique_activities": 7,
+      "unique_cases": 28,
+      "activity_diversity": 0.167,
+      "utilization": 0.0,
+      "total_value_handled": 343402.0
+    },
+    {
+      "resource": "user_265",
+      "events_handled": 66,
+      "unique_activities": 1,
+      "unique_cases": 50,
+      "activity_diversity": 0.024,
+      "utilization": 0.0,
+      "total_value_handled": 674261.0
+    },
+    {
+      "resource": "user_344",
+      "events_handled": 66,
+      "unique_activities": 1,
+      "unique_cases": 14,
+      "activity_diversity": 0.024,
+      "utilization": 0.0,
+      "total_value_handled": 1029908.0
+    },
+    {
+      "resource": "user_149",
+      "events_handled": 65,
+      "unique_activities": 1,
+      "unique_cases": 65,
+      "activity_diversity": 0.024,
+      "utilization": 0.0,
+      "total_value_handled": 381887.0
+    },
+    {
+      "resource": "user_205",
+      "events_handled": 64,
+      "unique_activities": 1,
+      "unique_cases": 63,
+      "activity_diversity": 0.024,
+      "utilization": 0.0,
+      "total_value_handled": 545149.0
+    },
+    {
+      "resource": "user_225",
+      "events_handled": 64,
+      "unique_activities": 6,
+      "unique_cases": 49,
+      "activity_diversity": 0.143,
+      "utilization": 0.0,
+      "total_value_handled": 103859.0
+    },
+    {
+      "resource": "user_493",
+      "events_handled": 63,
+      "unique_activities": 1,
+      "unique_cases": 63,
+      "activity_diversity": 0.024,
+      "utilization": 0.0,
+      "total_value_handled": 339530.0
+    },
+    {
+      "resource": "user_312",
+      "events_handled": 63,
+      "unique_activities": 1,
+      "unique_cases": 11,
+      "activity_diversity": 0.024,
+      "utilization": 0.0,
+      "total_value_handled": 1086648.0
+    },
+    {
+      "resource": "user_597",
+      "events_handled": 62,
+      "unique_activities": 1,
+      "unique_cases": 62,
+      "activity_diversity": 0.024,
+      "utilization": 0.0,
+      "total_value_handled": 576226.0
+    },
+    {
+      "resource": "user_500",
+      "events_handled": 62,
+      "unique_activities": 3,
+      "unique_cases": 27,
+      "activity_diversity": 0.071,
+      "utilization": 0.0,
+      "total_value_handled": 44170.0
+    },
+    {
+      "resource": "user_525",
+      "events_handled": 61,
+      "unique_activities": 1,
+      "unique_cases": 61,
+      "activity_diversity": 0.024,
+      "utilization": 0.0,
+      "total_value_handled": 343354.0
+    },
+    {
+      "resource": "user_318",
+      "events_handled": 61,
+      "unique_activities": 1,
+      "unique_cases": 41,
+      "activity_diversity": 0.024,
+      "utilization": 0.0,
+      "total_value_handled": 1707430.0
+    },
+    {
+      "resource": "user_460",
+      "events_handled": 61,
+      "unique_activities": 1,
+      "unique_cases": 61,
+      "activity_diversity": 0.024,
+      "utilization": 0.0,
+      "total_value_handled": 44356.0
+    },
+    {
+      "resource": "user_419",
+      "events_handled": 58,
+      "unique_activities": 1,
+      "unique_cases": 53,
+      "activity_diversity": 0.024,
+      "utilization": 0.0,
+      "total_value_handled": 14336.0
+    },
+    {
+      "resource": "user_254",
+      "events_handled": 57,
+      "unique_activities": 1,
+      "unique_cases": 51,
+      "activity_diversity": 0.024,
+      "utilization": 0.0,
+      "total_value_handled": 289442.0
+    },
+    {
+      "resource": "user_458",
+      "events_handled": 56,
+      "unique_activities": 2,
+      "unique_cases": 46,
+      "activity_diversity": 0.048,
+      "utilization": 0.0,
+      "total_value_handled": 774401.0
+    },
+    {
+      "resource": "user_270",
+      "events_handled": 56,
+      "unique_activities": 1,
+      "unique_cases": 29,
+      "activity_diversity": 0.024,
+      "utilization": 0.0,
+      "total_value_handled": 562699.0
+    },
+    {
+      "resource": "user_330",
+      "events_handled": 54,
+      "unique_activities": 1,
+      "unique_cases": 11,
+      "activity_diversity": 0.024,
+      "utilization": 0.0,
+      "total_value_handled": 921699.0
+    },
+    {
+      "resource": "user_387",
+      "events_handled": 53,
+      "unique_activities": 6,
+      "unique_cases": 33,
+      "activity_diversity": 0.143,
+      "utilization": 0.0,
+      "total_value_handled": 642685.0
+    },
+    {
+      "resource": "user_275",
+      "events_handled": 52,
+      "unique_activities": 1,
+      "unique_cases": 14,
+      "activity_diversity": 0.024,
+      "utilization": 0.0,
+      "total_value_handled": 548793.0
+    },
+    {
+      "resource": "user_362",
+      "events_handled": 52,
+      "unique_activities": 1,
+      "unique_cases": 5,
+      "activity_diversity": 0.024,
+      "utilization": 0.0,
+      "total_value_handled": 14055580.0
+    },
+    {
+      "resource": "user_305",
+      "events_handled": 51,
+      "unique_activities": 2,
+      "unique_cases": 51,
+      "activity_diversity": 0.048,
+      "utilization": 0.0,
+      "total_value_handled": 95768.0
+    },
+    {
+      "resource": "user_364",
+      "events_handled": 50,
+      "unique_activities": 1,
+      "unique_cases": 50,
+      "activity_diversity": 0.024,
+      "utilization": 0.0,
+      "total_value_handled": 163383.0
+    },
+    {
+      "resource": "user_476",
+      "events_handled": 50,
+      "unique_activities": 1,
+      "unique_cases": 50,
+      "activity_diversity": 0.024,
+      "utilization": 0.0,
+      "total_value_handled": 171318.0
+    },
+    {
+      "resource": "user_347",
+      "events_handled": 48,
+      "unique_activities": 1,
+      "unique_cases": 18,
+      "activity_diversity": 0.024,
+      "utilization": 0.0,
+      "total_value_handled": 1017438.0
+    },
+    {
+      "resource": "user_248",
+      "events_handled": 48,
+      "unique_activities": 1,
+      "unique_cases": 48,
+      "activity_diversity": 0.024,
+      "utilization": 0.0,
+      "total_value_handled": 2622452.0
+    },
+    {
+      "resource": "user_514",
+      "events_handled": 48,
+      "unique_activities": 2,
+      "unique_cases": 40,
+      "activity_diversity": 0.048,
+      "utilization": 0.0,
+      "total_value_handled": 133891.0
+    },
+    {
+      "resource": "user_380",
+      "events_handled": 48,
+      "unique_activities": 2,
+      "unique_cases": 48,
+      "activity_diversity": 0.048,
+      "utilization": 0.0,
+      "total_value_handled": 49477.0
+    },
+    {
+      "resource": "user_367",
+      "events_handled": 47,
+      "unique_activities": 1,
+      "unique_cases": 47,
+      "activity_diversity": 0.024,
+      "utilization": 0.0,
+      "total_value_handled": 101522.0
+    },
+    {
+      "resource": "user_165",
+      "events_handled": 47,
+      "unique_activities": 2,
+      "unique_cases": 3,
+      "activity_diversity": 0.048,
+      "utilization": 0.0,
+      "total_value_handled": 87130794.0
+    },
+    {
+      "resource": "user_285",
+      "events_handled": 47,
+      "unique_activities": 2,
+      "unique_cases": 47,
+      "activity_diversity": 0.048,
+      "utilization": 0.0,
+      "total_value_handled": 690724.0
+    },
+    {
+      "resource": "user_448",
+      "events_handled": 46,
+      "unique_activities": 1,
+      "unique_cases": 46,
+      "activity_diversity": 0.024,
+      "utilization": 0.0,
+      "total_value_handled": 2187.0
+    },
+    {
+      "resource": "user_505",
+      "events_handled": 46,
+      "unique_activities": 1,
+      "unique_cases": 46,
+      "activity_diversity": 0.024,
+      "utilization": 0.0,
+      "total_value_handled": 51602.0
+    },
+    {
+      "resource": "user_416",
+      "events_handled": 46,
+      "unique_activities": 1,
+      "unique_cases": 46,
+      "activity_diversity": 0.024,
+      "utilization": 0.0,
+      "total_value_handled": 864008.0
+    },
+    {
+      "resource": "user_452",
+      "events_handled": 46,
+      "unique_activities": 2,
+      "unique_cases": 42,
+      "activity_diversity": 0.048,
+      "utilization": 0.0,
+      "total_value_handled": 256289.0
+    },
+    {
+      "resource": "user_313",
+      "events_handled": 46,
+      "unique_activities": 2,
+      "unique_cases": 42,
+      "activity_diversity": 0.048,
+      "utilization": 0.0,
+      "total_value_handled": 25829.0
+    },
+    {
+      "resource": "user_368",
+      "events_handled": 45,
+      "unique_activities": 1,
+      "unique_cases": 45,
+      "activity_diversity": 0.024,
+      "utilization": 0.0,
+      "total_value_handled": 143298.0
+    },
+    {
+      "resource": "user_160",
+      "events_handled": 45,
+      "unique_activities": 1,
+      "unique_cases": 45,
+      "activity_diversity": 0.024,
+      "utilization": 0.0,
+      "total_value_handled": 20628513.0
+    },
+    {
+      "resource": "user_328",
+      "events_handled": 45,
+      "unique_activities": 4,
+      "unique_cases": 29,
+      "activity_diversity": 0.095,
+      "utilization": 0.0,
+      "total_value_handled": 177275.0
+    },
+    {
+      "resource": "user_314",
+      "events_handled": 44,
+      "unique_activities": 1,
+      "unique_cases": 10,
+      "activity_diversity": 0.024,
+      "utilization": 0.0,
+      "total_value_handled": 3890259.0
+    },
+    {
+      "resource": "user_279",
+      "events_handled": 44,
+      "unique_activities": 2,
+      "unique_cases": 30,
+      "activity_diversity": 0.048,
+      "utilization": 0.0,
+      "total_value_handled": 1219956.0
+    },
+    {
+      "resource": "user_545",
+      "events_handled": 44,
+      "unique_activities": 1,
+      "unique_cases": 44,
+      "activity_diversity": 0.024,
+      "utilization": 0.0,
+      "total_value_handled": 53577.0
+    },
+    {
+      "resource": "user_481",
+      "events_handled": 43,
+      "unique_activities": 1,
+      "unique_cases": 43,
+      "activity_diversity": 0.024,
+      "utilization": 0.0,
+      "total_value_handled": 92439.0
+    },
+    {
+      "resource": "user_316",
+      "events_handled": 42,
+      "unique_activities": 1,
+      "unique_cases": 21,
+      "activity_diversity": 0.024,
+      "utilization": 0.0,
+      "total_value_handled": 1810220.0
+    },
+    {
+      "resource": "user_473",
+      "events_handled": 42,
+      "unique_activities": 2,
+      "unique_cases": 39,
+      "activity_diversity": 0.048,
+      "utilization": 0.0,
+      "total_value_handled": 19471.0
+    },
+    {
+      "resource": "user_544",
+      "events_handled": 41,
+      "unique_activities": 2,
+      "unique_cases": 36,
+      "activity_diversity": 0.048,
+      "utilization": 0.0,
+      "total_value_handled": 68334.0
+    },
+    {
+      "resource": "user_260",
+      "events_handled": 41,
+      "unique_activities": 5,
+      "unique_cases": 39,
+      "activity_diversity": 0.119,
+      "utilization": 0.0,
+      "total_value_handled": 186881.0
+    },
+    {
+      "resource": "user_342",
+      "events_handled": 41,
+      "unique_activities": 1,
+      "unique_cases": 14,
+      "activity_diversity": 0.024,
+      "utilization": 0.0,
+      "total_value_handled": 554793.0
+    },
+    {
+      "resource": "user_111",
+      "events_handled": 40,
+      "unique_activities": 3,
+      "unique_cases": 36,
+      "activity_diversity": 0.071,
+      "utilization": 0.0,
+      "total_value_handled": 20548853.0
+    },
+    {
+      "resource": "user_495",
+      "events_handled": 40,
+      "unique_activities": 1,
+      "unique_cases": 40,
+      "activity_diversity": 0.024,
+      "utilization": 0.0,
+      "total_value_handled": 34077.0
+    },
+    {
+      "resource": "user_455",
+      "events_handled": 40,
+      "unique_activities": 2,
+      "unique_cases": 37,
+      "activity_diversity": 0.048,
+      "utilization": 0.0,
+      "total_value_handled": 78405.0
+    },
+    {
+      "resource": "user_454",
+      "events_handled": 40,
+      "unique_activities": 2,
+      "unique_cases": 37,
+      "activity_diversity": 0.048,
+      "utilization": 0.0,
+      "total_value_handled": 52719.0
+    },
+    {
+      "resource": "user_376",
+      "events_handled": 40,
+      "unique_activities": 1,
+      "unique_cases": 40,
+      "activity_diversity": 0.024,
+      "utilization": 0.0,
+      "total_value_handled": 550148.0
+    },
+    {
+      "resource": "user_552",
+      "events_handled": 40,
+      "unique_activities": 1,
+      "unique_cases": 40,
+      "activity_diversity": 0.024,
+      "utilization": 0.0,
+      "total_value_handled": 74411.0
+    },
+    {
+      "resource": "user_523",
+      "events_handled": 40,
+      "unique_activities": 1,
+      "unique_cases": 40,
+      "activity_diversity": 0.024,
+      "utilization": 0.0,
+      "total_value_handled": 433405.0
+    },
+    {
+      "resource": "user_537",
+      "events_handled": 40,
+      "unique_activities": 1,
+      "unique_cases": 40,
+      "activity_diversity": 0.024,
+      "utilization": 0.0,
+      "total_value_handled": 98248.0
+    },
+    {
+      "resource": "user_261",
+      "events_handled": 38,
+      "unique_activities": 1,
+      "unique_cases": 5,
+      "activity_diversity": 0.024,
+      "utilization": 0.0,
+      "total_value_handled": 819703.0
+    },
+    {
+      "resource": "user_323",
+      "events_handled": 38,
+      "unique_activities": 1,
+      "unique_cases": 38,
+      "activity_diversity": 0.024,
+      "utilization": 0.0,
+      "total_value_handled": 1443100.0
+    },
+    {
+      "resource": "user_463",
+      "events_handled": 37,
+      "unique_activities": 1,
+      "unique_cases": 37,
+      "activity_diversity": 0.024,
+      "utilization": 0.0,
+      "total_value_handled": 481203.0
+    },
+    {
+      "resource": "user_259",
+      "events_handled": 37,
+      "unique_activities": 1,
+      "unique_cases": 21,
+      "activity_diversity": 0.024,
+      "utilization": 0.0,
+      "total_value_handled": 793328.0
+    },
+    {
+      "resource": "user_021",
+      "events_handled": 36,
+      "unique_activities": 4,
+      "unique_cases": 9,
+      "activity_diversity": 0.095,
+      "utilization": 0.0,
+      "total_value_handled": 7721560.0
+    },
+    {
+      "resource": "user_025",
+      "events_handled": 36,
+      "unique_activities": 1,
+      "unique_cases": 32,
+      "activity_diversity": 0.024,
+      "utilization": 0.0,
+      "total_value_handled": 5950230.0
+    },
+    {
+      "resource": "user_356",
+      "events_handled": 36,
+      "unique_activities": 1,
+      "unique_cases": 19,
+      "activity_diversity": 0.024,
+      "utilization": 0.0,
+      "total_value_handled": 1223819.0
+    },
+    {
+      "resource": "user_459",
+      "events_handled": 35,
+      "unique_activities": 2,
+      "unique_cases": 31,
+      "activity_diversity": 0.048,
+      "utilization": 0.0,
+      "total_value_handled": 216297.0
+    },
+    {
+      "resource": "user_496",
+      "events_handled": 34,
+      "unique_activities": 2,
+      "unique_cases": 33,
+      "activity_diversity": 0.048,
+      "utilization": 0.0,
+      "total_value_handled": 159579.0
+    },
+    {
+      "resource": "user_274",
+      "events_handled": 34,
+      "unique_activities": 3,
+      "unique_cases": 30,
+      "activity_diversity": 0.071,
+      "utilization": 0.0,
+      "total_value_handled": 261513.0
+    },
+    {
+      "resource": "user_361",
+      "events_handled": 34,
+      "unique_activities": 3,
+      "unique_cases": 32,
+      "activity_diversity": 0.071,
+      "utilization": 0.0,
+      "total_value_handled": 304113.0
+    },
+    {
+      "resource": "user_536",
+      "events_handled": 34,
+      "unique_activities": 1,
+      "unique_cases": 34,
+      "activity_diversity": 0.024,
+      "utilization": 0.0,
+      "total_value_handled": 75202.0
+    },
+    {
+      "resource": "user_498",
+      "events_handled": 33,
+      "unique_activities": 2,
+      "unique_cases": 30,
+      "activity_diversity": 0.048,
+      "utilization": 0.0,
+      "total_value_handled": 133738.0
+    },
+    {
+      "resource": "user_378",
+      "events_handled": 33,
+      "unique_activities": 4,
+      "unique_cases": 27,
+      "activity_diversity": 0.095,
+      "utilization": 0.0,
+      "total_value_handled": 95929.0
+    },
+    {
+      "resource": "user_302",
+      "events_handled": 33,
+      "unique_activities": 1,
+      "unique_cases": 18,
+      "activity_diversity": 0.024,
+      "utilization": 0.0,
+      "total_value_handled": 1095874.0
+    },
+    {
+      "resource": "user_256",
+      "events_handled": 32,
+      "unique_activities": 5,
+      "unique_cases": 23,
+      "activity_diversity": 0.119,
+      "utilization": 0.0,
+      "total_value_handled": 660873.0
+    },
+    {
+      "resource": "user_309",
+      "events_handled": 32,
+      "unique_activities": 2,
+      "unique_cases": 32,
+      "activity_diversity": 0.048,
+      "utilization": 0.0,
+      "total_value_handled": 33798.0
+    },
+    {
+      "resource": "user_336",
+      "events_handled": 32,
+      "unique_activities": 1,
+      "unique_cases": 3,
+      "activity_diversity": 0.024,
+      "utilization": 0.0,
+      "total_value_handled": 467249.0
+    },
+    {
+      "resource": "user_268",
+      "events_handled": 32,
+      "unique_activities": 1,
+      "unique_cases": 23,
+      "activity_diversity": 0.024,
+      "utilization": 0.0,
+      "total_value_handled": 81562.0
+    },
+    {
+      "resource": "user_394",
+      "events_handled": 31,
+      "unique_activities": 2,
+      "unique_cases": 27,
+      "activity_diversity": 0.048,
+      "utilization": 0.0,
+      "total_value_handled": 309860.0
+    },
+    {
+      "resource": "user_410",
+      "events_handled": 31,
+      "unique_activities": 1,
+      "unique_cases": 2,
+      "activity_diversity": 0.024,
+      "utilization": 0.0,
+      "total_value_handled": 601151.0
+    },
+    {
+      "resource": "user_242",
+      "events_handled": 31,
+      "unique_activities": 1,
+      "unique_cases": 7,
+      "activity_diversity": 0.024,
+      "utilization": 0.0,
+      "total_value_handled": 132324.0
+    },
+    {
+      "resource": "user_365",
+      "events_handled": 31,
+      "unique_activities": 1,
+      "unique_cases": 1,
+      "activity_diversity": 0.024,
+      "utilization": 0.0,
+      "total_value_handled": 435736.0
+    },
+    {
+      "resource": "user_601",
+      "events_handled": 31,
+      "unique_activities": 3,
+      "unique_cases": 5,
+      "activity_diversity": 0.071,
+      "utilization": 0.0,
+      "total_value_handled": 241879.0
+    },
+    {
+      "resource": "user_501",
+      "events_handled": 30,
+      "unique_activities": 1,
+      "unique_cases": 30,
+      "activity_diversity": 0.024,
+      "utilization": 0.0,
+      "total_value_handled": 47624.0
+    },
+    {
+      "resource": "user_348",
+      "events_handled": 30,
+      "unique_activities": 1,
+      "unique_cases": 30,
+      "activity_diversity": 0.024,
+      "utilization": 0.0,
+      "total_value_handled": 14246.0
+    },
+    {
+      "resource": "user_026",
+      "events_handled": 30,
+      "unique_activities": 6,
+      "unique_cases": 7,
+      "activity_diversity": 0.143,
+      "utilization": 0.0,
+      "total_value_handled": 187968.0
+    },
+    {
+      "resource": "user_490",
+      "events_handled": 29,
+      "unique_activities": 2,
+      "unique_cases": 25,
+      "activity_diversity": 0.048,
+      "utilization": 0.0,
+      "total_value_handled": 421415.0
+    },
+    {
+      "resource": "user_427",
+      "events_handled": 28,
+      "unique_activities": 1,
+      "unique_cases": 4,
+      "activity_diversity": 0.024,
+      "utilization": 0.0,
+      "total_value_handled": 297150.0
+    },
+    {
+      "resource": "user_290",
+      "events_handled": 27,
+      "unique_activities": 2,
+      "unique_cases": 6,
+      "activity_diversity": 0.048,
+      "utilization": 0.0,
+      "total_value_handled": 3863747.0
+    },
+    {
+      "resource": "user_502",
+      "events_handled": 27,
+      "unique_activities": 2,
+      "unique_cases": 24,
+      "activity_diversity": 0.048,
+      "utilization": 0.0,
+      "total_value_handled": 80770.0
+    },
+    {
+      "resource": "user_483",
+      "events_handled": 27,
+      "unique_activities": 2,
+      "unique_cases": 25,
+      "activity_diversity": 0.048,
+      "utilization": 0.0,
+      "total_value_handled": 203588.0
+    },
+    {
+      "resource": "user_456",
+      "events_handled": 27,
+      "unique_activities": 2,
+      "unique_cases": 26,
+      "activity_diversity": 0.048,
+      "utilization": 0.0,
+      "total_value_handled": 567444.0
+    },
+    {
+      "resource": "user_507",
+      "events_handled": 26,
+      "unique_activities": 2,
+      "unique_cases": 22,
+      "activity_diversity": 0.048,
+      "utilization": 0.0,
+      "total_value_handled": 219834.0
+    },
+    {
+      "resource": "user_291",
+      "events_handled": 26,
+      "unique_activities": 2,
+      "unique_cases": 10,
+      "activity_diversity": 0.048,
+      "utilization": 0.0,
+      "total_value_handled": 4594309.0
+    },
+    {
+      "resource": "user_229",
+      "events_handled": 26,
+      "unique_activities": 1,
+      "unique_cases": 26,
+      "activity_diversity": 0.024,
+      "utilization": 0.0,
+      "total_value_handled": 120520.0
+    },
+    {
+      "resource": "user_551",
+      "events_handled": 26,
+      "unique_activities": 1,
+      "unique_cases": 26,
+      "activity_diversity": 0.024,
+      "utilization": 0.0,
+      "total_value_handled": 126390.0
+    },
+    {
+      "resource": "user_412",
+      "events_handled": 25,
+      "unique_activities": 1,
+      "unique_cases": 1,
+      "activity_diversity": 0.024,
+      "utilization": 0.0,
+      "total_value_handled": 465250.0
+    },
+    {
+      "resource": "user_017",
+      "events_handled": 25,
+      "unique_activities": 5,
+      "unique_cases": 19,
+      "activity_diversity": 0.119,
+      "utilization": 0.0,
+      "total_value_handled": 1750964.0
+    },
+    {
+      "resource": "user_301",
+      "events_handled": 25,
+      "unique_activities": 1,
+      "unique_cases": 2,
+      "activity_diversity": 0.024,
+      "utilization": 0.0,
+      "total_value_handled": 539722.0
+    },
+    {
+      "resource": "user_371",
+      "events_handled": 25,
+      "unique_activities": 1,
+      "unique_cases": 25,
+      "activity_diversity": 0.024,
+      "utilization": 0.0,
+      "total_value_handled": 10265.0
+    },
+    {
+      "resource": "user_467",
+      "events_handled": 24,
+      "unique_activities": 1,
+      "unique_cases": 24,
+      "activity_diversity": 0.024,
+      "utilization": 0.0,
+      "total_value_handled": 212367.0
+    },
+    {
+      "resource": "user_472",
+      "events_handled": 23,
+      "unique_activities": 2,
+      "unique_cases": 19,
+      "activity_diversity": 0.048,
+      "utilization": 0.0,
+      "total_value_handled": 11541.0
+    },
+    {
+      "resource": "user_563",
+      "events_handled": 23,
+      "unique_activities": 2,
+      "unique_cases": 16,
+      "activity_diversity": 0.048,
+      "utilization": 0.0,
+      "total_value_handled": 30822.0
+    },
+    {
+      "resource": "user_513",
+      "events_handled": 23,
+      "unique_activities": 2,
+      "unique_cases": 21,
+      "activity_diversity": 0.048,
+      "utilization": 0.0,
+      "total_value_handled": 50815.0
+    },
+    {
+      "resource": "user_547",
+      "events_handled": 22,
+      "unique_activities": 2,
+      "unique_cases": 20,
+      "activity_diversity": 0.048,
+      "utilization": 0.0,
+      "total_value_handled": 49934.0
+    },
+    {
+      "resource": "user_404",
+      "events_handled": 22,
+      "unique_activities": 1,
+      "unique_cases": 6,
+      "activity_diversity": 0.024,
+      "utilization": 0.0,
+      "total_value_handled": 1013241.0
+    },
+    {
+      "resource": "user_478",
+      "events_handled": 22,
+      "unique_activities": 1,
+      "unique_cases": 22,
+      "activity_diversity": 0.024,
+      "utilization": 0.0,
+      "total_value_handled": 18455.0
+    },
+    {
+      "resource": "user_253",
+      "events_handled": 21,
+      "unique_activities": 1,
+      "unique_cases": 15,
+      "activity_diversity": 0.024,
+      "utilization": 0.0,
+      "total_value_handled": 340369.0
+    },
+    {
+      "resource": "user_567",
+      "events_handled": 21,
+      "unique_activities": 2,
+      "unique_cases": 17,
+      "activity_diversity": 0.048,
+      "utilization": 0.0,
+      "total_value_handled": 34729.0
+    },
+    {
+      "resource": "user_445",
+      "events_handled": 20,
+      "unique_activities": 4,
+      "unique_cases": 5,
+      "activity_diversity": 0.095,
+      "utilization": 0.0,
+      "total_value_handled": 496.0
+    },
+    {
+      "resource": "user_521",
+      "events_handled": 20,
+      "unique_activities": 1,
+      "unique_cases": 20,
+      "activity_diversity": 0.024,
+      "utilization": 0.0,
+      "total_value_handled": 39594.0
+    },
+    {
+      "resource": "user_503",
+      "events_handled": 20,
+      "unique_activities": 1,
+      "unique_cases": 20,
+      "activity_diversity": 0.024,
+      "utilization": 0.0,
+      "total_value_handled": 150876.0
+    },
+    {
+      "resource": "user_479",
+      "events_handled": 20,
+      "unique_activities": 1,
+      "unique_cases": 20,
+      "activity_diversity": 0.024,
+      "utilization": 0.0,
+      "total_value_handled": 10408.0
+    },
+    {
+      "resource": "user_516",
+      "events_handled": 19,
+      "unique_activities": 1,
+      "unique_cases": 19,
+      "activity_diversity": 0.024,
+      "utilization": 0.0,
+      "total_value_handled": 72357.0
+    },
+    {
+      "resource": "user_506",
+      "events_handled": 19,
+      "unique_activities": 1,
+      "unique_cases": 19,
+      "activity_diversity": 0.024,
+      "utilization": 0.0,
+      "total_value_handled": 164719.0
+    },
+    {
+      "resource": "user_183",
+      "events_handled": 19,
+      "unique_activities": 1,
+      "unique_cases": 19,
+      "activity_diversity": 0.024,
+      "utilization": 0.0,
+      "total_value_handled": 54656.0
+    },
+    {
+      "resource": "user_512",
+      "events_handled": 19,
+      "unique_activities": 1,
+      "unique_cases": 19,
+      "activity_diversity": 0.024,
+      "utilization": 0.0,
+      "total_value_handled": 284816.0
+    },
+    {
+      "resource": "user_247",
+      "events_handled": 19,
+      "unique_activities": 2,
+      "unique_cases": 19,
+      "activity_diversity": 0.048,
+      "utilization": 0.0,
+      "total_value_handled": 176259.0
+    },
+    {
+      "resource": "user_499",
+      "events_handled": 18,
+      "unique_activities": 2,
+      "unique_cases": 15,
+      "activity_diversity": 0.048,
+      "utilization": 0.0,
+      "total_value_handled": 145412.0
+    },
+    {
+      "resource": "user_477",
+      "events_handled": 18,
+      "unique_activities": 1,
+      "unique_cases": 18,
+      "activity_diversity": 0.024,
+      "utilization": 0.0,
+      "total_value_handled": 44549.0
+    },
+    {
+      "resource": "user_129",
+      "events_handled": 18,
+      "unique_activities": 4,
+      "unique_cases": 16,
+      "activity_diversity": 0.095,
+      "utilization": 0.0,
+      "total_value_handled": 172835.0
+    },
+    {
+      "resource": "user_569",
+      "events_handled": 18,
+      "unique_activities": 1,
+      "unique_cases": 18,
+      "activity_diversity": 0.024,
+      "utilization": 0.0,
+      "total_value_handled": 20759.0
+    },
+    {
+      "resource": "user_535",
+      "events_handled": 18,
+      "unique_activities": 1,
+      "unique_cases": 18,
+      "activity_diversity": 0.024,
+      "utilization": 0.0,
+      "total_value_handled": 21159.0
+    },
+    {
+      "resource": "user_487",
+      "events_handled": 17,
+      "unique_activities": 1,
+      "unique_cases": 17,
+      "activity_diversity": 0.024,
+      "utilization": 0.0,
+      "total_value_handled": 6004.0
+    },
+    {
+      "resource": "user_246",
+      "events_handled": 16,
+      "unique_activities": 1,
+      "unique_cases": 16,
+      "activity_diversity": 0.024,
+      "utilization": 0.0,
+      "total_value_handled": 76140.0
+    },
+    {
+      "resource": "user_518",
+      "events_handled": 16,
+      "unique_activities": 1,
+      "unique_cases": 16,
+      "activity_diversity": 0.024,
+      "utilization": 0.0,
+      "total_value_handled": 2762.0
+    },
+    {
+      "resource": "batch_09",
+      "events_handled": 16,
+      "unique_activities": 1,
+      "unique_cases": 15,
+      "activity_diversity": 0.024,
+      "utilization": 0.0,
+      "total_value_handled": 107109.0
+    },
+    {
+      "resource": "user_511",
+      "events_handled": 16,
+      "unique_activities": 2,
+      "unique_cases": 13,
+      "activity_diversity": 0.048,
+      "utilization": 0.0,
+      "total_value_handled": 8858.0
+    },
+    {
+      "resource": "user_289",
+      "events_handled": 15,
+      "unique_activities": 2,
+      "unique_cases": 9,
+      "activity_diversity": 0.048,
+      "utilization": 0.0,
+      "total_value_handled": 1994240.0
+    },
+    {
+      "resource": "user_383",
+      "events_handled": 15,
+      "unique_activities": 1,
+      "unique_cases": 7,
+      "activity_diversity": 0.024,
+      "utilization": 0.0,
+      "total_value_handled": 321630.0
+    },
+    {
+      "resource": "user_281",
+      "events_handled": 15,
+      "unique_activities": 3,
+      "unique_cases": 14,
+      "activity_diversity": 0.071,
+      "utilization": 0.0,
+      "total_value_handled": 29738.0
+    },
+    {
+      "resource": "user_287",
+      "events_handled": 14,
+      "unique_activities": 2,
+      "unique_cases": 8,
+      "activity_diversity": 0.048,
+      "utilization": 0.0,
+      "total_value_handled": 3618865.0
+    },
+    {
+      "resource": "user_295",
+      "events_handled": 14,
+      "unique_activities": 1,
+      "unique_cases": 14,
+      "activity_diversity": 0.024,
+      "utilization": 0.0,
+      "total_value_handled": 14782.0
+    },
+    {
+      "resource": "user_241",
+      "events_handled": 14,
+      "unique_activities": 1,
+      "unique_cases": 14,
+      "activity_diversity": 0.024,
+      "utilization": 0.0,
+      "total_value_handled": 45168.0
+    },
+    {
+      "resource": "user_568",
+      "events_handled": 14,
+      "unique_activities": 1,
+      "unique_cases": 14,
+      "activity_diversity": 0.024,
+      "utilization": 0.0,
+      "total_value_handled": 19940.0
+    },
+    {
+      "resource": "user_278",
+      "events_handled": 14,
+      "unique_activities": 2,
+      "unique_cases": 13,
+      "activity_diversity": 0.048,
+      "utilization": 0.0,
+      "total_value_handled": 6988855.0
+    },
+    {
+      "resource": "user_494",
+      "events_handled": 14,
+      "unique_activities": 2,
+      "unique_cases": 13,
+      "activity_diversity": 0.048,
+      "utilization": 0.0,
+      "total_value_handled": 57513.0
+    },
+    {
+      "resource": "user_605",
+      "events_handled": 13,
+      "unique_activities": 3,
+      "unique_cases": 5,
+      "activity_diversity": 0.071,
+      "utilization": 0.0,
+      "total_value_handled": 131337.0
+    },
+    {
+      "resource": "user_226",
+      "events_handled": 13,
+      "unique_activities": 1,
+      "unique_cases": 13,
+      "activity_diversity": 0.024,
+      "utilization": 0.0,
+      "total_value_handled": 10415.0
+    },
+    {
+      "resource": "user_143",
+      "events_handled": 13,
+      "unique_activities": 4,
+      "unique_cases": 10,
+      "activity_diversity": 0.095,
+      "utilization": 0.0,
+      "total_value_handled": 1087793.0
+    },
+    {
+      "resource": "user_550",
+      "events_handled": 13,
+      "unique_activities": 2,
+      "unique_cases": 10,
+      "activity_diversity": 0.048,
+      "utilization": 0.0,
+      "total_value_handled": 35693.0
+    },
+    {
+      "resource": "user_366",
+      "events_handled": 13,
+      "unique_activities": 4,
+      "unique_cases": 5,
+      "activity_diversity": 0.095,
+      "utilization": 0.0,
+      "total_value_handled": 22498.0
+    },
+    {
+      "resource": "user_564",
+      "events_handled": 13,
+      "unique_activities": 2,
+      "unique_cases": 11,
+      "activity_diversity": 0.048,
+      "utilization": 0.0,
+      "total_value_handled": 24271.0
+    },
+    {
+      "resource": "user_520",
+      "events_handled": 13,
+      "unique_activities": 1,
+      "unique_cases": 13,
+      "activity_diversity": 0.024,
+      "utilization": 0.0,
+      "total_value_handled": 24965.0
+    },
+    {
+      "resource": "user_515",
+      "events_handled": 13,
+      "unique_activities": 2,
+      "unique_cases": 10,
+      "activity_diversity": 0.048,
+      "utilization": 0.0,
+      "total_value_handled": 28597.0
+    },
+    {
+      "resource": "user_399",
+      "events_handled": 12,
+      "unique_activities": 1,
+      "unique_cases": 12,
+      "activity_diversity": 0.024,
+      "utilization": 0.0,
+      "total_value_handled": 4066.0
+    },
+    {
+      "resource": "user_351",
+      "events_handled": 12,
+      "unique_activities": 1,
+      "unique_cases": 12,
+      "activity_diversity": 0.024,
+      "utilization": 0.0,
+      "total_value_handled": 826335.0
+    },
+    {
+      "resource": "user_558",
+      "events_handled": 12,
+      "unique_activities": 2,
+      "unique_cases": 11,
+      "activity_diversity": 0.048,
+      "utilization": 0.0,
+      "total_value_handled": 15743.0
+    },
+    {
+      "resource": "user_549",
+      "events_handled": 12,
+      "unique_activities": 1,
+      "unique_cases": 9,
+      "activity_diversity": 0.024,
+      "utilization": 0.0,
+      "total_value_handled": 9525.0
+    },
+    {
+      "resource": "user_492",
+      "events_handled": 12,
+      "unique_activities": 2,
+      "unique_cases": 9,
+      "activity_diversity": 0.048,
+      "utilization": 0.0,
+      "total_value_handled": 27501.0
+    },
+    {
+      "resource": "user_403",
+      "events_handled": 11,
+      "unique_activities": 1,
+      "unique_cases": 2,
+      "activity_diversity": 0.024,
+      "utilization": 0.0,
+      "total_value_handled": 293590.0
+    },
+    {
+      "resource": "user_303",
+      "events_handled": 11,
+      "unique_activities": 2,
+      "unique_cases": 9,
+      "activity_diversity": 0.048,
+      "utilization": 0.0,
+      "total_value_handled": 151445.0
+    },
+    {
+      "resource": "user_150",
+      "events_handled": 11,
+      "unique_activities": 5,
+      "unique_cases": 8,
+      "activity_diversity": 0.119,
+      "utilization": 0.0,
+      "total_value_handled": 47606.0
+    },
+    {
+      "resource": "user_578",
+      "events_handled": 11,
+      "unique_activities": 1,
+      "unique_cases": 11,
+      "activity_diversity": 0.024,
+      "utilization": 0.0,
+      "total_value_handled": 70367.0
+    },
+    {
+      "resource": "user_577",
+      "events_handled": 10,
+      "unique_activities": 1,
+      "unique_cases": 10,
+      "activity_diversity": 0.024,
+      "utilization": 0.0,
+      "total_value_handled": 12387.0
+    },
+    {
+      "resource": "user_357",
+      "events_handled": 10,
+      "unique_activities": 1,
+      "unique_cases": 8,
+      "activity_diversity": 0.024,
+      "utilization": 0.0,
+      "total_value_handled": 64643.0
+    },
+    {
+      "resource": "user_237",
+      "events_handled": 10,
+      "unique_activities": 1,
+      "unique_cases": 10,
+      "activity_diversity": 0.024,
+      "utilization": 0.0,
+      "total_value_handled": 1496273.0
+    },
+    {
+      "resource": "user_276",
+      "events_handled": 9,
+      "unique_activities": 1,
+      "unique_cases": 9,
+      "activity_diversity": 0.024,
+      "utilization": 0.0,
+      "total_value_handled": 0.0
+    },
+    {
+      "resource": "user_379",
+      "events_handled": 9,
+      "unique_activities": 1,
+      "unique_cases": 4,
+      "activity_diversity": 0.024,
+      "utilization": 0.0,
+      "total_value_handled": 73860.0
+    },
+    {
+      "resource": "user_581",
+      "events_handled": 9,
+      "unique_activities": 3,
+      "unique_cases": 6,
+      "activity_diversity": 0.071,
+      "utilization": 0.0,
+      "total_value_handled": 47351.0
+    },
+    {
+      "resource": "user_557",
+      "events_handled": 9,
+      "unique_activities": 1,
+      "unique_cases": 9,
+      "activity_diversity": 0.024,
+      "utilization": 0.0,
+      "total_value_handled": 31855.0
+    },
+    {
+      "resource": "user_028",
+      "events_handled": 9,
+      "unique_activities": 3,
+      "unique_cases": 3,
+      "activity_diversity": 0.071,
+      "utilization": 0.0,
+      "total_value_handled": 2130.0
+    },
+    {
+      "resource": "user_474",
+      "events_handled": 9,
+      "unique_activities": 1,
+      "unique_cases": 9,
+      "activity_diversity": 0.024,
+      "utilization": 0.0,
+      "total_value_handled": 138489.0
+    },
+    {
+      "resource": "user_228",
+      "events_handled": 9,
+      "unique_activities": 4,
+      "unique_cases": 5,
+      "activity_diversity": 0.095,
+      "utilization": 0.0,
+      "total_value_handled": 397377.0
+    },
+    {
+      "resource": "user_504",
+      "events_handled": 9,
+      "unique_activities": 1,
+      "unique_cases": 9,
+      "activity_diversity": 0.024,
+      "utilization": 0.0,
+      "total_value_handled": 241555.0
+    },
+    {
+      "resource": "user_527",
+      "events_handled": 9,
+      "unique_activities": 1,
+      "unique_cases": 9,
+      "activity_diversity": 0.024,
+      "utilization": 0.0,
+      "total_value_handled": 213773.0
+    },
+    {
+      "resource": "user_554",
+      "events_handled": 9,
+      "unique_activities": 1,
+      "unique_cases": 9,
+      "activity_diversity": 0.024,
+      "utilization": 0.0,
+      "total_value_handled": 1648.0
+    },
+    {
+      "resource": "user_543",
+      "events_handled": 9,
+      "unique_activities": 1,
+      "unique_cases": 9,
+      "activity_diversity": 0.024,
+      "utilization": 0.0,
+      "total_value_handled": 35092.0
+    },
+    {
+      "resource": "user_528",
+      "events_handled": 8,
+      "unique_activities": 1,
+      "unique_cases": 8,
+      "activity_diversity": 0.024,
+      "utilization": 0.0,
+      "total_value_handled": 44298.0
+    },
+    {
+      "resource": "user_390",
+      "events_handled": 8,
+      "unique_activities": 1,
+      "unique_cases": 8,
+      "activity_diversity": 0.024,
+      "utilization": 0.0,
+      "total_value_handled": 283817.0
+    },
+    {
+      "resource": "user_398",
+      "events_handled": 8,
+      "unique_activities": 1,
+      "unique_cases": 8,
+      "activity_diversity": 0.024,
+      "utilization": 0.0,
+      "total_value_handled": 50466.0
+    },
+    {
+      "resource": "user_310",
+      "events_handled": 8,
+      "unique_activities": 1,
+      "unique_cases": 8,
+      "activity_diversity": 0.024,
+      "utilization": 0.0,
+      "total_value_handled": 107124.0
+    },
+    {
+      "resource": "user_437",
+      "events_handled": 8,
+      "unique_activities": 3,
+      "unique_cases": 6,
+      "activity_diversity": 0.071,
+      "utilization": 0.0,
+      "total_value_handled": 22603.0
+    },
+    {
+      "resource": "user_297",
+      "events_handled": 8,
+      "unique_activities": 2,
+      "unique_cases": 4,
+      "activity_diversity": 0.048,
+      "utilization": 0.0,
+      "total_value_handled": 2692.0
+    },
+    {
+      "resource": "user_389",
+      "events_handled": 7,
+      "unique_activities": 1,
+      "unique_cases": 7,
+      "activity_diversity": 0.024,
+      "utilization": 0.0,
+      "total_value_handled": 9563.0
+    },
+    {
+      "resource": "user_546",
+      "events_handled": 7,
+      "unique_activities": 1,
+      "unique_cases": 7,
+      "activity_diversity": 0.024,
+      "utilization": 0.0,
+      "total_value_handled": 5251.0
+    },
+    {
+      "resource": "user_395",
+      "events_handled": 7,
+      "unique_activities": 1,
+      "unique_cases": 7,
+      "activity_diversity": 0.024,
+      "utilization": 0.0,
+      "total_value_handled": 0.0
+    },
+    {
+      "resource": "user_413",
+      "events_handled": 7,
+      "unique_activities": 1,
+      "unique_cases": 2,
+      "activity_diversity": 0.024,
+      "utilization": 0.0,
+      "total_value_handled": 99202.0
+    },
+    {
+      "resource": "user_230",
+      "events_handled": 6,
+      "unique_activities": 1,
+      "unique_cases": 6,
+      "activity_diversity": 0.024,
+      "utilization": 0.0,
+      "total_value_handled": 15464.0
+    },
+    {
+      "resource": "user_538",
+      "events_handled": 6,
+      "unique_activities": 2,
+      "unique_cases": 3,
+      "activity_diversity": 0.048,
+      "utilization": 0.0,
+      "total_value_handled": 2332.0
+    },
+    {
+      "resource": "user_382",
+      "events_handled": 6,
+      "unique_activities": 1,
+      "unique_cases": 6,
+      "activity_diversity": 0.024,
+      "utilization": 0.0,
+      "total_value_handled": 53759.0
+    },
+    {
+      "resource": "batch_19",
+      "events_handled": 6,
+      "unique_activities": 2,
+      "unique_cases": 6,
+      "activity_diversity": 0.048,
+      "utilization": 0.0,
+      "total_value_handled": 7407.0
+    },
+    {
+      "resource": "user_401",
+      "events_handled": 6,
+      "unique_activities": 3,
+      "unique_cases": 6,
+      "activity_diversity": 0.071,
+      "utilization": 0.0,
+      "total_value_handled": 39210.0
+    },
+    {
+      "resource": "user_402",
+      "events_handled": 6,
+      "unique_activities": 1,
+      "unique_cases": 6,
+      "activity_diversity": 0.024,
+      "utilization": 0.0,
+      "total_value_handled": 50060.0
+    },
+    {
+      "resource": "user_491",
+      "events_handled": 6,
+      "unique_activities": 1,
+      "unique_cases": 6,
+      "activity_diversity": 0.024,
+      "utilization": 0.0,
+      "total_value_handled": 22170.0
+    },
+    {
+      "resource": "user_508",
+      "events_handled": 6,
+      "unique_activities": 1,
+      "unique_cases": 6,
+      "activity_diversity": 0.024,
+      "utilization": 0.0,
+      "total_value_handled": 67685.0
+    },
+    {
+      "resource": "user_588",
+      "events_handled": 5,
+      "unique_activities": 1,
+      "unique_cases": 5,
+      "activity_diversity": 0.024,
+      "utilization": 0.0,
+      "total_value_handled": 8323.0
+    },
+    {
+      "resource": "user_589",
+      "events_handled": 5,
+      "unique_activities": 1,
+      "unique_cases": 5,
+      "activity_diversity": 0.024,
+      "utilization": 0.0,
+      "total_value_handled": 1863.0
+    },
+    {
+      "resource": "user_598",
+      "events_handled": 5,
+      "unique_activities": 1,
+      "unique_cases": 5,
+      "activity_diversity": 0.024,
+      "utilization": 0.0,
+      "total_value_handled": 55164.0
+    },
+    {
+      "resource": "user_533",
+      "events_handled": 5,
+      "unique_activities": 1,
+      "unique_cases": 5,
+      "activity_diversity": 0.024,
+      "utilization": 0.0,
+      "total_value_handled": 218300.0
+    },
+    {
+      "resource": "user_565",
+      "events_handled": 5,
+      "unique_activities": 2,
+      "unique_cases": 4,
+      "activity_diversity": 0.048,
+      "utilization": 0.0,
+      "total_value_handled": 17266.0
+    },
+    {
+      "resource": "user_559",
+      "events_handled": 5,
+      "unique_activities": 2,
+      "unique_cases": 3,
+      "activity_diversity": 0.048,
+      "utilization": 0.0,
+      "total_value_handled": 26334.0
+    },
+    {
+      "resource": "user_580",
+      "events_handled": 5,
+      "unique_activities": 1,
+      "unique_cases": 5,
+      "activity_diversity": 0.024,
+      "utilization": 0.0,
+      "total_value_handled": 10538.0
+    },
+    {
+      "resource": "user_438",
+      "events_handled": 4,
+      "unique_activities": 1,
+      "unique_cases": 4,
+      "activity_diversity": 0.024,
+      "utilization": 0.0,
+      "total_value_handled": 32680.0
+    },
+    {
+      "resource": "user_555",
+      "events_handled": 4,
+      "unique_activities": 1,
+      "unique_cases": 4,
+      "activity_diversity": 0.024,
+      "utilization": 0.0,
+      "total_value_handled": 4713.0
+    },
+    {
+      "resource": "user_532",
+      "events_handled": 4,
+      "unique_activities": 1,
+      "unique_cases": 4,
+      "activity_diversity": 0.024,
+      "utilization": 0.0,
+      "total_value_handled": 15087.0
+    },
+    {
+      "resource": "user_227",
+      "events_handled": 4,
+      "unique_activities": 2,
+      "unique_cases": 3,
+      "activity_diversity": 0.048,
+      "utilization": 0.0,
+      "total_value_handled": 8416.0
+    },
+    {
+      "resource": "user_444",
+      "events_handled": 4,
+      "unique_activities": 4,
+      "unique_cases": 1,
+      "activity_diversity": 0.095,
+      "utilization": 0.0,
+      "total_value_handled": 747900.0
+    },
+    {
+      "resource": "user_531",
+      "events_handled": 4,
+      "unique_activities": 1,
+      "unique_cases": 4,
+      "activity_diversity": 0.024,
+      "utilization": 0.0,
+      "total_value_handled": 143461.0
+    },
+    {
+      "resource": "user_570",
+      "events_handled": 4,
+      "unique_activities": 1,
+      "unique_cases": 4,
+      "activity_diversity": 0.024,
+      "utilization": 0.0,
+      "total_value_handled": 4486.0
+    },
+    {
+      "resource": "user_576",
+      "events_handled": 4,
+      "unique_activities": 1,
+      "unique_cases": 4,
+      "activity_diversity": 0.024,
+      "utilization": 0.0,
+      "total_value_handled": 24.0
+    },
+    {
+      "resource": "user_296",
+      "events_handled": 4,
+      "unique_activities": 1,
+      "unique_cases": 4,
+      "activity_diversity": 0.024,
+      "utilization": 0.0,
+      "total_value_handled": 47672.0
+    },
+    {
+      "resource": "user_442",
+      "events_handled": 4,
+      "unique_activities": 1,
+      "unique_cases": 4,
+      "activity_diversity": 0.024,
+      "utilization": 0.0,
+      "total_value_handled": 61316.0
+    },
+    {
+      "resource": "user_579",
+      "events_handled": 4,
+      "unique_activities": 1,
+      "unique_cases": 4,
+      "activity_diversity": 0.024,
+      "utilization": 0.0,
+      "total_value_handled": 10978.0
+    },
+    {
+      "resource": "batch_18",
+      "events_handled": 4,
+      "unique_activities": 4,
+      "unique_cases": 1,
+      "activity_diversity": 0.095,
+      "utilization": 0.0,
+      "total_value_handled": 5196.0
+    },
+    {
+      "resource": "user_396",
+      "events_handled": 3,
+      "unique_activities": 2,
+      "unique_cases": 3,
+      "activity_diversity": 0.048,
+      "utilization": 0.0,
+      "total_value_handled": 197646.0
+    },
+    {
+      "resource": "user_338",
+      "events_handled": 3,
+      "unique_activities": 1,
+      "unique_cases": 3,
+      "activity_diversity": 0.024,
+      "utilization": 0.0,
+      "total_value_handled": 14530.0
+    },
+    {
+      "resource": "user_573",
+      "events_handled": 3,
+      "unique_activities": 1,
+      "unique_cases": 3,
+      "activity_diversity": 0.024,
+      "utilization": 0.0,
+      "total_value_handled": 4604.0
+    },
+    {
+      "resource": "user_571",
+      "events_handled": 3,
+      "unique_activities": 1,
+      "unique_cases": 3,
+      "activity_diversity": 0.024,
+      "utilization": 0.0,
+      "total_value_handled": 3797.0
+    },
+    {
+      "resource": "user_566",
+      "events_handled": 3,
+      "unique_activities": 1,
+      "unique_cases": 3,
+      "activity_diversity": 0.024,
+      "utilization": 0.0,
+      "total_value_handled": 15810.0
+    },
+    {
+      "resource": "user_561",
+      "events_handled": 3,
+      "unique_activities": 1,
+      "unique_cases": 2,
+      "activity_diversity": 0.024,
+      "utilization": 0.0,
+      "total_value_handled": 3843.0
+    },
+    {
+      "resource": "user_132",
+      "events_handled": 3,
+      "unique_activities": 1,
+      "unique_cases": 2,
+      "activity_diversity": 0.024,
+      "utilization": 0.0,
+      "total_value_handled": 195203.0
+    },
+    {
+      "resource": "user_517",
+      "events_handled": 3,
+      "unique_activities": 1,
+      "unique_cases": 3,
+      "activity_diversity": 0.024,
+      "utilization": 0.0,
+      "total_value_handled": 25007.0
+    },
+    {
+      "resource": "user_556",
+      "events_handled": 3,
+      "unique_activities": 1,
+      "unique_cases": 3,
+      "activity_diversity": 0.024,
+      "utilization": 0.0,
+      "total_value_handled": 2398.0
+    },
+    {
+      "resource": "user_393",
+      "events_handled": 3,
+      "unique_activities": 1,
+      "unique_cases": 3,
+      "activity_diversity": 0.024,
+      "utilization": 0.0,
+      "total_value_handled": 3335.0
+    },
+    {
+      "resource": "user_431",
+      "events_handled": 3,
+      "unique_activities": 1,
+      "unique_cases": 3,
+      "activity_diversity": 0.024,
+      "utilization": 0.0,
+      "total_value_handled": 967.0
+    },
+    {
+      "resource": "user_529",
+      "events_handled": 3,
+      "unique_activities": 1,
+      "unique_cases": 3,
+      "activity_diversity": 0.024,
+      "utilization": 0.0,
+      "total_value_handled": 1622.0
+    },
+    {
+      "resource": "user_315",
+      "events_handled": 2,
+      "unique_activities": 1,
+      "unique_cases": 2,
+      "activity_diversity": 0.024,
+      "utilization": 0.0,
+      "total_value_handled": 60326.0
+    },
+    {
+      "resource": "user_385",
+      "events_handled": 2,
+      "unique_activities": 1,
+      "unique_cases": 2,
+      "activity_diversity": 0.024,
+      "utilization": 0.0,
+      "total_value_handled": 8520.0
+    },
+    {
+      "resource": "user_585",
+      "events_handled": 2,
+      "unique_activities": 1,
+      "unique_cases": 2,
+      "activity_diversity": 0.024,
+      "utilization": 0.0,
+      "total_value_handled": 50880.0
+    },
+    {
+      "resource": "user_354",
+      "events_handled": 2,
+      "unique_activities": 2,
+      "unique_cases": 1,
+      "activity_diversity": 0.048,
+      "utilization": 0.0,
+      "total_value_handled": 488.0
+    },
+    {
+      "resource": "user_386",
+      "events_handled": 2,
+      "unique_activities": 1,
+      "unique_cases": 2,
+      "activity_diversity": 0.024,
+      "utilization": 0.0,
+      "total_value_handled": 22919.0
+    },
+    {
+      "resource": "user_583",
+      "events_handled": 2,
+      "unique_activities": 1,
+      "unique_cases": 2,
+      "activity_diversity": 0.024,
+      "utilization": 0.0,
+      "total_value_handled": 29808.0
+    },
+    {
+      "resource": "user_548",
+      "events_handled": 2,
+      "unique_activities": 1,
+      "unique_cases": 2,
+      "activity_diversity": 0.024,
+      "utilization": 0.0,
+      "total_value_handled": 9469.0
+    },
+    {
+      "resource": "user_526",
+      "events_handled": 2,
+      "unique_activities": 1,
+      "unique_cases": 2,
+      "activity_diversity": 0.024,
+      "utilization": 0.0,
+      "total_value_handled": 226.0
+    },
+    {
+      "resource": "user_522",
+      "events_handled": 2,
+      "unique_activities": 1,
+      "unique_cases": 2,
+      "activity_diversity": 0.024,
+      "utilization": 0.0,
+      "total_value_handled": 13166.0
+    },
+    {
+      "resource": "user_541",
+      "events_handled": 2,
+      "unique_activities": 1,
+      "unique_cases": 2,
+      "activity_diversity": 0.024,
+      "utilization": 0.0,
+      "total_value_handled": 7884.0
+    },
+    {
+      "resource": "user_600",
+      "events_handled": 2,
+      "unique_activities": 1,
+      "unique_cases": 2,
+      "activity_diversity": 0.024,
+      "utilization": 0.0,
+      "total_value_handled": 2935.0
+    },
+    {
+      "resource": "user_423",
+      "events_handled": 2,
+      "unique_activities": 1,
+      "unique_cases": 1,
+      "activity_diversity": 0.024,
+      "utilization": 0.0,
+      "total_value_handled": 692.0
+    },
+    {
+      "resource": "user_405",
+      "events_handled": 2,
+      "unique_activities": 1,
+      "unique_cases": 2,
+      "activity_diversity": 0.024,
+      "utilization": 0.0,
+      "total_value_handled": 9878.0
+    },
+    {
+      "resource": "batch_15",
+      "events_handled": 2,
+      "unique_activities": 1,
+      "unique_cases": 2,
+      "activity_diversity": 0.024,
+      "utilization": 0.0,
+      "total_value_handled": 16872.0
+    },
+    {
+      "resource": "user_586",
+      "events_handled": 1,
+      "unique_activities": 1,
+      "unique_cases": 1,
+      "activity_diversity": 0.024,
+      "utilization": 0.0,
+      "total_value_handled": 2119.0
+    },
+    {
+      "resource": "user_596",
+      "events_handled": 1,
+      "unique_activities": 1,
+      "unique_cases": 1,
+      "activity_diversity": 0.024,
+      "utilization": 0.0,
+      "total_value_handled": 1120.0
+    },
+    {
+      "resource": "user_587",
+      "events_handled": 1,
+      "unique_activities": 1,
+      "unique_cases": 1,
+      "activity_diversity": 0.024,
+      "utilization": 0.0,
+      "total_value_handled": 35645.0
+    },
+    {
+      "resource": "user_590",
+      "events_handled": 1,
+      "unique_activities": 1,
+      "unique_cases": 1,
+      "activity_diversity": 0.024,
+      "utilization": 0.0,
+      "total_value_handled": 4905.0
+    },
+    {
+      "resource": "user_593",
+      "events_handled": 1,
+      "unique_activities": 1,
+      "unique_cases": 1,
+      "activity_diversity": 0.024,
+      "utilization": 0.0,
+      "total_value_handled": 391.0
+    },
+    {
+      "resource": "user_594",
+      "events_handled": 1,
+      "unique_activities": 1,
+      "unique_cases": 1,
+      "activity_diversity": 0.024,
+      "utilization": 0.0,
+      "total_value_handled": 1265.0
+    },
+    {
+      "resource": "user_584",
+      "events_handled": 1,
+      "unique_activities": 1,
+      "unique_cases": 1,
+      "activity_diversity": 0.024,
+      "utilization": 0.0,
+      "total_value_handled": 1556.0
+    },
+    {
+      "resource": "user_340",
+      "events_handled": 1,
+      "unique_activities": 1,
+      "unique_cases": 1,
+      "activity_diversity": 0.024,
+      "utilization": 0.0,
+      "total_value_handled": 13856.0
+    },
+    {
+      "resource": "user_575",
+      "events_handled": 1,
+      "unique_activities": 1,
+      "unique_cases": 1,
+      "activity_diversity": 0.024,
+      "utilization": 0.0,
+      "total_value_handled": 19804.0
+    },
+    {
+      "resource": "user_443",
+      "events_handled": 1,
+      "unique_activities": 1,
+      "unique_cases": 1,
+      "activity_diversity": 0.024,
+      "utilization": 0.0,
+      "total_value_handled": 457.0
+    },
+    {
+      "resource": "user_282",
+      "events_handled": 1,
+      "unique_activities": 1,
+      "unique_cases": 1,
+      "activity_diversity": 0.024,
+      "utilization": 0.0,
+      "total_value_handled": 21064.0
+    },
+    {
+      "resource": "user_425",
+      "events_handled": 1,
+      "unique_activities": 1,
+      "unique_cases": 1,
+      "activity_diversity": 0.024,
+      "utilization": 0.0,
+      "total_value_handled": 2702.0
+    },
+    {
+      "resource": "user_298",
+      "events_handled": 1,
+      "unique_activities": 1,
+      "unique_cases": 1,
+      "activity_diversity": 0.024,
+      "utilization": 0.0,
+      "total_value_handled": 16888.0
+    },
+    {
+      "resource": "user_422",
+      "events_handled": 1,
+      "unique_activities": 1,
+      "unique_cases": 1,
+      "activity_diversity": 0.024,
+      "utilization": 0.0,
+      "total_value_handled": 913.0
+    },
+    {
+      "resource": "user_420",
+      "events_handled": 1,
+      "unique_activities": 1,
+      "unique_cases": 1,
+      "activity_diversity": 0.024,
+      "utilization": 0.0,
+      "total_value_handled": 2788.0
+    },
+    {
+      "resource": "user_426",
+      "events_handled": 1,
+      "unique_activities": 1,
+      "unique_cases": 1,
+      "activity_diversity": 0.024,
+      "utilization": 0.0,
+      "total_value_handled": 0.0
+    },
+    {
+      "resource": "user_415",
+      "events_handled": 1,
+      "unique_activities": 1,
+      "unique_cases": 1,
+      "activity_diversity": 0.024,
+      "utilization": 0.0,
+      "total_value_handled": 4865.0
+    },
+    {
+      "resource": "user_414",
+      "events_handled": 1,
+      "unique_activities": 1,
+      "unique_cases": 1,
+      "activity_diversity": 0.024,
+      "utilization": 0.0,
+      "total_value_handled": 4865.0
+    },
+    {
+      "resource": "user_397",
+      "events_handled": 1,
+      "unique_activities": 1,
+      "unique_cases": 1,
+      "activity_diversity": 0.024,
+      "utilization": 0.0,
+      "total_value_handled": 20147.0
+    },
+    {
+      "resource": "user_408",
+      "events_handled": 1,
+      "unique_activities": 1,
+      "unique_cases": 1,
+      "activity_diversity": 0.024,
+      "utilization": 0.0,
+      "total_value_handled": 5592.0
+    },
+    {
+      "resource": "user_409",
+      "events_handled": 1,
+      "unique_activities": 1,
+      "unique_cases": 1,
+      "activity_diversity": 0.024,
+      "utilization": 0.0,
+      "total_value_handled": 1396.0
+    },
+    {
+      "resource": "user_418",
+      "events_handled": 1,
+      "unique_activities": 1,
+      "unique_cases": 1,
+      "activity_diversity": 0.024,
+      "utilization": 0.0,
+      "total_value_handled": 149.0
+    },
+    {
+      "resource": "user_406",
+      "events_handled": 1,
+      "unique_activities": 1,
+      "unique_cases": 1,
+      "activity_diversity": 0.024,
+      "utilization": 0.0,
+      "total_value_handled": 4281.0
+    },
+    {
+      "resource": "user_582",
+      "events_handled": 1,
+      "unique_activities": 1,
+      "unique_cases": 1,
+      "activity_diversity": 0.024,
+      "utilization": 0.0,
+      "total_value_handled": 135.0
+    },
+    {
+      "resource": "user_334",
+      "events_handled": 1,
+      "unique_activities": 1,
+      "unique_cases": 1,
+      "activity_diversity": 0.024,
+      "utilization": 0.0,
+      "total_value_handled": 4574.0
+    },
+    {
+      "resource": "user_595",
+      "events_handled": 1,
+      "unique_activities": 1,
+      "unique_cases": 1,
+      "activity_diversity": 0.024,
+      "utilization": 0.0,
+      "total_value_handled": 13717.0
+    },
+    {
+      "resource": "user_341",
+      "events_handled": 1,
+      "unique_activities": 1,
+      "unique_cases": 1,
+      "activity_diversity": 0.024,
+      "utilization": 0.0,
+      "total_value_handled": 24802.0
+    },
+    {
+      "resource": "user_343",
+      "events_handled": 1,
+      "unique_activities": 1,
+      "unique_cases": 1,
+      "activity_diversity": 0.024,
+      "utilization": 0.0,
+      "total_value_handled": 37128.0
+    },
+    {
+      "resource": "user_339",
+      "events_handled": 1,
+      "unique_activities": 1,
+      "unique_cases": 1,
+      "activity_diversity": 0.024,
+      "utilization": 0.0,
+      "total_value_handled": 23328.0
+    },
+    {
+      "resource": "user_489",
+      "events_handled": 1,
+      "unique_activities": 1,
+      "unique_cases": 1,
+      "activity_diversity": 0.024,
+      "utilization": 0.0,
+      "total_value_handled": 2525.0
+    },
+    {
+      "resource": "user_219",
+      "events_handled": 1,
+      "unique_activities": 1,
+      "unique_cases": 1,
+      "activity_diversity": 0.024,
+      "utilization": 0.0,
+      "total_value_handled": 34.0
+    },
+    {
+      "resource": "user_245",
+      "events_handled": 1,
+      "unique_activities": 1,
+      "unique_cases": 1,
+      "activity_diversity": 0.024,
+      "utilization": 0.0,
+      "total_value_handled": 23725.0
+    },
+    {
+      "resource": "user_055",
+      "events_handled": 1,
+      "unique_activities": 1,
+      "unique_cases": 1,
+      "activity_diversity": 0.024,
+      "utilization": 0.0,
+      "total_value_handled": 134.0
+    },
+    {
+      "resource": "user_542",
+      "events_handled": 1,
+      "unique_activities": 1,
+      "unique_cases": 1,
+      "activity_diversity": 0.024,
+      "utilization": 0.0,
+      "total_value_handled": 309.0
+    },
+    {
+      "resource": "user_540",
+      "events_handled": 1,
+      "unique_activities": 1,
+      "unique_cases": 1,
+      "activity_diversity": 0.024,
+      "utilization": 0.0,
+      "total_value_handled": 7669.0
+    },
+    {
+      "resource": "user_534",
+      "events_handled": 1,
+      "unique_activities": 1,
+      "unique_cases": 1,
+      "activity_diversity": 0.024,
+      "utilization": 0.0,
+      "total_value_handled": 8181.0
+    },
+    {
+      "resource": "user_553",
+      "events_handled": 1,
+      "unique_activities": 1,
+      "unique_cases": 1,
+      "activity_diversity": 0.024,
+      "utilization": 0.0,
+      "total_value_handled": 767.0
+    },
+    {
+      "resource": "user_599",
+      "events_handled": 1,
+      "unique_activities": 1,
+      "unique_cases": 1,
+      "activity_diversity": 0.024,
+      "utilization": 0.0,
+      "total_value_handled": 1607.0
+    },
+    {
+      "resource": "user_560",
+      "events_handled": 1,
+      "unique_activities": 1,
+      "unique_cases": 1,
+      "activity_diversity": 0.024,
+      "utilization": 0.0,
+      "total_value_handled": 16523.0
+    },
+    {
+      "resource": "user_562",
+      "events_handled": 1,
+      "unique_activities": 1,
+      "unique_cases": 1,
+      "activity_diversity": 0.024,
+      "utilization": 0.0,
+      "total_value_handled": 4156.0
+    },
+    {
+      "resource": "user_606",
+      "events_handled": 1,
+      "unique_activities": 1,
+      "unique_cases": 1,
+      "activity_diversity": 0.024,
+      "utilization": 0.0,
+      "total_value_handled": 18456.0
+    }
+  ]
+}

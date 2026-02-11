@@ -1,0 +1,3036 @@
+{
+  "edges": [
+    {
+      "source": "Record Service Entry Sheet",
+      "target": "Record Service Entry Sheet",
+      "frequency": 139107,
+      "avg_duration_hours": 0.04
+    },
+    {
+      "source": "Record Invoice Receipt",
+      "target": "Clear Invoice",
+      "frequency": 134955,
+      "avg_duration_hours": 1049.33
+    },
+    {
+      "source": "Record Goods Receipt",
+      "target": "Record Invoice Receipt",
+      "frequency": 112182,
+      "avg_duration_hours": 519.27
+    },
+    {
+      "source": "Vendor creates invoice",
+      "target": "Record Goods Receipt",
+      "frequency": 110215,
+      "avg_duration_hours": 58.99
+    },
+    {
+      "source": "Create Purchase Order Item",
+      "target": "Vendor creates invoice",
+      "frequency": 103150,
+      "avg_duration_hours": 286.72
+    },
+    {
+      "source": "Vendor creates invoice",
+      "target": "Record Invoice Receipt",
+      "frequency": 95218,
+      "avg_duration_hours": 301.47
+    },
+    {
+      "source": "Record Goods Receipt",
+      "target": "Vendor creates invoice",
+      "frequency": 80616,
+      "avg_duration_hours": 79.14
+    },
+    {
+      "source": "Create Purchase Order Item",
+      "target": "Record Goods Receipt",
+      "frequency": 77206,
+      "avg_duration_hours": 369.23
+    },
+    {
+      "source": "Record Goods Receipt",
+      "target": "Record Goods Receipt",
+      "frequency": 54277,
+      "avg_duration_hours": 6.72
+    },
+    {
+      "source": "Remove Payment Block",
+      "target": "Clear Invoice",
+      "frequency": 49424,
+      "avg_duration_hours": 871.95
+    },
+    {
+      "source": "Create Purchase Requisition Item",
+      "target": "Create Purchase Order Item",
+      "frequency": 46125,
+      "avg_duration_hours": 22.5
+    },
+    {
+      "source": "Record Invoice Receipt",
+      "target": "Remove Payment Block",
+      "frequency": 37621,
+      "avg_duration_hours": 512.34
+    },
+    {
+      "source": "Create Purchase Order Item",
+      "target": "Receive Order Confirmation",
+      "frequency": 30837,
+      "avg_duration_hours": 15.91
+    },
+    {
+      "source": "Record Goods Receipt",
+      "target": "Record Service Entry Sheet",
+      "frequency": 23151,
+      "avg_duration_hours": 0.94
+    },
+    {
+      "source": "Receive Order Confirmation",
+      "target": "Record Goods Receipt",
+      "frequency": 20398,
+      "avg_duration_hours": 191.04
+    },
+    {
+      "source": "Record Service Entry Sheet",
+      "target": "Record Goods Receipt",
+      "frequency": 19183,
+      "avg_duration_hours": 2.79
+    },
+    {
+      "source": "Record Invoice Receipt",
+      "target": "Record Goods Receipt",
+      "frequency": 15580,
+      "avg_duration_hours": 71.73
+    },
+    {
+      "source": "Record Goods Receipt",
+      "target": "Remove Payment Block",
+      "frequency": 15370,
+      "avg_duration_hours": 75.73
+    },
+    {
+      "source": "Create Purchase Order Item",
+      "target": "Change Quantity",
+      "frequency": 11760,
+      "avg_duration_hours": 385.46
+    },
+    {
+      "source": "Change Quantity",
+      "target": "Record Goods Receipt",
+      "frequency": 9206,
+      "avg_duration_hours": 152.64
+    },
+    {
+      "source": "Receive Order Confirmation",
+      "target": "Vendor creates invoice",
+      "frequency": 9190,
+      "avg_duration_hours": 212.47
+    },
+    {
+      "source": "Create Purchase Order Item",
+      "target": "Delete Purchase Order Item",
+      "frequency": 6890,
+      "avg_duration_hours": 223.72
+    },
+    {
+      "source": "Record Invoice Receipt",
+      "target": "Record Invoice Receipt",
+      "frequency": 6783,
+      "avg_duration_hours": 95.91
+    },
+    {
+      "source": "Create Purchase Order Item",
+      "target": "Change Price",
+      "frequency": 6433,
+      "avg_duration_hours": 163.66
+    },
+    {
+      "source": "Change Quantity",
+      "target": "Vendor creates invoice",
+      "frequency": 5994,
+      "avg_duration_hours": 296.57
+    },
+    {
+      "source": "Record Invoice Receipt",
+      "target": "Vendor creates invoice",
+      "frequency": 4054,
+      "avg_duration_hours": 92.99
+    },
+    {
+      "source": "Clear Invoice",
+      "target": "Record Invoice Receipt",
+      "frequency": 3958,
+      "avg_duration_hours": 752.9
+    },
+    {
+      "source": "Change Price",
+      "target": "Vendor creates invoice",
+      "frequency": 3396,
+      "avg_duration_hours": 277.6
+    },
+    {
+      "source": "Vendor creates invoice",
+      "target": "Create Purchase Order Item",
+      "frequency": 3318,
+      "avg_duration_hours": 2612.22
+    },
+    {
+      "source": "Clear Invoice",
+      "target": "Clear Invoice",
+      "frequency": 3213,
+      "avg_duration_hours": 410.91
+    },
+    {
+      "source": "Change Price",
+      "target": "Record Goods Receipt",
+      "frequency": 3102,
+      "avg_duration_hours": 280.79
+    },
+    {
+      "source": "Create Purchase Order Item",
+      "target": "Change Approval for Purchase Order",
+      "frequency": 3060,
+      "avg_duration_hours": 28.21
+    },
+    {
+      "source": "Cancel Invoice Receipt",
+      "target": "Clear Invoice",
+      "frequency": 3002,
+      "avg_duration_hours": 163.42
+    },
+    {
+      "source": "Record Service Entry Sheet",
+      "target": "Vendor creates invoice",
+      "frequency": 2823,
+      "avg_duration_hours": 226.29
+    },
+    {
+      "source": "Vendor creates invoice",
+      "target": "Vendor creates debit memo",
+      "frequency": 2715,
+      "avg_duration_hours": 12.33
+    },
+    {
+      "source": "Record Invoice Receipt",
+      "target": "Cancel Invoice Receipt",
+      "frequency": 2697,
+      "avg_duration_hours": 713.16
+    },
+    {
+      "source": "Vendor creates invoice",
+      "target": "Change Quantity",
+      "frequency": 2545,
+      "avg_duration_hours": 93.98
+    },
+    {
+      "source": "Change Quantity",
+      "target": "Change Quantity",
+      "frequency": 2290,
+      "avg_duration_hours": 132.97
+    },
+    {
+      "source": "Clear Invoice",
+      "target": "Cancel Invoice Receipt",
+      "frequency": 2111,
+      "avg_duration_hours": 2026.77
+    },
+    {
+      "source": "Create Purchase Order Item",
+      "target": "Record Service Entry Sheet",
+      "frequency": 2072,
+      "avg_duration_hours": 9.45
+    },
+    {
+      "source": "Record Service Entry Sheet",
+      "target": "Record Invoice Receipt",
+      "frequency": 2029,
+      "avg_duration_hours": 228.82
+    },
+    {
+      "source": "Cancel Invoice Receipt",
+      "target": "Record Invoice Receipt",
+      "frequency": 1954,
+      "avg_duration_hours": 42.81
+    },
+    {
+      "source": "Vendor creates debit memo",
+      "target": "Vendor creates invoice",
+      "frequency": 1926,
+      "avg_duration_hours": 89.16
+    },
+    {
+      "source": "Record Invoice Receipt",
+      "target": "Change Price",
+      "frequency": 1874,
+      "avg_duration_hours": 430.41
+    },
+    {
+      "source": "Vendor creates invoice",
+      "target": "Vendor creates invoice",
+      "frequency": 1788,
+      "avg_duration_hours": 207.9
+    },
+    {
+      "source": "Change Price",
+      "target": "Remove Payment Block",
+      "frequency": 1721,
+      "avg_duration_hours": 33.86
+    },
+    {
+      "source": "Create Purchase Order Item",
+      "target": "Record Invoice Receipt",
+      "frequency": 1673,
+      "avg_duration_hours": 126.88
+    },
+    {
+      "source": "SRM: Complete",
+      "target": "SRM: Awaiting Approval",
+      "frequency": 1628,
+      "avg_duration_hours": 0.0
+    },
+    {
+      "source": "SRM: Awaiting Approval",
+      "target": "SRM: Document Completed",
+      "frequency": 1626,
+      "avg_duration_hours": 0.0
+    },
+    {
+      "source": "SRM: Created",
+      "target": "SRM: Complete",
+      "frequency": 1599,
+      "avg_duration_hours": 1.55
+    },
+    {
+      "source": "Change Approval for Purchase Order",
+      "target": "Change Approval for Purchase Order",
+      "frequency": 1588,
+      "avg_duration_hours": 389.82
+    },
+    {
+      "source": "Release Purchase Order",
+      "target": "Change Approval for Purchase Order",
+      "frequency": 1489,
+      "avg_duration_hours": 68.74
+    },
+    {
+      "source": "Record Goods Receipt",
+      "target": "Change Quantity",
+      "frequency": 1472,
+      "avg_duration_hours": 122.49
+    },
+    {
+      "source": "Vendor creates invoice",
+      "target": "Clear Invoice",
+      "frequency": 1443,
+      "avg_duration_hours": 714.17
+    },
+    {
+      "source": "Vendor creates debit memo",
+      "target": "Record Invoice Receipt",
+      "frequency": 1317,
+      "avg_duration_hours": 430.47
+    },
+    {
+      "source": "Clear Invoice",
+      "target": "Vendor creates invoice",
+      "frequency": 1299,
+      "avg_duration_hours": 291.75
+    },
+    {
+      "source": "Receive Order Confirmation",
+      "target": "Delete Purchase Order Item",
+      "frequency": 1229,
+      "avg_duration_hours": 255.98
+    },
+    {
+      "source": "Vendor creates debit memo",
+      "target": "Record Goods Receipt",
+      "frequency": 1144,
+      "avg_duration_hours": 82.48
+    },
+    {
+      "source": "SRM: Document Completed",
+      "target": "SRM: In Transfer to Execution Syst.",
+      "frequency": 1131,
+      "avg_duration_hours": 1.09
+    },
+    {
+      "source": "Change Quantity",
+      "target": "Change Delivery Indicator",
+      "frequency": 1130,
+      "avg_duration_hours": 38.99
+    },
+    {
+      "source": "SRM: In Transfer to Execution Syst.",
+      "target": "SRM: Ordered",
+      "frequency": 1118,
+      "avg_duration_hours": 0.0
+    },
+    {
+      "source": "Change Price",
+      "target": "Change Quantity",
+      "frequency": 1106,
+      "avg_duration_hours": 320.39
+    },
+    {
+      "source": "Record Goods Receipt",
+      "target": "Cancel Goods Receipt",
+      "frequency": 1063,
+      "avg_duration_hours": 101.85
+    },
+    {
+      "source": "Create Purchase Order Item",
+      "target": "Vendor creates debit memo",
+      "frequency": 1052,
+      "avg_duration_hours": 252.0
+    },
+    {
+      "source": "Vendor creates debit memo",
+      "target": "Cancel Invoice Receipt",
+      "frequency": 996,
+      "avg_duration_hours": 771.71
+    },
+    {
+      "source": "Create Purchase Order Item",
+      "target": "Cancel Goods Receipt",
+      "frequency": 925,
+      "avg_duration_hours": 147.19
+    },
+    {
+      "source": "Change Price",
+      "target": "Record Invoice Receipt",
+      "frequency": 908,
+      "avg_duration_hours": 680.34
+    },
+    {
+      "source": "Cancel Goods Receipt",
+      "target": "Record Goods Receipt",
+      "frequency": 896,
+      "avg_duration_hours": 55.05
+    },
+    {
+      "source": "Change Approval for Purchase Order",
+      "target": "Vendor creates invoice",
+      "frequency": 884,
+      "avg_duration_hours": 1039.01
+    },
+    {
+      "source": "Vendor creates invoice",
+      "target": "Change Price",
+      "frequency": 855,
+      "avg_duration_hours": 158.31
+    },
+    {
+      "source": "SRM: Change was Transmitted",
+      "target": "Create Purchase Order Item",
+      "frequency": 821,
+      "avg_duration_hours": 0.0
+    },
+    {
+      "source": "SRM: Ordered",
+      "target": "SRM: Change was Transmitted",
+      "frequency": 775,
+      "avg_duration_hours": 0.0
+    },
+    {
+      "source": "Clear Invoice",
+      "target": "Remove Payment Block",
+      "frequency": 766,
+      "avg_duration_hours": 497.1
+    },
+    {
+      "source": "Record Goods Receipt",
+      "target": "Change Price",
+      "frequency": 761,
+      "avg_duration_hours": 356.36
+    },
+    {
+      "source": "Clear Invoice",
+      "target": "Record Goods Receipt",
+      "frequency": 759,
+      "avg_duration_hours": 277.31
+    },
+    {
+      "source": "Create Purchase Order Item",
+      "target": "Release Purchase Order",
+      "frequency": 746,
+      "avg_duration_hours": 65.99
+    },
+    {
+      "source": "Record Goods Receipt",
+      "target": "Change Delivery Indicator",
+      "frequency": 733,
+      "avg_duration_hours": 131.73
+    },
+    {
+      "source": "Change Approval for Purchase Order",
+      "target": "Receive Order Confirmation",
+      "frequency": 715,
+      "avg_duration_hours": 5.05
+    },
+    {
+      "source": "Change Delivery Indicator",
+      "target": "Record Goods Receipt",
+      "frequency": 706,
+      "avg_duration_hours": 55.06
+    },
+    {
+      "source": "Change Delivery Indicator",
+      "target": "Record Invoice Receipt",
+      "frequency": 705,
+      "avg_duration_hours": 497.95
+    },
+    {
+      "source": "Change Approval for Purchase Order",
+      "target": "Record Invoice Receipt",
+      "frequency": 676,
+      "avg_duration_hours": 88.69
+    },
+    {
+      "source": "Change Price",
+      "target": "Change Price",
+      "frequency": 671,
+      "avg_duration_hours": 222.23
+    },
+    {
+      "source": "Record Invoice Receipt",
+      "target": "Change Quantity",
+      "frequency": 662,
+      "avg_duration_hours": 273.13
+    },
+    {
+      "source": "Change Quantity",
+      "target": "Record Invoice Receipt",
+      "frequency": 659,
+      "avg_duration_hours": 418.86
+    },
+    {
+      "source": "Change Approval for Purchase Order",
+      "target": "Release Purchase Order",
+      "frequency": 637,
+      "avg_duration_hours": 556.45
+    },
+    {
+      "source": "Record Goods Receipt",
+      "target": "Vendor creates debit memo",
+      "frequency": 636,
+      "avg_duration_hours": 157.63
+    },
+    {
+      "source": "Cancel Invoice Receipt",
+      "target": "Remove Payment Block",
+      "frequency": 611,
+      "avg_duration_hours": 110.46
+    },
+    {
+      "source": "Record Goods Receipt",
+      "target": "Clear Invoice",
+      "frequency": 556,
+      "avg_duration_hours": 1056.44
+    },
+    {
+      "source": "Record Invoice Receipt",
+      "target": "Vendor creates debit memo",
+      "frequency": 544,
+      "avg_duration_hours": 474.55
+    },
+    {
+      "source": "Cancel Goods Receipt",
+      "target": "Vendor creates debit memo",
+      "frequency": 513,
+      "avg_duration_hours": 848.45
+    },
+    {
+      "source": "Change Quantity",
+      "target": "Change Price",
+      "frequency": 510,
+      "avg_duration_hours": 128.74
+    },
+    {
+      "source": "Receive Order Confirmation",
+      "target": "Change Quantity",
+      "frequency": 472,
+      "avg_duration_hours": 137.12
+    },
+    {
+      "source": "Create Purchase Requisition Item",
+      "target": "Release Purchase Requisition",
+      "frequency": 467,
+      "avg_duration_hours": 28.9
+    },
+    {
+      "source": "Release Purchase Requisition",
+      "target": "Create Purchase Order Item",
+      "frequency": 467,
+      "avg_duration_hours": 1.56
+    },
+    {
+      "source": "SRM: Document Completed",
+      "target": "SRM: Ordered",
+      "frequency": 453,
+      "avg_duration_hours": 6.32
+    },
+    {
+      "source": "Create Purchase Order Item",
+      "target": "Change Delivery Indicator",
+      "frequency": 446,
+      "avg_duration_hours": 467.9
+    },
+    {
+      "source": "Remove Payment Block",
+      "target": "Record Invoice Receipt",
+      "frequency": 442,
+      "avg_duration_hours": 260.03
+    },
+    {
+      "source": "Create Purchase Order Item",
+      "target": "SRM: Change was Transmitted",
+      "frequency": 440,
+      "avg_duration_hours": 0.0
+    },
+    {
+      "source": "Change Approval for Purchase Order",
+      "target": "Change Price",
+      "frequency": 433,
+      "avg_duration_hours": 606.93
+    },
+    {
+      "source": "Remove Payment Block",
+      "target": "Record Goods Receipt",
+      "frequency": 432,
+      "avg_duration_hours": 99.67
+    },
+    {
+      "source": "Record Service Entry Sheet",
+      "target": "Cancel Goods Receipt",
+      "frequency": 382,
+      "avg_duration_hours": 120.19
+    },
+    {
+      "source": "Change Approval for Purchase Order",
+      "target": "Create Purchase Order Item",
+      "frequency": 382,
+      "avg_duration_hours": 90.29
+    },
+    {
+      "source": "SRM: Ordered",
+      "target": "Create Purchase Order Item",
+      "frequency": 364,
+      "avg_duration_hours": 0.0
+    },
+    {
+      "source": "Record Goods Receipt",
+      "target": "Cancel Invoice Receipt",
+      "frequency": 356,
+      "avg_duration_hours": 1106.65
+    },
+    {
+      "source": "Record Service Entry Sheet",
+      "target": "Clear Invoice",
+      "frequency": 355,
+      "avg_duration_hours": 106.13
+    },
+    {
+      "source": "SRM: Ordered",
+      "target": "SRM: In Transfer to Execution Syst.",
+      "frequency": 354,
+      "avg_duration_hours": 0.0
+    },
+    {
+      "source": "Vendor creates invoice",
+      "target": "Record Service Entry Sheet",
+      "frequency": 351,
+      "avg_duration_hours": 184.46
+    },
+    {
+      "source": "Remove Payment Block",
+      "target": "Cancel Invoice Receipt",
+      "frequency": 340,
+      "avg_duration_hours": 441.24
+    },
+    {
+      "source": "Change Approval for Purchase Order",
+      "target": "Change Quantity",
+      "frequency": 319,
+      "avg_duration_hours": 1227.47
+    },
+    {
+      "source": "Remove Payment Block",
+      "target": "Vendor creates invoice",
+      "frequency": 312,
+      "avg_duration_hours": 177.02
+    },
+    {
+      "source": "Delete Purchase Order Item",
+      "target": "Change Approval for Purchase Order",
+      "frequency": 303,
+      "avg_duration_hours": 5.42
+    },
+    {
+      "source": "Cancel Goods Receipt",
+      "target": "Cancel Invoice Receipt",
+      "frequency": 300,
+      "avg_duration_hours": 3109.1
+    },
+    {
+      "source": "SRM: Change was Transmitted",
+      "target": "Vendor creates invoice",
+      "frequency": 295,
+      "avg_duration_hours": 226.91
+    },
+    {
+      "source": "Cancel Goods Receipt",
+      "target": "Cancel Goods Receipt",
+      "frequency": 291,
+      "avg_duration_hours": 33.25
+    },
+    {
+      "source": "Change Price",
+      "target": "Clear Invoice",
+      "frequency": 283,
+      "avg_duration_hours": 867.07
+    },
+    {
+      "source": "Delete Purchase Order Item",
+      "target": "Reactivate Purchase Order Item",
+      "frequency": 272,
+      "avg_duration_hours": 87.88
+    },
+    {
+      "source": "Record Invoice Receipt",
+      "target": "Change Delivery Indicator",
+      "frequency": 270,
+      "avg_duration_hours": 311.53
+    },
+    {
+      "source": "Change Delivery Indicator",
+      "target": "Clear Invoice",
+      "frequency": 265,
+      "avg_duration_hours": 1050.73
+    },
+    {
+      "source": "Reactivate Purchase Order Item",
+      "target": "Record Goods Receipt",
+      "frequency": 260,
+      "avg_duration_hours": 115.19
+    },
+    {
+      "source": "Create Purchase Order Item",
+      "target": "Block Purchase Order Item",
+      "frequency": 252,
+      "avg_duration_hours": 690.33
+    },
+    {
+      "source": "Change Approval for Purchase Order",
+      "target": "Record Goods Receipt",
+      "frequency": 251,
+      "avg_duration_hours": 596.24
+    },
+    {
+      "source": "Create Purchase Order Item",
+      "target": "Change Storage Location",
+      "frequency": 250,
+      "avg_duration_hours": 154.62
+    },
+    {
+      "source": "Change Quantity",
+      "target": "Receive Order Confirmation",
+      "frequency": 236,
+      "avg_duration_hours": 33.07
+    },
+    {
+      "source": "Vendor creates invoice",
+      "target": "Change Delivery Indicator",
+      "frequency": 232,
+      "avg_duration_hours": 86.38
+    },
+    {
+      "source": "Change Quantity",
+      "target": "Delete Purchase Order Item",
+      "frequency": 229,
+      "avg_duration_hours": 231.81
+    },
+    {
+      "source": "SRM: In Transfer to Execution Syst.",
+      "target": "Create Purchase Order Item",
+      "frequency": 228,
+      "avg_duration_hours": 0.0
+    },
+    {
+      "source": "Vendor creates debit memo",
+      "target": "Cancel Subsequent Invoice",
+      "frequency": 228,
+      "avg_duration_hours": 406.21
+    },
+    {
+      "source": "Cancel Subsequent Invoice",
+      "target": "Clear Invoice",
+      "frequency": 226,
+      "avg_duration_hours": 545.88
+    },
+    {
+      "source": "Vendor creates invoice",
+      "target": "Change Approval for Purchase Order",
+      "frequency": 222,
+      "avg_duration_hours": 339.91
+    },
+    {
+      "source": "Change Delivery Indicator",
+      "target": "Vendor creates invoice",
+      "frequency": 221,
+      "avg_duration_hours": 107.93
+    },
+    {
+      "source": "Receive Order Confirmation",
+      "target": "Change Price",
+      "frequency": 221,
+      "avg_duration_hours": 162.16
+    },
+    {
+      "source": "SRM: In Transfer to Execution Syst.",
+      "target": "SRM: Change was Transmitted",
+      "frequency": 220,
+      "avg_duration_hours": 0.0
+    },
+    {
+      "source": "Vendor creates invoice",
+      "target": "Remove Payment Block",
+      "frequency": 217,
+      "avg_duration_hours": 317.38
+    },
+    {
+      "source": "Cancel Subsequent Invoice",
+      "target": "Remove Payment Block",
+      "frequency": 206,
+      "avg_duration_hours": 13.03
+    },
+    {
+      "source": "Change Storage Location",
+      "target": "Record Goods Receipt",
+      "frequency": 195,
+      "avg_duration_hours": 122.45
+    },
+    {
+      "source": "Remove Payment Block",
+      "target": "Remove Payment Block",
+      "frequency": 194,
+      "avg_duration_hours": 268.59
+    },
+    {
+      "source": "Vendor creates debit memo",
+      "target": "Clear Invoice",
+      "frequency": 190,
+      "avg_duration_hours": 442.96
+    },
+    {
+      "source": "Receive Order Confirmation",
+      "target": "Update Order Confirmation",
+      "frequency": 182,
+      "avg_duration_hours": 117.89
+    },
+    {
+      "source": "Change Delivery Indicator",
+      "target": "Change Delivery Indicator",
+      "frequency": 177,
+      "avg_duration_hours": 97.41
+    },
+    {
+      "source": "Change Quantity",
+      "target": "Clear Invoice",
+      "frequency": 157,
+      "avg_duration_hours": 1227.48
+    },
+    {
+      "source": "Change Delivery Indicator",
+      "target": "Vendor creates debit memo",
+      "frequency": 151,
+      "avg_duration_hours": 277.35
+    },
+    {
+      "source": "Cancel Goods Receipt",
+      "target": "Vendor creates invoice",
+      "frequency": 145,
+      "avg_duration_hours": 106.94
+    },
+    {
+      "source": "Change Delivery Indicator",
+      "target": "Change Quantity",
+      "frequency": 141,
+      "avg_duration_hours": 90.59
+    },
+    {
+      "source": "Vendor creates debit memo",
+      "target": "Remove Payment Block",
+      "frequency": 140,
+      "avg_duration_hours": 184.73
+    },
+    {
+      "source": "Change Price",
+      "target": "Receive Order Confirmation",
+      "frequency": 138,
+      "avg_duration_hours": 21.99
+    },
+    {
+      "source": "Change Quantity",
+      "target": "Change Approval for Purchase Order",
+      "frequency": 137,
+      "avg_duration_hours": 32.28
+    },
+    {
+      "source": "SRM: Ordered",
+      "target": "SRM: Deleted",
+      "frequency": 132,
+      "avg_duration_hours": 0.0
+    },
+    {
+      "source": "Block Purchase Order Item",
+      "target": "Delete Purchase Order Item",
+      "frequency": 132,
+      "avg_duration_hours": 49.6
+    },
+    {
+      "source": "Vendor creates invoice",
+      "target": "SRM: Created",
+      "frequency": 131,
+      "avg_duration_hours": 2288.74
+    },
+    {
+      "source": "Clear Invoice",
+      "target": "Change Approval for Purchase Order",
+      "frequency": 129,
+      "avg_duration_hours": 948.61
+    },
+    {
+      "source": "Vendor creates debit memo",
+      "target": "Create Purchase Order Item",
+      "frequency": 126,
+      "avg_duration_hours": 33702.64
+    },
+    {
+      "source": "Clear Invoice",
+      "target": "Vendor creates debit memo",
+      "frequency": 122,
+      "avg_duration_hours": 1072.81
+    },
+    {
+      "source": "Remove Payment Block",
+      "target": "Change Price",
+      "frequency": 120,
+      "avg_duration_hours": 246.37
+    },
+    {
+      "source": "Clear Invoice",
+      "target": "Change Price",
+      "frequency": 120,
+      "avg_duration_hours": 1131.2
+    },
+    {
+      "source": "Change Approval for Purchase Order",
+      "target": "Clear Invoice",
+      "frequency": 120,
+      "avg_duration_hours": 977.79
+    },
+    {
+      "source": "Block Purchase Order Item",
+      "target": "Reactivate Purchase Order Item",
+      "frequency": 117,
+      "avg_duration_hours": 192.72
+    },
+    {
+      "source": "Remove Payment Block",
+      "target": "Change Quantity",
+      "frequency": 117,
+      "avg_duration_hours": 150.27
+    },
+    {
+      "source": "Record Invoice Receipt",
+      "target": "Change Approval for Purchase Order",
+      "frequency": 115,
+      "avg_duration_hours": 570.53
+    },
+    {
+      "source": "Clear Invoice",
+      "target": "Record Service Entry Sheet",
+      "frequency": 114,
+      "avg_duration_hours": 362.6
+    },
+    {
+      "source": "SRM: Deleted",
+      "target": "Change Price",
+      "frequency": 110,
+      "avg_duration_hours": 0.0
+    },
+    {
+      "source": "SRM: Change was Transmitted",
+      "target": "Record Goods Receipt",
+      "frequency": 110,
+      "avg_duration_hours": 379.53
+    },
+    {
+      "source": "Change Price",
+      "target": "Delete Purchase Order Item",
+      "frequency": 110,
+      "avg_duration_hours": 812.32
+    },
+    {
+      "source": "Clear Invoice",
+      "target": "Change Quantity",
+      "frequency": 110,
+      "avg_duration_hours": 799.85
+    },
+    {
+      "source": "Change Approval for Purchase Order",
+      "target": "Block Purchase Order Item",
+      "frequency": 107,
+      "avg_duration_hours": 3920.9
+    },
+    {
+      "source": "Update Order Confirmation",
+      "target": "Record Goods Receipt",
+      "frequency": 105,
+      "avg_duration_hours": 247.85
+    },
+    {
+      "source": "Remove Payment Block",
+      "target": "Vendor creates debit memo",
+      "frequency": 105,
+      "avg_duration_hours": 445.28
+    },
+    {
+      "source": "Vendor creates invoice",
+      "target": "Cancel Invoice Receipt",
+      "frequency": 104,
+      "avg_duration_hours": 308.91
+    },
+    {
+      "source": "Change Delivery Indicator",
+      "target": "Remove Payment Block",
+      "frequency": 104,
+      "avg_duration_hours": 449.11
+    },
+    {
+      "source": "Record Invoice Receipt",
+      "target": "Set Payment Block",
+      "frequency": 103,
+      "avg_duration_hours": 958.28
+    },
+    {
+      "source": "Receive Order Confirmation",
+      "target": "Record Invoice Receipt",
+      "frequency": 100,
+      "avg_duration_hours": 355.33
+    },
+    {
+      "source": "Vendor creates invoice",
+      "target": "Cancel Goods Receipt",
+      "frequency": 98,
+      "avg_duration_hours": 93.9
+    },
+    {
+      "source": "Record Subsequent Invoice",
+      "target": "Clear Invoice",
+      "frequency": 97,
+      "avg_duration_hours": 388.4
+    },
+    {
+      "source": "Record Invoice Receipt",
+      "target": "Cancel Subsequent Invoice",
+      "frequency": 97,
+      "avg_duration_hours": 157.2
+    },
+    {
+      "source": "SRM: Change was Transmitted",
+      "target": "SRM: In Transfer to Execution Syst.",
+      "frequency": 95,
+      "avg_duration_hours": 150.74
+    },
+    {
+      "source": "Cancel Goods Receipt",
+      "target": "Record Invoice Receipt",
+      "frequency": 95,
+      "avg_duration_hours": 279.67
+    },
+    {
+      "source": "Reactivate Purchase Order Item",
+      "target": "Change Quantity",
+      "frequency": 95,
+      "avg_duration_hours": 267.0
+    },
+    {
+      "source": "Change Quantity",
+      "target": "Remove Payment Block",
+      "frequency": 92,
+      "avg_duration_hours": 437.92
+    },
+    {
+      "source": "Cancel Goods Receipt",
+      "target": "Change Quantity",
+      "frequency": 92,
+      "avg_duration_hours": 250.92
+    },
+    {
+      "source": "Remove Payment Block",
+      "target": "Change Delivery Indicator",
+      "frequency": 91,
+      "avg_duration_hours": 275.97
+    },
+    {
+      "source": "Clear Invoice",
+      "target": "Cancel Subsequent Invoice",
+      "frequency": 89,
+      "avg_duration_hours": 555.42
+    },
+    {
+      "source": "Cancel Goods Receipt",
+      "target": "Change Delivery Indicator",
+      "frequency": 88,
+      "avg_duration_hours": 154.72
+    },
+    {
+      "source": "Change Quantity",
+      "target": "Vendor creates debit memo",
+      "frequency": 84,
+      "avg_duration_hours": 312.48
+    },
+    {
+      "source": "Reactivate Purchase Order Item",
+      "target": "Vendor creates invoice",
+      "frequency": 83,
+      "avg_duration_hours": 293.38
+    },
+    {
+      "source": "Record Service Entry Sheet",
+      "target": "Change Price",
+      "frequency": 81,
+      "avg_duration_hours": 23.79
+    },
+    {
+      "source": "Change Price",
+      "target": "Vendor creates debit memo",
+      "frequency": 81,
+      "avg_duration_hours": 131.49
+    },
+    {
+      "source": "Clear Invoice",
+      "target": "SRM: In Transfer to Execution Syst.",
+      "frequency": 79,
+      "avg_duration_hours": 3815.63
+    },
+    {
+      "source": "Change Price",
+      "target": "Cancel Goods Receipt",
+      "frequency": 79,
+      "avg_duration_hours": 80.02
+    },
+    {
+      "source": "Change Quantity",
+      "target": "Reactivate Purchase Order Item",
+      "frequency": 77,
+      "avg_duration_hours": 48.37
+    },
+    {
+      "source": "Vendor creates invoice",
+      "target": "Receive Order Confirmation",
+      "frequency": 76,
+      "avg_duration_hours": 83.31
+    },
+    {
+      "source": "Update Order Confirmation",
+      "target": "Vendor creates invoice",
+      "frequency": 74,
+      "avg_duration_hours": 218.0
+    },
+    {
+      "source": "Change Price",
+      "target": "Change Approval for Purchase Order",
+      "frequency": 73,
+      "avg_duration_hours": 103.82
+    },
+    {
+      "source": "Block Purchase Order Item",
+      "target": "Change Quantity",
+      "frequency": 72,
+      "avg_duration_hours": 0.02
+    },
+    {
+      "source": "Cancel Goods Receipt",
+      "target": "Record Service Entry Sheet",
+      "frequency": 71,
+      "avg_duration_hours": 12.75
+    },
+    {
+      "source": "Change Storage Location",
+      "target": "Vendor creates invoice",
+      "frequency": 70,
+      "avg_duration_hours": 228.09
+    },
+    {
+      "source": "Cancel Goods Receipt",
+      "target": "Delete Purchase Order Item",
+      "frequency": 65,
+      "avg_duration_hours": 48.07
+    },
+    {
+      "source": "Record Invoice Receipt",
+      "target": "Cancel Goods Receipt",
+      "frequency": 63,
+      "avg_duration_hours": 256.86
+    },
+    {
+      "source": "Vendor creates invoice",
+      "target": "Reactivate Purchase Order Item",
+      "frequency": 63,
+      "avg_duration_hours": 102.67
+    },
+    {
+      "source": "Vendor creates invoice",
+      "target": "Create Purchase Requisition Item",
+      "frequency": 62,
+      "avg_duration_hours": 3955.52
+    },
+    {
+      "source": "Cancel Invoice Receipt",
+      "target": "Cancel Invoice Receipt",
+      "frequency": 60,
+      "avg_duration_hours": 96.2
+    },
+    {
+      "source": "Record Invoice Receipt",
+      "target": "Record Service Entry Sheet",
+      "frequency": 57,
+      "avg_duration_hours": 182.7
+    },
+    {
+      "source": "SRM: In Transfer to Execution Syst.",
+      "target": "SRM: Deleted",
+      "frequency": 56,
+      "avg_duration_hours": 0.0
+    },
+    {
+      "source": "Delete Purchase Order Item",
+      "target": "Change Quantity",
+      "frequency": 56,
+      "avg_duration_hours": 0.03
+    },
+    {
+      "source": "Clear Invoice",
+      "target": "Record Subsequent Invoice",
+      "frequency": 55,
+      "avg_duration_hours": 829.37
+    },
+    {
+      "source": "Vendor creates invoice",
+      "target": "Block Purchase Order Item",
+      "frequency": 54,
+      "avg_duration_hours": 663.02
+    },
+    {
+      "source": "Change Approval for Purchase Order",
+      "target": "Delete Purchase Order Item",
+      "frequency": 53,
+      "avg_duration_hours": 1115.66
+    },
+    {
+      "source": "Vendor creates debit memo",
+      "target": "Change Quantity",
+      "frequency": 51,
+      "avg_duration_hours": 118.55
+    },
+    {
+      "source": "Change Price",
+      "target": "Cancel Invoice Receipt",
+      "frequency": 51,
+      "avg_duration_hours": 480.76
+    },
+    {
+      "source": "Release Purchase Order",
+      "target": "Change Price",
+      "frequency": 48,
+      "avg_duration_hours": 30.06
+    },
+    {
+      "source": "Remove Payment Block",
+      "target": "Cancel Subsequent Invoice",
+      "frequency": 47,
+      "avg_duration_hours": 166.62
+    },
+    {
+      "source": "Delete Purchase Order Item",
+      "target": "Vendor creates invoice",
+      "frequency": 46,
+      "avg_duration_hours": 252.38
+    },
+    {
+      "source": "SRM: In Transfer to Execution Syst.",
+      "target": "SRM: Transfer Failed (E.Sys.)",
+      "frequency": 45,
+      "avg_duration_hours": 0.0
+    },
+    {
+      "source": "Clear Invoice",
+      "target": "Cancel Goods Receipt",
+      "frequency": 45,
+      "avg_duration_hours": 897.18
+    },
+    {
+      "source": "Cancel Goods Receipt",
+      "target": "Change Price",
+      "frequency": 45,
+      "avg_duration_hours": 5.09
+    },
+    {
+      "source": "Remove Payment Block",
+      "target": "Cancel Goods Receipt",
+      "frequency": 44,
+      "avg_duration_hours": 219.1
+    },
+    {
+      "source": "Record Service Entry Sheet",
+      "target": "Vendor creates debit memo",
+      "frequency": 43,
+      "avg_duration_hours": 248.84
+    },
+    {
+      "source": "Record Subsequent Invoice",
+      "target": "Remove Payment Block",
+      "frequency": 43,
+      "avg_duration_hours": 654.44
+    },
+    {
+      "source": "Create Purchase Order Item",
+      "target": "SRM: In Transfer to Execution Syst.",
+      "frequency": 42,
+      "avg_duration_hours": 98.32
+    },
+    {
+      "source": "Set Payment Block",
+      "target": "Clear Invoice",
+      "frequency": 42,
+      "avg_duration_hours": 203.17
+    },
+    {
+      "source": "Release Purchase Order",
+      "target": "Change Quantity",
+      "frequency": 41,
+      "avg_duration_hours": 4.59
+    },
+    {
+      "source": "Change Delivery Indicator",
+      "target": "Cancel Invoice Receipt",
+      "frequency": 41,
+      "avg_duration_hours": 1189.45
+    },
+    {
+      "source": "Vendor creates debit memo",
+      "target": "Cancel Goods Receipt",
+      "frequency": 41,
+      "avg_duration_hours": 185.63
+    },
+    {
+      "source": "Record Invoice Receipt",
+      "target": "Release Purchase Order",
+      "frequency": 40,
+      "avg_duration_hours": 163.43
+    },
+    {
+      "source": "Change Storage Location",
+      "target": "Change Storage Location",
+      "frequency": 40,
+      "avg_duration_hours": 36.71
+    },
+    {
+      "source": "Record Invoice Receipt",
+      "target": "Record Subsequent Invoice",
+      "frequency": 39,
+      "avg_duration_hours": 241.93
+    },
+    {
+      "source": "Record Goods Receipt",
+      "target": "Receive Order Confirmation",
+      "frequency": 38,
+      "avg_duration_hours": 61.23
+    },
+    {
+      "source": "SRM: Change was Transmitted",
+      "target": "SRM: Ordered",
+      "frequency": 37,
+      "avg_duration_hours": 0.0
+    },
+    {
+      "source": "Vendor creates debit memo",
+      "target": "Change Price",
+      "frequency": 37,
+      "avg_duration_hours": 328.68
+    },
+    {
+      "source": "Record Invoice Receipt",
+      "target": "Block Purchase Order Item",
+      "frequency": 34,
+      "avg_duration_hours": 1402.72
+    },
+    {
+      "source": "Delete Purchase Order Item",
+      "target": "Change Price",
+      "frequency": 33,
+      "avg_duration_hours": 0.0
+    },
+    {
+      "source": "Clear Invoice",
+      "target": "Change Delivery Indicator",
+      "frequency": 33,
+      "avg_duration_hours": 665.72
+    },
+    {
+      "source": "Record Goods Receipt",
+      "target": "Change Approval for Purchase Order",
+      "frequency": 33,
+      "avg_duration_hours": 82.15
+    },
+    {
+      "source": "Reactivate Purchase Order Item",
+      "target": "Delete Purchase Order Item",
+      "frequency": 33,
+      "avg_duration_hours": 127.06
+    },
+    {
+      "source": "Change Quantity",
+      "target": "Release Purchase Order",
+      "frequency": 33,
+      "avg_duration_hours": 5.22
+    },
+    {
+      "source": "Vendor creates invoice",
+      "target": "Change Storage Location",
+      "frequency": 31,
+      "avg_duration_hours": 92.41
+    },
+    {
+      "source": "Remove Payment Block",
+      "target": "Release Purchase Order",
+      "frequency": 31,
+      "avg_duration_hours": 287.79
+    },
+    {
+      "source": "Create Purchase Order Item",
+      "target": "SRM: Created",
+      "frequency": 30,
+      "avg_duration_hours": 644.07
+    },
+    {
+      "source": "Change Price",
+      "target": "Release Purchase Order",
+      "frequency": 30,
+      "avg_duration_hours": 201.99
+    },
+    {
+      "source": "Change Price",
+      "target": "Change Storage Location",
+      "frequency": 30,
+      "avg_duration_hours": 67.12
+    },
+    {
+      "source": "Cancel Invoice Receipt",
+      "target": "Vendor creates debit memo",
+      "frequency": 29,
+      "avg_duration_hours": 70.2
+    },
+    {
+      "source": "Vendor creates invoice",
+      "target": "Record Subsequent Invoice",
+      "frequency": 29,
+      "avg_duration_hours": 365.23
+    },
+    {
+      "source": "Change Price",
+      "target": "Change Currency",
+      "frequency": 29,
+      "avg_duration_hours": 0.0
+    },
+    {
+      "source": "Record Goods Receipt",
+      "target": "Release Purchase Order",
+      "frequency": 29,
+      "avg_duration_hours": 112.98
+    },
+    {
+      "source": "Record Invoice Receipt",
+      "target": "SRM: Created",
+      "frequency": 28,
+      "avg_duration_hours": 194.22
+    },
+    {
+      "source": "Clear Invoice",
+      "target": "Delete Purchase Order Item",
+      "frequency": 27,
+      "avg_duration_hours": 1011.41
+    },
+    {
+      "source": "Change Quantity",
+      "target": "Cancel Goods Receipt",
+      "frequency": 27,
+      "avg_duration_hours": 80.18
+    },
+    {
+      "source": "Change Storage Location",
+      "target": "Change Quantity",
+      "frequency": 27,
+      "avg_duration_hours": 152.08
+    },
+    {
+      "source": "Change Price",
+      "target": "Change Delivery Indicator",
+      "frequency": 26,
+      "avg_duration_hours": 127.5
+    },
+    {
+      "source": "Cancel Invoice Receipt",
+      "target": "Vendor creates invoice",
+      "frequency": 25,
+      "avg_duration_hours": 159.25
+    },
+    {
+      "source": "Vendor creates invoice",
+      "target": "SRM: In Transfer to Execution Syst.",
+      "frequency": 25,
+      "avg_duration_hours": 273.08
+    },
+    {
+      "source": "SRM: Document Completed",
+      "target": "Create Purchase Order Item",
+      "frequency": 25,
+      "avg_duration_hours": 0.0
+    },
+    {
+      "source": "Clear Invoice",
+      "target": "SRM: Created",
+      "frequency": 24,
+      "avg_duration_hours": 887.23
+    },
+    {
+      "source": "Change Price",
+      "target": "Record Service Entry Sheet",
+      "frequency": 24,
+      "avg_duration_hours": 17.22
+    },
+    {
+      "source": "Cancel Goods Receipt",
+      "target": "Clear Invoice",
+      "frequency": 24,
+      "avg_duration_hours": 667.21
+    },
+    {
+      "source": "Receive Order Confirmation",
+      "target": "Vendor creates debit memo",
+      "frequency": 24,
+      "avg_duration_hours": 219.49
+    },
+    {
+      "source": "Block Purchase Order Item",
+      "target": "Vendor creates invoice",
+      "frequency": 23,
+      "avg_duration_hours": 348.3
+    },
+    {
+      "source": "Change Quantity",
+      "target": "Block Purchase Order Item",
+      "frequency": 23,
+      "avg_duration_hours": 350.43
+    },
+    {
+      "source": "Vendor creates invoice",
+      "target": "Release Purchase Order",
+      "frequency": 22,
+      "avg_duration_hours": 71.64
+    },
+    {
+      "source": "Record Invoice Receipt",
+      "target": "Change Storage Location",
+      "frequency": 21,
+      "avg_duration_hours": 69.74
+    },
+    {
+      "source": "Change Currency",
+      "target": "Vendor creates invoice",
+      "frequency": 21,
+      "avg_duration_hours": 84.93
+    },
+    {
+      "source": "SRM: Deleted",
+      "target": "Record Goods Receipt",
+      "frequency": 20,
+      "avg_duration_hours": 84.61
+    },
+    {
+      "source": "Record Service Entry Sheet",
+      "target": "Cancel Invoice Receipt",
+      "frequency": 20,
+      "avg_duration_hours": 103.76
+    },
+    {
+      "source": "Reactivate Purchase Order Item",
+      "target": "Record Invoice Receipt",
+      "frequency": 20,
+      "avg_duration_hours": 351.52
+    },
+    {
+      "source": "SRM: In Transfer to Execution Syst.",
+      "target": "Record Goods Receipt",
+      "frequency": 19,
+      "avg_duration_hours": 226.05
+    },
+    {
+      "source": "Change Storage Location",
+      "target": "Change Price",
+      "frequency": 18,
+      "avg_duration_hours": 319.59
+    },
+    {
+      "source": "Change Delivery Indicator",
+      "target": "Delete Purchase Order Item",
+      "frequency": 17,
+      "avg_duration_hours": 38.13
+    },
+    {
+      "source": "Cancel Goods Receipt",
+      "target": "Remove Payment Block",
+      "frequency": 17,
+      "avg_duration_hours": 146.17
+    },
+    {
+      "source": "Vendor creates invoice",
+      "target": "Update Order Confirmation",
+      "frequency": 16,
+      "avg_duration_hours": 103.96
+    },
+    {
+      "source": "Delete Purchase Order Item",
+      "target": "Release Purchase Order",
+      "frequency": 16,
+      "avg_duration_hours": 830.42
+    },
+    {
+      "source": "Update Order Confirmation",
+      "target": "Change Quantity",
+      "frequency": 16,
+      "avg_duration_hours": 130.06
+    },
+    {
+      "source": "SRM: In Transfer to Execution Syst.",
+      "target": "SRM: In Transfer to Execution Syst.",
+      "frequency": 15,
+      "avg_duration_hours": 15.51
+    },
+    {
+      "source": "SRM: Deleted",
+      "target": "Delete Purchase Order Item",
+      "frequency": 15,
+      "avg_duration_hours": 0.0
+    },
+    {
+      "source": "Cancel Invoice Receipt",
+      "target": "Record Goods Receipt",
+      "frequency": 15,
+      "avg_duration_hours": 111.58
+    },
+    {
+      "source": "Record Goods Receipt",
+      "target": "Block Purchase Order Item",
+      "frequency": 15,
+      "avg_duration_hours": 199.3
+    },
+    {
+      "source": "Update Order Confirmation",
+      "target": "Update Order Confirmation",
+      "frequency": 15,
+      "avg_duration_hours": 57.63
+    },
+    {
+      "source": "Reactivate Purchase Order Item",
+      "target": "Change Price",
+      "frequency": 15,
+      "avg_duration_hours": 33.19
+    },
+    {
+      "source": "Change Delivery Indicator",
+      "target": "Change Price",
+      "frequency": 14,
+      "avg_duration_hours": 219.77
+    },
+    {
+      "source": "Remove Payment Block",
+      "target": "Set Payment Block",
+      "frequency": 14,
+      "avg_duration_hours": 1045.82
+    },
+    {
+      "source": "Change Storage Location",
+      "target": "Delete Purchase Order Item",
+      "frequency": 14,
+      "avg_duration_hours": 371.58
+    },
+    {
+      "source": "Record Service Entry Sheet",
+      "target": "Remove Payment Block",
+      "frequency": 13,
+      "avg_duration_hours": 77.71
+    },
+    {
+      "source": "SRM: Change was Transmitted",
+      "target": "SRM: Created",
+      "frequency": 13,
+      "avg_duration_hours": 1181.95
+    },
+    {
+      "source": "Vendor creates debit memo",
+      "target": "Vendor creates debit memo",
+      "frequency": 13,
+      "avg_duration_hours": 411.69
+    },
+    {
+      "source": "Cancel Invoice Receipt",
+      "target": "Change Delivery Indicator",
+      "frequency": 13,
+      "avg_duration_hours": 356.93
+    },
+    {
+      "source": "Change Quantity",
+      "target": "Change Storage Location",
+      "frequency": 13,
+      "avg_duration_hours": 98.05
+    },
+    {
+      "source": "Vendor creates debit memo",
+      "target": "Change Delivery Indicator",
+      "frequency": 13,
+      "avg_duration_hours": 227.23
+    },
+    {
+      "source": "Vendor creates invoice",
+      "target": "Delete Purchase Order Item",
+      "frequency": 13,
+      "avg_duration_hours": 98.26
+    },
+    {
+      "source": "Update Order Confirmation",
+      "target": "Delete Purchase Order Item",
+      "frequency": 13,
+      "avg_duration_hours": 154.09
+    },
+    {
+      "source": "Change Quantity",
+      "target": "Update Order Confirmation",
+      "frequency": 13,
+      "avg_duration_hours": 10.01
+    },
+    {
+      "source": "SRM: In Transfer to Execution Syst.",
+      "target": "Change Delivery Indicator",
+      "frequency": 12,
+      "avg_duration_hours": 0.0
+    },
+    {
+      "source": "Create Purchase Order Item",
+      "target": "SRM: Ordered",
+      "frequency": 12,
+      "avg_duration_hours": 0.0
+    },
+    {
+      "source": "Change Quantity",
+      "target": "Cancel Invoice Receipt",
+      "frequency": 12,
+      "avg_duration_hours": 2205.89
+    },
+    {
+      "source": "Record Service Entry Sheet",
+      "target": "SRM: Created",
+      "frequency": 11,
+      "avg_duration_hours": 70.74
+    },
+    {
+      "source": "Record Invoice Receipt",
+      "target": "Receive Order Confirmation",
+      "frequency": 11,
+      "avg_duration_hours": 111.15
+    },
+    {
+      "source": "Cancel Invoice Receipt",
+      "target": "Record Subsequent Invoice",
+      "frequency": 11,
+      "avg_duration_hours": 32.61
+    },
+    {
+      "source": "Cancel Invoice Receipt",
+      "target": "Cancel Goods Receipt",
+      "frequency": 10,
+      "avg_duration_hours": 280.06
+    },
+    {
+      "source": "Change Approval for Purchase Order",
+      "target": "Change Storage Location",
+      "frequency": 10,
+      "avg_duration_hours": 425.76
+    },
+    {
+      "source": "Release Purchase Order",
+      "target": "Vendor creates invoice",
+      "frequency": 10,
+      "avg_duration_hours": 86.84
+    },
+    {
+      "source": "Change Delivery Indicator",
+      "target": "Cancel Goods Receipt",
+      "frequency": 10,
+      "avg_duration_hours": 155.93
+    },
+    {
+      "source": "Set Payment Block",
+      "target": "Remove Payment Block",
+      "frequency": 10,
+      "avg_duration_hours": 587.37
+    },
+    {
+      "source": "Record Invoice Receipt",
+      "target": "SRM: In Transfer to Execution Syst.",
+      "frequency": 9,
+      "avg_duration_hours": 254.01
+    },
+    {
+      "source": "Reactivate Purchase Order Item",
+      "target": "Block Purchase Order Item",
+      "frequency": 9,
+      "avg_duration_hours": 525.49
+    },
+    {
+      "source": "Cancel Subsequent Invoice",
+      "target": "Record Invoice Receipt",
+      "frequency": 9,
+      "avg_duration_hours": 509.53
+    },
+    {
+      "source": "Delete Purchase Order Item",
+      "target": "Clear Invoice",
+      "frequency": 9,
+      "avg_duration_hours": 708.37
+    },
+    {
+      "source": "Release Purchase Order",
+      "target": "Delete Purchase Order Item",
+      "frequency": 9,
+      "avg_duration_hours": 9.82
+    },
+    {
+      "source": "Change Price",
+      "target": "Block Purchase Order Item",
+      "frequency": 9,
+      "avg_duration_hours": 978.26
+    },
+    {
+      "source": "SRM: In Transfer to Execution Syst.",
+      "target": "Change Price",
+      "frequency": 8,
+      "avg_duration_hours": 0.0
+    },
+    {
+      "source": "Cancel Subsequent Invoice",
+      "target": "Record Subsequent Invoice",
+      "frequency": 8,
+      "avg_duration_hours": 227.68
+    },
+    {
+      "source": "SRM: Change was Transmitted",
+      "target": "Record Invoice Receipt",
+      "frequency": 8,
+      "avg_duration_hours": 151.03
+    },
+    {
+      "source": "Record Goods Receipt",
+      "target": "Delete Purchase Order Item",
+      "frequency": 8,
+      "avg_duration_hours": 385.24
+    },
+    {
+      "source": "Release Purchase Order",
+      "target": "Create Purchase Order Item",
+      "frequency": 8,
+      "avg_duration_hours": 12.74
+    },
+    {
+      "source": "Remove Payment Block",
+      "target": "Record Subsequent Invoice",
+      "frequency": 8,
+      "avg_duration_hours": 287.71
+    },
+    {
+      "source": "Change Storage Location",
+      "target": "Cancel Goods Receipt",
+      "frequency": 8,
+      "avg_duration_hours": 19.82
+    },
+    {
+      "source": "Receive Order Confirmation",
+      "target": "Change Delivery Indicator",
+      "frequency": 8,
+      "avg_duration_hours": 170.56
+    },
+    {
+      "source": "Set Payment Block",
+      "target": "Change Approval for Purchase Order",
+      "frequency": 8,
+      "avg_duration_hours": 515.93
+    },
+    {
+      "source": "SRM: Change was Transmitted",
+      "target": "Record Service Entry Sheet",
+      "frequency": 7,
+      "avg_duration_hours": 427.7
+    },
+    {
+      "source": "Vendor creates debit memo",
+      "target": "SRM: Created",
+      "frequency": 7,
+      "avg_duration_hours": 22468.14
+    },
+    {
+      "source": "SRM: Deleted",
+      "target": "SRM: In Transfer to Execution Syst.",
+      "frequency": 7,
+      "avg_duration_hours": 0.16
+    },
+    {
+      "source": "Vendor creates debit memo",
+      "target": "Record Service Entry Sheet",
+      "frequency": 7,
+      "avg_duration_hours": 354.46
+    },
+    {
+      "source": "Remove Payment Block",
+      "target": "Record Service Entry Sheet",
+      "frequency": 7,
+      "avg_duration_hours": 121.5
+    },
+    {
+      "source": "Update Order Confirmation",
+      "target": "Record Invoice Receipt",
+      "frequency": 7,
+      "avg_duration_hours": 156.18
+    },
+    {
+      "source": "Change Price",
+      "target": "Record Subsequent Invoice",
+      "frequency": 7,
+      "avg_duration_hours": 220.07
+    },
+    {
+      "source": "Record Goods Receipt",
+      "target": "Change Storage Location",
+      "frequency": 7,
+      "avg_duration_hours": 29.38
+    },
+    {
+      "source": "Change Approval for Purchase Order",
+      "target": "Reactivate Purchase Order Item",
+      "frequency": 7,
+      "avg_duration_hours": 747.57
+    },
+    {
+      "source": "Change Storage Location",
+      "target": "Clear Invoice",
+      "frequency": 7,
+      "avg_duration_hours": 1021.93
+    },
+    {
+      "source": "SRM: Created",
+      "target": "Record Goods Receipt",
+      "frequency": 6,
+      "avg_duration_hours": 1.64
+    },
+    {
+      "source": "SRM: Document Completed",
+      "target": "Vendor creates invoice",
+      "frequency": 6,
+      "avg_duration_hours": 194.9
+    },
+    {
+      "source": "SRM: Change was Transmitted",
+      "target": "Vendor creates debit memo",
+      "frequency": 6,
+      "avg_duration_hours": 237.55
+    },
+    {
+      "source": "SRM: Created",
+      "target": "SRM: Incomplete",
+      "frequency": 6,
+      "avg_duration_hours": 1.5
+    },
+    {
+      "source": "SRM: Incomplete",
+      "target": "SRM: Held",
+      "frequency": 6,
+      "avg_duration_hours": 0.0
+    },
+    {
+      "source": "SRM: Held",
+      "target": "SRM: Complete",
+      "frequency": 6,
+      "avg_duration_hours": 71.17
+    },
+    {
+      "source": "SRM: Created",
+      "target": "SRM: Created",
+      "frequency": 6,
+      "avg_duration_hours": 0.18
+    },
+    {
+      "source": "Delete Purchase Order Item",
+      "target": "Change Delivery Indicator",
+      "frequency": 6,
+      "avg_duration_hours": 0.01
+    },
+    {
+      "source": "Cancel Invoice Receipt",
+      "target": "Delete Purchase Order Item",
+      "frequency": 6,
+      "avg_duration_hours": 134.74
+    },
+    {
+      "source": "Change Storage Location",
+      "target": "Record Invoice Receipt",
+      "frequency": 6,
+      "avg_duration_hours": 1417.79
+    },
+    {
+      "source": "Reactivate Purchase Order Item",
+      "target": "Receive Order Confirmation",
+      "frequency": 6,
+      "avg_duration_hours": 0.89
+    },
+    {
+      "source": "Record Invoice Receipt",
+      "target": "Update Order Confirmation",
+      "frequency": 6,
+      "avg_duration_hours": 379.13
+    },
+    {
+      "source": "Record Subsequent Invoice",
+      "target": "Cancel Subsequent Invoice",
+      "frequency": 6,
+      "avg_duration_hours": 120.77
+    },
+    {
+      "source": "Record Goods Receipt",
+      "target": "Update Order Confirmation",
+      "frequency": 6,
+      "avg_duration_hours": 10.86
+    },
+    {
+      "source": "Change Delivery Indicator",
+      "target": "Block Purchase Order Item",
+      "frequency": 6,
+      "avg_duration_hours": 222.49
+    },
+    {
+      "source": "SRM: In Transfer to Execution Syst.",
+      "target": "SRM: Created",
+      "frequency": 5,
+      "avg_duration_hours": 188.61
+    },
+    {
+      "source": "SRM: Document Completed",
+      "target": "SRM: Change was Transmitted",
+      "frequency": 5,
+      "avg_duration_hours": 0.0
+    },
+    {
+      "source": "SRM: Deleted",
+      "target": "Change Delivery Indicator",
+      "frequency": 5,
+      "avg_duration_hours": 0.0
+    },
+    {
+      "source": "Change Delivery Indicator",
+      "target": "Change Final Invoice Indicator",
+      "frequency": 5,
+      "avg_duration_hours": 0.0
+    },
+    {
+      "source": "Record Goods Receipt",
+      "target": "SRM: Complete",
+      "frequency": 5,
+      "avg_duration_hours": 0.63
+    },
+    {
+      "source": "Cancel Invoice Receipt",
+      "target": "Change Price",
+      "frequency": 5,
+      "avg_duration_hours": 67.85
+    },
+    {
+      "source": "Vendor creates debit memo",
+      "target": "Reactivate Purchase Order Item",
+      "frequency": 5,
+      "avg_duration_hours": 99.59
+    },
+    {
+      "source": "Cancel Subsequent Invoice",
+      "target": "Vendor creates debit memo",
+      "frequency": 5,
+      "avg_duration_hours": 162.75
+    },
+    {
+      "source": "Change Storage Location",
+      "target": "Receive Order Confirmation",
+      "frequency": 5,
+      "avg_duration_hours": 44.43
+    },
+    {
+      "source": "Record Goods Receipt",
+      "target": "Cancel Subsequent Invoice",
+      "frequency": 5,
+      "avg_duration_hours": 182.23
+    },
+    {
+      "source": "Update Order Confirmation",
+      "target": "Clear Invoice",
+      "frequency": 5,
+      "avg_duration_hours": 1316.08
+    },
+    {
+      "source": "Change Approval for Purchase Order",
+      "target": "Vendor creates debit memo",
+      "frequency": 5,
+      "avg_duration_hours": 1243.08
+    },
+    {
+      "source": "Record Service Entry Sheet",
+      "target": "SRM: Complete",
+      "frequency": 4,
+      "avg_duration_hours": 0.33
+    },
+    {
+      "source": "SRM: Document Completed",
+      "target": "Record Invoice Receipt",
+      "frequency": 4,
+      "avg_duration_hours": 17.34
+    },
+    {
+      "source": "SRM: Deleted",
+      "target": "Record Invoice Receipt",
+      "frequency": 4,
+      "avg_duration_hours": 247.52
+    },
+    {
+      "source": "Cancel Goods Receipt",
+      "target": "SRM: Created",
+      "frequency": 4,
+      "avg_duration_hours": 0.18
+    },
+    {
+      "source": "Change Price",
+      "target": "SRM: Created",
+      "frequency": 4,
+      "avg_duration_hours": 600.36
+    },
+    {
+      "source": "SRM: Deleted",
+      "target": "Change Final Invoice Indicator",
+      "frequency": 4,
+      "avg_duration_hours": 0.0
+    },
+    {
+      "source": "Change Final Invoice Indicator",
+      "target": "Clear Invoice",
+      "frequency": 4,
+      "avg_duration_hours": 383.55
+    },
+    {
+      "source": "SRM: Deleted",
+      "target": "SRM: Complete",
+      "frequency": 4,
+      "avg_duration_hours": 0.03
+    },
+    {
+      "source": "Vendor creates invoice",
+      "target": "Cancel Subsequent Invoice",
+      "frequency": 4,
+      "avg_duration_hours": 488.15
+    },
+    {
+      "source": "Receive Order Confirmation",
+      "target": "Change Storage Location",
+      "frequency": 4,
+      "avg_duration_hours": 159.76
+    },
+    {
+      "source": "Record Subsequent Invoice",
+      "target": "Record Subsequent Invoice",
+      "frequency": 4,
+      "avg_duration_hours": 5.38
+    },
+    {
+      "source": "Delete Purchase Order Item",
+      "target": "Remove Payment Block",
+      "frequency": 4,
+      "avg_duration_hours": 6.12
+    },
+    {
+      "source": "Create Purchase Order Item",
+      "target": "Change Currency",
+      "frequency": 4,
+      "avg_duration_hours": 0.02
+    },
+    {
+      "source": "Cancel Subsequent Invoice",
+      "target": "Record Goods Receipt",
+      "frequency": 4,
+      "avg_duration_hours": 38.08
+    },
+    {
+      "source": "Change Price",
+      "target": "Cancel Subsequent Invoice",
+      "frequency": 4,
+      "avg_duration_hours": 33.47
+    },
+    {
+      "source": "Vendor creates debit memo",
+      "target": "Record Subsequent Invoice",
+      "frequency": 4,
+      "avg_duration_hours": 35.06
+    },
+    {
+      "source": "Change payment term",
+      "target": "Record Goods Receipt",
+      "frequency": 4,
+      "avg_duration_hours": 748.05
+    },
+    {
+      "source": "Remove Payment Block",
+      "target": "Change Approval for Purchase Order",
+      "frequency": 4,
+      "avg_duration_hours": 368.89
+    },
+    {
+      "source": "Remove Payment Block",
+      "target": "Delete Purchase Order Item",
+      "frequency": 4,
+      "avg_duration_hours": 220.01
+    },
+    {
+      "source": "Vendor creates invoice",
+      "target": "Set Payment Block",
+      "frequency": 4,
+      "avg_duration_hours": 376.35
+    },
+    {
+      "source": "Change Price",
+      "target": "Update Order Confirmation",
+      "frequency": 4,
+      "avg_duration_hours": 0.0
+    },
+    {
+      "source": "Vendor creates debit memo",
+      "target": "Create Purchase Requisition Item",
+      "frequency": 4,
+      "avg_duration_hours": 2724.27
+    },
+    {
+      "source": "Delete Purchase Order Item",
+      "target": "SRM: Transaction Completed",
+      "frequency": 3,
+      "avg_duration_hours": 0.0
+    },
+    {
+      "source": "SRM: Deleted",
+      "target": "Vendor creates invoice",
+      "frequency": 3,
+      "avg_duration_hours": 197.88
+    },
+    {
+      "source": "SRM: Deleted",
+      "target": "Clear Invoice",
+      "frequency": 3,
+      "avg_duration_hours": 338.41
+    },
+    {
+      "source": "SRM: Created",
+      "target": "Record Service Entry Sheet",
+      "frequency": 3,
+      "avg_duration_hours": 1.23
+    },
+    {
+      "source": "Clear Invoice",
+      "target": "Set Payment Block",
+      "frequency": 3,
+      "avg_duration_hours": 13.44
+    },
+    {
+      "source": "Cancel Subsequent Invoice",
+      "target": "Cancel Invoice Receipt",
+      "frequency": 3,
+      "avg_duration_hours": 135.11
+    },
+    {
+      "source": "Receive Order Confirmation",
+      "target": "Clear Invoice",
+      "frequency": 3,
+      "avg_duration_hours": 1532.54
+    },
+    {
+      "source": "Record Subsequent Invoice",
+      "target": "Vendor creates invoice",
+      "frequency": 3,
+      "avg_duration_hours": 52.24
+    },
+    {
+      "source": "Cancel Goods Receipt",
+      "target": "Change Storage Location",
+      "frequency": 3,
+      "avg_duration_hours": 0.04
+    },
+    {
+      "source": "Cancel Invoice Receipt",
+      "target": "Cancel Subsequent Invoice",
+      "frequency": 3,
+      "avg_duration_hours": 49.45
+    },
+    {
+      "source": "Release Purchase Order",
+      "target": "Clear Invoice",
+      "frequency": 3,
+      "avg_duration_hours": 219.12
+    },
+    {
+      "source": "Change Approval for Purchase Order",
+      "target": "Cancel Goods Receipt",
+      "frequency": 3,
+      "avg_duration_hours": 919.22
+    },
+    {
+      "source": "Change Approval for Purchase Order",
+      "target": "Remove Payment Block",
+      "frequency": 3,
+      "avg_duration_hours": 33.12
+    },
+    {
+      "source": "Update Order Confirmation",
+      "target": "Change Price",
+      "frequency": 3,
+      "avg_duration_hours": 335.6
+    },
+    {
+      "source": "Clear Invoice",
+      "target": "Block Purchase Order Item",
+      "frequency": 3,
+      "avg_duration_hours": 135.84
+    },
+    {
+      "source": "Record Invoice Receipt",
+      "target": "Delete Purchase Order Item",
+      "frequency": 3,
+      "avg_duration_hours": 595.53
+    },
+    {
+      "source": "Reactivate Purchase Order Item",
+      "target": "Change Delivery Indicator",
+      "frequency": 3,
+      "avg_duration_hours": 0.0
+    },
+    {
+      "source": "Cancel Invoice Receipt",
+      "target": "Change Quantity",
+      "frequency": 3,
+      "avg_duration_hours": 77.97
+    },
+    {
+      "source": "Create Purchase Order Item",
+      "target": "Change payment term",
+      "frequency": 3,
+      "avg_duration_hours": 24.02
+    },
+    {
+      "source": "SRM: In Transfer to Execution Syst.",
+      "target": "SRM: Transaction Completed",
+      "frequency": 2,
+      "avg_duration_hours": 0.0
+    },
+    {
+      "source": "SRM: Document Completed",
+      "target": "Clear Invoice",
+      "frequency": 2,
+      "avg_duration_hours": 1.38
+    },
+    {
+      "source": "Clear Invoice",
+      "target": "SRM: Ordered",
+      "frequency": 2,
+      "avg_duration_hours": 299.19
+    },
+    {
+      "source": "Record Invoice Receipt",
+      "target": "SRM: Ordered",
+      "frequency": 2,
+      "avg_duration_hours": 38.89
+    },
+    {
+      "source": "SRM: Created",
+      "target": "Clear Invoice",
+      "frequency": 2,
+      "avg_duration_hours": 0.97
+    },
+    {
+      "source": "Clear Invoice",
+      "target": "SRM: Complete",
+      "frequency": 2,
+      "avg_duration_hours": 1.07
+    },
+    {
+      "source": "Record Goods Receipt",
+      "target": "SRM: Created",
+      "frequency": 2,
+      "avg_duration_hours": 40.89
+    },
+    {
+      "source": "SRM: Created",
+      "target": "Cancel Goods Receipt",
+      "frequency": 2,
+      "avg_duration_hours": 1.95
+    },
+    {
+      "source": "Cancel Goods Receipt",
+      "target": "SRM: Complete",
+      "frequency": 2,
+      "avg_duration_hours": 0.09
+    },
+    {
+      "source": "Change Price",
+      "target": "SRM: In Transfer to Execution Syst.",
+      "frequency": 2,
+      "avg_duration_hours": 10.98
+    },
+    {
+      "source": "Cancel Subsequent Invoice",
+      "target": "Cancel Subsequent Invoice",
+      "frequency": 2,
+      "avg_duration_hours": 83.66
+    },
+    {
+      "source": "Change Price",
+      "target": "SRM: Transaction Completed",
+      "frequency": 2,
+      "avg_duration_hours": 0.0
+    },
+    {
+      "source": "SRM: Ordered",
+      "target": "SRM: Document Completed",
+      "frequency": 2,
+      "avg_duration_hours": 0.0
+    },
+    {
+      "source": "SRM: Deleted",
+      "target": "Record Service Entry Sheet",
+      "frequency": 2,
+      "avg_duration_hours": 184.23
+    },
+    {
+      "source": "Change Approval for Purchase Order",
+      "target": "Cancel Invoice Receipt",
+      "frequency": 2,
+      "avg_duration_hours": 2498.0
+    },
+    {
+      "source": "Cancel Subsequent Invoice",
+      "target": "Vendor creates invoice",
+      "frequency": 2,
+      "avg_duration_hours": 84.38
+    },
+    {
+      "source": "Update Order Confirmation",
+      "target": "Receive Order Confirmation",
+      "frequency": 2,
+      "avg_duration_hours": 12.42
+    },
+    {
+      "source": "Block Purchase Order Item",
+      "target": "Clear Invoice",
+      "frequency": 2,
+      "avg_duration_hours": 1224.87
+    },
+    {
+      "source": "Change Currency",
+      "target": "Create Purchase Order Item",
+      "frequency": 2,
+      "avg_duration_hours": 2917.46
+    },
+    {
+      "source": "Change Currency",
+      "target": "Change Price",
+      "frequency": 2,
+      "avg_duration_hours": 38.48
+    },
+    {
+      "source": "Change Storage Location",
+      "target": "Change Delivery Indicator",
+      "frequency": 2,
+      "avg_duration_hours": 226.46
+    },
+    {
+      "source": "Cancel Subsequent Invoice",
+      "target": "Change Price",
+      "frequency": 2,
+      "avg_duration_hours": 671.87
+    },
+    {
+      "source": "Change Currency",
+      "target": "Delete Purchase Order Item",
+      "frequency": 2,
+      "avg_duration_hours": 9.18
+    },
+    {
+      "source": "Record Subsequent Invoice",
+      "target": "Cancel Invoice Receipt",
+      "frequency": 2,
+      "avg_duration_hours": 80.85
+    },
+    {
+      "source": "Cancel Goods Receipt",
+      "target": "Release Purchase Order",
+      "frequency": 2,
+      "avg_duration_hours": 1.46
+    },
+    {
+      "source": "Change Delivery Indicator",
+      "target": "Cancel Subsequent Invoice",
+      "frequency": 2,
+      "avg_duration_hours": 432.5
+    },
+    {
+      "source": "Record Subsequent Invoice",
+      "target": "Change Price",
+      "frequency": 2,
+      "avg_duration_hours": 514.66
+    },
+    {
+      "source": "Change Currency",
+      "target": "Change payment term",
+      "frequency": 2,
+      "avg_duration_hours": 0.0
+    },
+    {
+      "source": "Change Currency",
+      "target": "Record Goods Receipt",
+      "frequency": 2,
+      "avg_duration_hours": 259.83
+    },
+    {
+      "source": "Change Delivery Indicator",
+      "target": "Record Subsequent Invoice",
+      "frequency": 2,
+      "avg_duration_hours": 778.55
+    },
+    {
+      "source": "Reactivate Purchase Order Item",
+      "target": "Cancel Goods Receipt",
+      "frequency": 2,
+      "avg_duration_hours": 1.25
+    },
+    {
+      "source": "Change Quantity",
+      "target": "Cancel Subsequent Invoice",
+      "frequency": 2,
+      "avg_duration_hours": 557.37
+    },
+    {
+      "source": "Clear Invoice",
+      "target": "Change Storage Location",
+      "frequency": 2,
+      "avg_duration_hours": 1661.23
+    },
+    {
+      "source": "Change Currency",
+      "target": "Vendor creates debit memo",
+      "frequency": 2,
+      "avg_duration_hours": 34.63
+    },
+    {
+      "source": "Change Price",
+      "target": "Change payment term",
+      "frequency": 2,
+      "avg_duration_hours": 0.0
+    },
+    {
+      "source": "Record Service Entry Sheet",
+      "target": "SRM: In Transfer to Execution Syst.",
+      "frequency": 1,
+      "avg_duration_hours": 714.35
+    },
+    {
+      "source": "Record Service Entry Sheet",
+      "target": "SRM: Ordered",
+      "frequency": 1,
+      "avg_duration_hours": 6.87
+    },
+    {
+      "source": "SRM: In Transfer to Execution Syst.",
+      "target": "Record Service Entry Sheet",
+      "frequency": 1,
+      "avg_duration_hours": 75.8
+    },
+    {
+      "source": "Delete Purchase Order Item",
+      "target": "SRM: In Transfer to Execution Syst.",
+      "frequency": 1,
+      "avg_duration_hours": 0.02
+    },
+    {
+      "source": "SRM: Transaction Completed",
+      "target": "SRM: In Transfer to Execution Syst.",
+      "frequency": 1,
+      "avg_duration_hours": 3741.2
+    },
+    {
+      "source": "SRM: Transfer Failed (E.Sys.)",
+      "target": "Vendor creates invoice",
+      "frequency": 1,
+      "avg_duration_hours": 2482.98
+    },
+    {
+      "source": "SRM: Deleted",
+      "target": "SRM: Created",
+      "frequency": 1,
+      "avg_duration_hours": 96.33
+    },
+    {
+      "source": "SRM: Document Completed",
+      "target": "SRM: Created",
+      "frequency": 1,
+      "avg_duration_hours": 0.02
+    },
+    {
+      "source": "SRM: Created",
+      "target": "SRM: Ordered",
+      "frequency": 1,
+      "avg_duration_hours": 0.4
+    },
+    {
+      "source": "Change Price",
+      "target": "SRM: Complete",
+      "frequency": 1,
+      "avg_duration_hours": 0.6
+    },
+    {
+      "source": "Change Delivery Indicator",
+      "target": "SRM: Created",
+      "frequency": 1,
+      "avg_duration_hours": 0.42
+    },
+    {
+      "source": "Change Price",
+      "target": "Change Final Invoice Indicator",
+      "frequency": 1,
+      "avg_duration_hours": 0.0
+    },
+    {
+      "source": "SRM: Deleted",
+      "target": "Change Quantity",
+      "frequency": 1,
+      "avg_duration_hours": 0.0
+    },
+    {
+      "source": "Create Purchase Order Item",
+      "target": "SRM: Transaction Completed",
+      "frequency": 1,
+      "avg_duration_hours": 528.2
+    },
+    {
+      "source": "Change Final Invoice Indicator",
+      "target": "SRM: In Transfer to Execution Syst.",
+      "frequency": 1,
+      "avg_duration_hours": 407.37
+    },
+    {
+      "source": "SRM: In Transfer to Execution Syst.",
+      "target": "Record Invoice Receipt",
+      "frequency": 1,
+      "avg_duration_hours": 459.95
+    },
+    {
+      "source": "SRM: Created",
+      "target": "Record Invoice Receipt",
+      "frequency": 1,
+      "avg_duration_hours": 0.9
+    },
+    {
+      "source": "Record Invoice Receipt",
+      "target": "SRM: Complete",
+      "frequency": 1,
+      "avg_duration_hours": 1.12
+    },
+    {
+      "source": "SRM: Created",
+      "target": "Create Purchase Order Item",
+      "frequency": 1,
+      "avg_duration_hours": 2.0
+    },
+    {
+      "source": "Create Purchase Order Item",
+      "target": "SRM: Complete",
+      "frequency": 1,
+      "avg_duration_hours": 0.0
+    },
+    {
+      "source": "SRM: Document Completed",
+      "target": "Cancel Goods Receipt",
+      "frequency": 1,
+      "avg_duration_hours": 8.0
+    },
+    {
+      "source": "Cancel Goods Receipt",
+      "target": "SRM: Ordered",
+      "frequency": 1,
+      "avg_duration_hours": 9.65
+    },
+    {
+      "source": "SRM: Transaction Completed",
+      "target": "Change Delivery Indicator",
+      "frequency": 1,
+      "avg_duration_hours": 0.0
+    },
+    {
+      "source": "SRM: Change was Transmitted",
+      "target": "SRM: Complete",
+      "frequency": 1,
+      "avg_duration_hours": 0.9
+    },
+    {
+      "source": "SRM: In Transfer to Execution Syst.",
+      "target": "Cancel Goods Receipt",
+      "frequency": 1,
+      "avg_duration_hours": 0.98
+    },
+    {
+      "source": "SRM: In Transfer to Execution Syst.",
+      "target": "Vendor creates invoice",
+      "frequency": 1,
+      "avg_duration_hours": 1473.82
+    },
+    {
+      "source": "Change Final Invoice Indicator",
+      "target": "Record Invoice Receipt",
+      "frequency": 1,
+      "avg_duration_hours": 413.53
+    },
+    {
+      "source": "Change Final Invoice Indicator",
+      "target": "SRM: Complete",
+      "frequency": 1,
+      "avg_duration_hours": 0.02
+    },
+    {
+      "source": "SRM: Created",
+      "target": "SRM: In Transfer to Execution Syst.",
+      "frequency": 1,
+      "avg_duration_hours": 1.33
+    },
+    {
+      "source": "SRM: In Transfer to Execution Syst.",
+      "target": "SRM: Complete",
+      "frequency": 1,
+      "avg_duration_hours": 0.67
+    },
+    {
+      "source": "SRM: Ordered",
+      "target": "Vendor creates invoice",
+      "frequency": 1,
+      "avg_duration_hours": 30.73
+    },
+    {
+      "source": "SRM: Awaiting Approval",
+      "target": "SRM: Ordered",
+      "frequency": 1,
+      "avg_duration_hours": 0.0
+    },
+    {
+      "source": "SRM: In Transfer to Execution Syst.",
+      "target": "Delete Purchase Order Item",
+      "frequency": 1,
+      "avg_duration_hours": 0.0
+    },
+    {
+      "source": "SRM: Awaiting Approval",
+      "target": "SRM: In Transfer to Execution Syst.",
+      "frequency": 1,
+      "avg_duration_hours": 0.0
+    },
+    {
+      "source": "SRM: In Transfer to Execution Syst.",
+      "target": "Remove Payment Block",
+      "frequency": 1,
+      "avg_duration_hours": 11.2
+    },
+    {
+      "source": "Change Delivery Indicator",
+      "target": "Release Purchase Order",
+      "frequency": 1,
+      "avg_duration_hours": 0.0
+    },
+    {
+      "source": "Change Currency",
+      "target": "Change Quantity",
+      "frequency": 1,
+      "avg_duration_hours": 2525.67
+    },
+    {
+      "source": "Set Payment Block",
+      "target": "Cancel Invoice Receipt",
+      "frequency": 1,
+      "avg_duration_hours": 28.18
+    },
+    {
+      "source": "Block Purchase Order Item",
+      "target": "Vendor creates debit memo",
+      "frequency": 1,
+      "avg_duration_hours": 1305.52
+    },
+    {
+      "source": "Record Subsequent Invoice",
+      "target": "Record Goods Receipt",
+      "frequency": 1,
+      "avg_duration_hours": 4.57
+    },
+    {
+      "source": "Record Service Entry Sheet",
+      "target": "Cancel Subsequent Invoice",
+      "frequency": 1,
+      "avg_duration_hours": 12.43
+    },
+    {
+      "source": "Release Purchase Order",
+      "target": "Remove Payment Block",
+      "frequency": 1,
+      "avg_duration_hours": 6.55
+    },
+    {
+      "source": "Change Delivery Indicator",
+      "target": "Change Storage Location",
+      "frequency": 1,
+      "avg_duration_hours": 2.42
+    },
+    {
+      "source": "Cancel Invoice Receipt",
+      "target": "Record Service Entry Sheet",
+      "frequency": 1,
+      "avg_duration_hours": 524.88
+    },
+    {
+      "source": "Receive Order Confirmation",
+      "target": "Cancel Goods Receipt",
+      "frequency": 1,
+      "avg_duration_hours": 670.85
+    },
+    {
+      "source": "Change payment term",
+      "target": "Change Price",
+      "frequency": 1,
+      "avg_duration_hours": 20.22
+    },
+    {
+      "source": "Set Payment Block",
+      "target": "Cancel Subsequent Invoice",
+      "frequency": 1,
+      "avg_duration_hours": 341.85
+    },
+    {
+      "source": "Cancel Goods Receipt",
+      "target": "Change Approval for Purchase Order",
+      "frequency": 1,
+      "avg_duration_hours": 24.47
+    },
+    {
+      "source": "Remove Payment Block",
+      "target": "Receive Order Confirmation",
+      "frequency": 1,
+      "avg_duration_hours": 10.38
+    },
+    {
+      "source": "Delete Purchase Order Item",
+      "target": "Change Rejection Indicator",
+      "frequency": 1,
+      "avg_duration_hours": 0.0
+    },
+    {
+      "source": "Change Rejection Indicator",
+      "target": "Change Rejection Indicator",
+      "frequency": 1,
+      "avg_duration_hours": 5.97
+    },
+    {
+      "source": "Change Rejection Indicator",
+      "target": "Reactivate Purchase Order Item",
+      "frequency": 1,
+      "avg_duration_hours": 0.0
+    },
+    {
+      "source": "Delete Purchase Order Item",
+      "target": "Delete Purchase Order Item",
+      "frequency": 1,
+      "avg_duration_hours": 163.97
+    },
+    {
+      "source": "Change Storage Location",
+      "target": "Block Purchase Order Item",
+      "frequency": 1,
+      "avg_duration_hours": 4876.4
+    },
+    {
+      "source": "Change Storage Location",
+      "target": "Release Purchase Order",
+      "frequency": 1,
+      "avg_duration_hours": 29.93
+    },
+    {
+      "source": "Change Delivery Indicator",
+      "target": "Reactivate Purchase Order Item",
+      "frequency": 1,
+      "avg_duration_hours": 0.0
+    },
+    {
+      "source": "Update Order Confirmation",
+      "target": "Vendor creates debit memo",
+      "frequency": 1,
+      "avg_duration_hours": 226.35
+    },
+    {
+      "source": "Reactivate Purchase Order Item",
+      "target": "Change Storage Location",
+      "frequency": 1,
+      "avg_duration_hours": 5.98
+    },
+    {
+      "source": "Vendor creates debit memo",
+      "target": "Delete Purchase Order Item",
+      "frequency": 1,
+      "avg_duration_hours": 10.35
+    },
+    {
+      "source": "Remove Payment Block",
+      "target": "Update Order Confirmation",
+      "frequency": 1,
+      "avg_duration_hours": 91.77
+    },
+    {
+      "source": "Reactivate Purchase Order Item",
+      "target": "Clear Invoice",
+      "frequency": 1,
+      "avg_duration_hours": 169.35
+    },
+    {
+      "source": "Set Payment Block",
+      "target": "Change Price",
+      "frequency": 1,
+      "avg_duration_hours": 15.1
+    },
+    {
+      "source": "Change Storage Location",
+      "target": "Remove Payment Block",
+      "frequency": 1,
+      "avg_duration_hours": 269.02
+    },
+    {
+      "source": "Create Purchase Order Item",
+      "target": "Update Order Confirmation",
+      "frequency": 1,
+      "avg_duration_hours": 113.03
+    },
+    {
+      "source": "Cancel Goods Receipt",
+      "target": "Block Purchase Order Item",
+      "frequency": 1,
+      "avg_duration_hours": 23.05
+    },
+    {
+      "source": "Change payment term",
+      "target": "Change Storage Location",
+      "frequency": 1,
+      "avg_duration_hours": 425.4
+    },
+    {
+      "source": "Reactivate Purchase Order Item",
+      "target": "Remove Payment Block",
+      "frequency": 1,
+      "avg_duration_hours": 1035.08
+    },
+    {
+      "source": "Remove Payment Block",
+      "target": "Change Storage Location",
+      "frequency": 1,
+      "avg_duration_hours": 316.65
+    },
+    {
+      "source": "Create Purchase Order Item",
+      "target": "Change Final Invoice Indicator",
+      "frequency": 1,
+      "avg_duration_hours": 0.05
+    },
+    {
+      "source": "Change Final Invoice Indicator",
+      "target": "Record Goods Receipt",
+      "frequency": 1,
+      "avg_duration_hours": 31.18
+    },
+    {
+      "source": "Receive Order Confirmation",
+      "target": "Change Approval for Purchase Order",
+      "frequency": 1,
+      "avg_duration_hours": 142.6
+    },
+    {
+      "source": "Delete Purchase Order Item",
+      "target": "Vendor creates debit memo",
+      "frequency": 1,
+      "avg_duration_hours": 8.87
+    }
+  ],
+  "start_activities": {
+    "SRM: Created": 1360,
+    "Vendor creates invoice": 3457,
+    "Vendor creates debit memo": 122,
+    "Create Purchase Order Item": 199867,
+    "Create Purchase Requisition Item": 46526,
+    "Change Approval for Purchase Order": 378,
+    "Change Currency": 2,
+    "Release Purchase Order": 22
+  },
+  "end_activities": {
+    "Clear Invoice": 181328,
+    "SRM: Transfer Failed (E.Sys.)": 44,
+    "SRM: Change was Transmitted": 47,
+    "Change Delivery Indicator": 718,
+    "SRM: In Transfer to Execution Syst.": 30,
+    "Record Service Entry Sheet": 921,
+    "Create Purchase Order Item": 4447,
+    "Record Invoice Receipt": 23091,
+    "SRM: Transaction Completed": 6,
+    "Vendor creates debit memo": 5,
+    "Record Goods Receipt": 22776,
+    "Change Final Invoice Indicator": 3,
+    "Delete Purchase Order Item": 8123,
+    "Remove Payment Block": 5397,
+    "Cancel Invoice Receipt": 1348,
+    "Cancel Goods Receipt": 440,
+    "Change Price": 529,
+    "SRM: Deleted": 9,
+    "Change Quantity": 525,
+    "Set Payment Block": 61,
+    "Block Purchase Order Item": 167,
+    "Receive Order Confirmation": 232,
+    "Reactivate Purchase Order Item": 14,
+    "Change Approval for Purchase Order": 1346,
+    "Change Currency": 1,
+    "Cancel Subsequent Invoice": 24,
+    "Vendor creates invoice": 68,
+    "Update Order Confirmation": 3,
+    "Change Storage Location": 20,
+    "Record Subsequent Invoice": 9,
+    "Release Purchase Order": 1,
+    "Change payment term": 1
+  }
+}
