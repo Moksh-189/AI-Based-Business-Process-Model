@@ -64,14 +64,36 @@ class ProcessChatbot:
         except Exception:
             context['dfg_top_edges'] = "Not available"
 
+        try:
+            with open('agent_comparison.json', 'r') as f:
+                context['optimization'] = json.load(f)
+        except Exception:
+            context['optimization'] = None
+
         return context
+
+    def reload_context(self):
+        """Reloads context from files and updates system prompt."""
+        self.context = self._load_context()
+        self._set_system_prompt()
+        print("Chatbot context reloaded.")
 
     def _set_system_prompt(self):
         """Inject process data into the chat session."""
         stats = self.context.get('stats', {})
         bottlenecks = self.context.get('bottlenecks', {})
         dfg = self.context.get('dfg_top_edges', [])
+        opt = self.context.get('optimization')
         
+        opt_text = ""
+        if opt:
+            opt_text = f"""
+### RECENT OPTIMIZATION RESULTS
+- Winner Agent: {opt.get('winner', 'N/A')}
+- Improvement over Random: {opt.get('gelu_improvement_over_random', 'N/A')}
+- Training Timesteps: {opt.get('timesteps', 'N/A')}
+"""
+
         # Construct a data-rich system prompt
         system_prompt = f"""
 You are an expert AI Process Analyst for a large SAP procurement process.
@@ -88,18 +110,15 @@ Your goal is to analyze the provided process data, identify inefficiencies, and 
 
 ### TOP PROCESS FLOWS (DFG)
 {json.dumps(dfg, indent=2)}
-
+{opt_text}
 ### INSTRUCTIONS
 1. Be concise and actionable.
 2. Cite specific data points (e.g., "Activity X takes 50h") to back up claims.
 3. Focus on the high-severity bottlenecks (red nodes).
 4. Suggest root causes based on standard procurement knowledge (e.g., "Invoice Receipt delays often mean vendor mismatches").
 5. If asked about "simulation", explain that you can guide the digital twin setup.
+6. If optimization results are available, reference them to show potential AI impact.
 """
-        # Gemini python SDK handles system prompts via history or config.
-        # Ideally we send this as the first user message or system instruction.
-        # For simplicity in this class, we'll prepend it to the first query internally
-        # OR use the system_instruction if supported.
         self.system_prompt = system_prompt
         
     def ask(self, query):

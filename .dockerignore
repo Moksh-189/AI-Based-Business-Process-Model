@@ -1,0 +1,31 @@
+# Python
+venv/
+__pycache__/
+*.pyc
+.pytest_cache/
+
+# Data (too large for Docker image, mount as volume)
+*.xes
+*.csv
+*.zip
+
+# Node
+frontend/node_modules/
+frontend/.cache/
+
+# Git
+.git/
+.gitignore
+
+# IDE
+.vscode/
+.idea/
+
+# Test artifacts
+frontend/test_*.txt
+frontend/test-results/
+frontend/playwright-report/
+
+# Misc
+*.png
+*.pt

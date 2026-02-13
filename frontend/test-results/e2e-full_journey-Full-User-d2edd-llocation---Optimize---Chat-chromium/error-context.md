@@ -1,0 +1,81 @@
+# Page snapshot
+
+```yaml
+- generic [ref=e3]:
+  - generic [ref=e4]:
+    - generic [ref=e5]:
+      - generic [ref=e6]: AI.BPI
+      - button [ref=e7] [cursor=pointer]:
+        - img [ref=e8]
+    - navigation [ref=e9]:
+      - link "Dashboard" [ref=e10] [cursor=pointer]:
+        - /url: /
+        - img [ref=e11]
+        - generic [ref=e16]: Dashboard
+      - link "Process Topology" [ref=e17] [cursor=pointer]:
+        - /url: /topology
+        - img [ref=e18]
+        - generic [ref=e23]: Process Topology
+      - link "Workforce" [ref=e24] [cursor=pointer]:
+        - /url: /workforce
+        - img [ref=e25]
+        - generic [ref=e30]: Workforce
+      - link "Telemetry" [ref=e31] [cursor=pointer]:
+        - /url: /telemetry
+        - img [ref=e32]
+        - generic [ref=e33]: Telemetry
+    - generic [ref=e37]: System Online
+  - main [ref=e38]:
+    - generic [ref=e40]:
+      - generic [ref=e41]:
+        - generic [ref=e42]:
+          - img [ref=e43]
+          - generic [ref=e45]: Next-Gen Process Intelligence
+        - heading "Digital Twin Simulation" [level=1] [ref=e46]:
+          - text: Digital Twin
+          - text: Simulation
+        - paragraph [ref=e47]: Optimize your business processes with AI-driven insights. Simulate scenarios, identify bottlenecks, and automate decision-making in real-time.
+        - generic [ref=e48]:
+          - link "Launch Simulation" [ref=e49] [cursor=pointer]:
+            - /url: /topology
+            - generic [ref=e51]:
+              - text: Launch Simulation
+              - img [ref=e52]
+          - link "View Live Telemetry" [ref=e54] [cursor=pointer]:
+            - /url: /telemetry
+      - generic [ref=e55]:
+        - generic [ref=e56]:
+          - img [ref=e58]
+          - heading "Real-time Analytics" [level=3] [ref=e60]
+          - paragraph [ref=e61]: Monitor KPIs with millisecond precision using our advanced telemetry dashboard.
+        - generic [ref=e62]:
+          - img [ref=e64]
+          - heading "AI Optimization" [level=3] [ref=e67]
+          - paragraph [ref=e68]: Leverage Graph Neural Networks to predict and resolve process bottlenecks automatically.
+        - generic [ref=e69]:
+          - img [ref=e71]
+          - heading "Instant Simulation" [level=3] [ref=e73]
+          - paragraph [ref=e74]: Drag-and-drop resources to instantly simulate outcomes before deployment.
+  - generic [ref=e75]:
+    - generic:
+      - generic:
+        - generic:
+          - generic:
+            - img
+          - generic:
+            - heading "AI Assistant" [level=3]
+            - generic:
+              - generic: Online
+        - button:
+          - img
+      - generic:
+        - generic:
+          - generic: Hello! I'm your AI process assistant. How can I help you optimize your workflow today?
+      - generic:
+        - generic:
+          - textbox "Ask about process bottlenecks..."
+          - button [disabled]:
+            - img
+    - button [ref=e76] [cursor=pointer]:
+      - img [ref=e77]
+```
