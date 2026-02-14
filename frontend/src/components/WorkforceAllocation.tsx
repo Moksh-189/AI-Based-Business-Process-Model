@@ -1,9 +1,31 @@
 import { useState, useEffect } from 'react';
+import { createPortal } from 'react-dom';
 import { API_URL } from '../config/api';
 import { useToast } from '../context/ToastContext';
-import { DragDropContext, Droppable, Draggable, type DropResult } from '@hello-pangea/dnd';
+import { DragDropContext, Droppable, Draggable, type DropResult, type DraggableProvided, type DraggableStateSnapshot } from '@hello-pangea/dnd';
 import { Users, User, AlertCircle } from 'lucide-react';
 
+// Portal wrapper to fix drag offset caused by CSS transforms (backdrop-blur, etc.)
+const PortalAwareDraggable = ({ provided, snapshot, children }: {
+    provided: DraggableProvided;
+    snapshot: DraggableStateSnapshot;
+    children: React.ReactNode;
+}) => {
+    const child = (
+        <div
+            ref={provided.innerRef}
+            {...provided.draggableProps}
+            {...provided.dragHandleProps}
+        >
+            {children}
+        </div>
+    );
+
+    if (snapshot.isDragging) {
+        return createPortal(child, document.body);
+    }
+    return child;
+};
 interface Employee {
     id: string;
     name: string;
@@ -114,28 +136,27 @@ const WorkforceAllocation = () => {
                                     )}
                                     {assignedStaff.map((emp, index) => (
                                         <Draggable key={emp.id} draggableId={emp.id} index={index}>
-                                            {(provided) => (
-                                                <div
-                                                    ref={provided.innerRef}
-                                                    {...provided.draggableProps}
-                                                    {...provided.dragHandleProps}
-                                                    data-testid="draggable-card"
-                                                    data-employee-name={emp.name}
-                                                    className="mb-2 p-3 bg-surface border border-white/10 rounded-lg shadow-sm flex justify-between items-center group hover:border-primary/50"
-                                                >
-                                                    <div className="flex items-center gap-3">
-                                                        <div className="w-8 h-8 rounded-full bg-primary/20 flex items-center justify-center text-primary">
-                                                            <User size={16} />
+                                            {(provided, snapshot) => (
+                                                <PortalAwareDraggable provided={provided} snapshot={snapshot}>
+                                                    <div
+                                                        data-testid="draggable-card"
+                                                        data-employee-name={emp.name}
+                                                        className="mb-2 p-3 bg-surface border border-white/10 rounded-lg shadow-sm flex justify-between items-center group hover:border-primary/50"
+                                                    >
+                                                        <div className="flex items-center gap-3">
+                                                            <div className="w-8 h-8 rounded-full bg-primary/20 flex items-center justify-center text-primary">
+                                                                <User size={16} />
+                                                            </div>
+                                                            <div>
+                                                                <div className="font-bold text-sm">{emp.name}</div>
+                                                                <div className="text-xs text-gray-400">{emp.role}</div>
+                                                            </div>
                                                         </div>
-                                                        <div>
-                                                            <div className="font-bold text-sm">{emp.name}</div>
-                                                            <div className="text-xs text-gray-400">{emp.role}</div>
+                                                        <div className="text-emerald-400 text-xs font-mono">
+                                                            {emp.efficiency}% Eff.
                                                         </div>
                                                     </div>
-                                                    <div className="text-emerald-400 text-xs font-mono">
-                                                        {emp.efficiency}% Eff.
-                                                    </div>
-                                                </div>
+                                                </PortalAwareDraggable>
                                             )}
                                         </Draggable>
                                     ))}
@@ -158,25 +179,24 @@ const WorkforceAllocation = () => {
                                 >
                                     {availableStaff.map((emp, index) => (
                                         <Draggable key={emp.id} draggableId={emp.id} index={index}>
-                                            {(provided) => (
-                                                <div
-                                                    ref={provided.innerRef}
-                                                    {...provided.draggableProps}
-                                                    {...provided.dragHandleProps}
-                                                    data-testid="draggable-card"
-                                                    data-employee-name={emp.name}
-                                                    className="mb-2 p-3 bg-surface/50 border border-white/5 rounded-lg flex justify-between items-center cursor-grab active:cursor-grabbing hover:bg-surface/80"
-                                                >
-                                                    <div className="flex items-center gap-3">
-                                                        <div className="w-8 h-8 rounded-full bg-gray-700 flex items-center justify-center text-gray-300">
-                                                            <User size={16} />
-                                                        </div>
-                                                        <div>
-                                                            <div className="font-bold text-sm">{emp.name}</div>
-                                                            <div className="text-xs text-gray-500">{emp.role}</div>
+                                            {(provided, snapshot) => (
+                                                <PortalAwareDraggable provided={provided} snapshot={snapshot}>
+                                                    <div
+                                                        data-testid="draggable-card"
+                                                        data-employee-name={emp.name}
+                                                        className="mb-2 p-3 bg-surface/50 border border-white/5 rounded-lg flex justify-between items-center cursor-grab active:cursor-grabbing hover:bg-surface/80"
+                                                    >
+                                                        <div className="flex items-center gap-3">
+                                                            <div className="w-8 h-8 rounded-full bg-gray-700 flex items-center justify-center text-gray-300">
+                                                                <User size={16} />
+                                                            </div>
+                                                            <div>
+                                                                <div className="font-bold text-sm">{emp.name}</div>
+                                                                <div className="text-xs text-gray-500">{emp.role}</div>
+                                                            </div>
                                                         </div>
                                                     </div>
-                                                </div>
+                                                </PortalAwareDraggable>
                                             )}
                                         </Draggable>
                                     ))}
