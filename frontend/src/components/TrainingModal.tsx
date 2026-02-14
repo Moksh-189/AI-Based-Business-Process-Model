@@ -149,14 +149,16 @@ const TrainingModal = ({ isOpen, onClose }: TrainingModalProps) => {
                             <p className="text-xs text-gray-400">PPO Agent · GELU Activation · 200K Timesteps</p>
                         </div>
                     </div>
-                    {(status === 'complete' || status === 'error') && (
-                        <button
-                            onClick={onClose}
-                            className="p-2 rounded-lg hover:bg-white/5 text-gray-400 hover:text-white transition-colors"
-                        >
-                            <X size={18} />
-                        </button>
-                    )}
+                    <button
+                        onClick={() => {
+                            wsRef.current?.close();
+                            onClose();
+                        }}
+                        className="p-2 rounded-lg hover:bg-white/5 text-gray-400 hover:text-white transition-colors"
+                        title="Stop training & close"
+                    >
+                        <X size={18} />
+                    </button>
                 </div>
 
                 {/* Progress Bar */}
