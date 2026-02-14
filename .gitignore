@@ -10,10 +10,6 @@ node_modules/
 dist/
 .pytest_cache/
 *.pt
-bottleneck_report.json
-dfg_data.json
-process_stats.json
-gnn_comparison.json
 chatbot_test_results.json
 frontend/test_*.txt
 frontend/test_output.txt

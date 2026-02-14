@@ -16,7 +16,10 @@ Usage:
 import os
 import json
 import google.generativeai as genai
-import torch
+try:
+    import torch
+except ImportError:
+    pass  # torch not needed for chatbot
 import pandas as pd
 
 
