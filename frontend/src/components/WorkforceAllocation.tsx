@@ -1,4 +1,5 @@
 import { useState, useEffect } from 'react';
+import { API_URL } from '../config/api';
 import { useToast } from '../context/ToastContext';
 import { DragDropContext, Droppable, Draggable, type DropResult } from '@hello-pangea/dnd';
 import { Users, User, AlertCircle } from 'lucide-react';
@@ -62,7 +63,7 @@ const WorkforceAllocation = () => {
         const updateAllocation = async () => {
             try {
                 // Digital Twin Simulation call
-                await fetch('http://127.0.0.1:8000/api/simulate', {
+                await fetch(`${API_URL}/api/simulate`, {
                     method: 'POST',
                     headers: { 'Content-Type': 'application/json' },
                     body: JSON.stringify({ assigned: assignedStaff })

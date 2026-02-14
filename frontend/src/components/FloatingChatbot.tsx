@@ -1,4 +1,5 @@
 import React, { useState, useRef, useEffect, useCallback } from 'react';
+import { WS_URL } from '../config/api';
 import { MessageSquare, X, Send, Bot } from 'lucide-react';
 
 interface Message {
@@ -32,7 +33,7 @@ const FloatingChatbot = () => {
         if (ws.current?.readyState === WebSocket.OPEN) return;
 
         setConnectionStatus('connecting');
-        const socket = new WebSocket('ws://127.0.0.1:8000/ws/chat');
+        const socket = new WebSocket(`${WS_URL}/ws/chat`);
         ws.current = socket;
 
         socket.onopen = () => {

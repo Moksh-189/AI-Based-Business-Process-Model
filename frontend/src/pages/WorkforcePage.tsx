@@ -1,4 +1,5 @@
 import { useState, useEffect, useCallback, useRef } from 'react';
+import { API_URL } from '../config/api';
 import { useToast } from '../context/ToastContext';
 import { DragDropContext, Droppable, Draggable, type DropResult } from '@hello-pangea/dnd';
 import { Users, User, AlertCircle, Sparkles, X, TrendingDown, TrendingUp, DollarSign, Loader2, Network, Play, CheckCircle2, Zap, BarChart3 } from 'lucide-react';
@@ -130,7 +131,7 @@ const WorkforcePage = () => {
     useEffect(() => {
         const fetchTopology = async () => {
             try {
-                const res = await fetch('http://127.0.0.1:8000/api/topology');
+                const res = await fetch(`${API_URL}/api/topology`);
                 const data = await res.json();
                 setProcesses(data.nodes || []);
                 // Initialize assignments map
@@ -154,7 +155,7 @@ const WorkforcePage = () => {
         setShowSuggestion(true);
 
         try {
-            const res = await fetch('http://127.0.0.1:8000/api/suggest', {
+            const res = await fetch(`${API_URL}/api/suggest`, {
                 method: 'POST',
                 headers: { 'Content-Type': 'application/json' },
                 body: JSON.stringify({
@@ -280,7 +281,7 @@ const WorkforcePage = () => {
 
                 // Minimum 600ms per process so user can see each step
                 const [res] = await Promise.all([
-                    fetch('http://127.0.0.1:8000/api/suggest', {
+                    fetch(`${API_URL}/api/suggest`, {
                         method: 'POST',
                         headers: { 'Content-Type': 'application/json' },
                         body: JSON.stringify({ process_id: processId, process_label: label, assigned: staff }),

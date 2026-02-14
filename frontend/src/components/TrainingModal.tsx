@@ -1,4 +1,5 @@
 import { useState, useEffect, useRef } from 'react';
+import { API_URL, WS_URL } from '../config/api';
 import { X, Loader2, CheckCircle2, AlertTriangle, Terminal, TrendingUp } from 'lucide-react';
 
 interface TrainingMessage {
@@ -41,7 +42,7 @@ const TrainingModal = ({ isOpen, onClose }: TrainingModalProps) => {
         // Start training
         const startTraining = async () => {
             try {
-                const res = await fetch('http://127.0.0.1:8000/api/optimize', { method: 'POST' });
+                const res = await fetch(`${API_URL}/api/optimize`, { method: 'POST' });
                 const data = await res.json();
                 if (data.status === 'already_training') {
                     setStatus('training');
@@ -54,7 +55,7 @@ const TrainingModal = ({ isOpen, onClose }: TrainingModalProps) => {
 
         // Connect WebSocket
         const connectWs = () => {
-            const ws = new WebSocket('ws://127.0.0.1:8000/ws/training');
+            const ws = new WebSocket(`${WS_URL}/ws/training`);
             wsRef.current = ws;
 
             ws.onopen = () => {

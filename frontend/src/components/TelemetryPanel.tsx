@@ -1,4 +1,5 @@
 import { useEffect, useState } from 'react';
+import { API_URL } from '../config/api';
 import { useToast } from '../context/ToastContext';
 import {
     BarChart,
@@ -44,7 +45,7 @@ const TelemetryPanel = () => {
     useEffect(() => {
         const fetchData = async () => {
             try {
-                const response = await fetch('http://127.0.0.1:8000/api/telemetry');
+                const response = await fetch(`${API_URL}/api/telemetry`);
                 if (response.ok) {
                     const jsonData = await response.json();
                     setData(jsonData);
