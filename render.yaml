@@ -1,0 +1,20 @@
+services:
+  # Backend Service
+  - type: web
+    name: ai-bpi-backend
+    env: python
+    rpc: false
+    plan: free
+    buildCommand: pip install -r requirements.txt
+    startCommand: python server.py
+    envVars:
+      - key: GEMINI_API_KEY
+        sync: false
+    autoDeploy: true
+
+  # Frontend (Static Site) - Optional if you use Netlify
+  # - type: web
+  #   name: ai-bpi-frontend
+  #   env: static
+  #   buildCommand: cd frontend && npm install && npm run build
+  #   staticPublishPath: frontend/dist

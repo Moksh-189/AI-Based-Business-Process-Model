@@ -37,7 +37,7 @@ def run_simulation(model=None, env=None, steps=1000):
     return total_revenue
 
 def start_showdown():
-    print("🥊 THE SHOWDOWN: Random vs. AI")
+    print("THE SHOWDOWN: Random vs. AI")
     print("---------------------------------")
     
     # 1. Load Data & Env
@@ -45,31 +45,31 @@ def start_showdown():
     env = JiraOptimizationEnv(df)
     
     # 2. Run Random Agent (Baseline)
-    print("\n1️⃣  Running 'Random Intern' Strategy...")
+    print("\n Running 'Random Intern' Strategy...")
     random_score = run_simulation(model=None, env=env, steps=1000)
-    print(f"   👉 Result: ${random_score:,.0f} Revenue Processed")
+    print(f" Result: ${random_score:,.0f} Revenue Processed")
     
     # 3. Run AI Agent (Your Model)
-    print("\n2️⃣  Running 'PPO AI Agent' Strategy...")
+    print("\n  Running 'PPO AI Agent' Strategy...")
     try:
         # Load the GELU model you just trained
         model = PPO.load("ppo_jira_agent_gelu.zip")
         ai_score = run_simulation(model=model, env=env, steps=1000)
-        print(f"   👉 Result: ${ai_score:,.0f} Revenue Processed")
+        print(f"  Result: ${ai_score:,.0f} Revenue Processed")
         
         # 4. The Verdict
         print("\n---------------------------------")
         if ai_score > random_score:
             improvement = ((ai_score - random_score) / random_score) * 100
-            print(f"🏆 WINNER: AI Agent!")
-            print(f"📈 Improvement: +{improvement:.1f}% more revenue captured.")
+            print(f"WINNER: AI Agent!")
+            print(f"Improvement: +{improvement:.1f}% more revenue captured.")
             print("   (The AI successfully learned to prioritize High-Value tickets!)")
         else:
-            print("😐 RESULT: Tie or Loss.")
+            print("RESULT: Tie or Loss.")
             print("   (The AI might need more training steps or better data differentiation.)")
             
     except FileNotFoundError:
-        print("❌ Error: Could not find 'ppo_jira_agent_gelu.zip'. Did you run training?")
+        print("Error: Could not find 'ppo_jira_agent_gelu.zip'. Did you run training?")
 
 if __name__ == "__main__":
     start_showdown()

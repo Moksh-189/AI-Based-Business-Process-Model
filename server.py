@@ -7,7 +7,8 @@ import json
 import os
 import subprocess
 import asyncio
-from typing import List
+import threading
+from typing import List, Optional
 from pathlib import Path
 
 # --- Chatbot & Context ---
@@ -31,6 +32,14 @@ optimization_state = {
     "is_training": False
 }
 
+# Training progress shared state
+training_progress = {
+    "active": False,
+    "messages": [],   # list of JSON-serializable dicts
+    "complete": False,
+    "results": None,
+}
+
 # --- WebSocket Manager ---
 class ConnectionManager:
     def __init__(self):
@@ -41,12 +50,39 @@ class ConnectionManager:
         self.active_connections.append(websocket)
 
     def disconnect(self, websocket: WebSocket):
-        self.active_connections.remove(websocket)
+        if websocket in self.active_connections:
+            self.active_connections.remove(websocket)
 
     async def send_personal_message(self, message: str, websocket: WebSocket):
         await websocket.send_text(message)
 
 manager = ConnectionManager()
+
+# Separate manager for training WebSocket
+class TrainingWSManager:
+    def __init__(self):
+        self.connections: List[WebSocket] = []
+    
+    async def connect(self, ws: WebSocket):
+        await ws.accept()
+        self.connections.append(ws)
+    
+    def disconnect(self, ws: WebSocket):
+        if ws in self.connections:
+            self.connections.remove(ws)
+    
+    async def broadcast(self, message: dict):
+        dead = []
+        for ws in self.connections:
+            try:
+                await ws.send_json(message)
+            except Exception:
+                dead.append(ws)
+        for ws in dead:
+            self.disconnect(ws)
+
+training_manager = TrainingWSManager()
+
 chatbot = None
 
 @app.on_event("startup")
@@ -63,35 +99,108 @@ async def startup_event():
 
 @app.get("/api/topology")
 async def get_topology():
-    """Returns static topology (simulating DB fetch)."""
-    # ... (existing logic, simplified for brevity here, assume existing structure)
-    # Re-using the structure from before but inline for clarity or importing if needed.
-    # For now, keeping the manual structure to ensure it works.
-    return {
-            "nodes": [
-                {"id": "1", "type": "input", "data": {"label": "Start: Create Purchase Req"}, "position": {"x": 250, "y": 0}, "style": {"background": "#1e293b", "color": "#fff", "border": "1px solid #06b6d4", "width": 180}},
-                {"id": "2", "data": {"label": "Approve Requisition"}, "position": {"x": 250, "y": 100}, "style": {"background": "#1e293b", "color": "#fff", "border": "1px solid #fff"}},
-                {"id": "3", "data": {"label": "Create PO"}, "position": {"x": 250, "y": 200}, "style": {"background": "#1e293b", "color": "#fff", "border": "1px solid #fff"}},
-                {"id": "4", "data": {"label": "Receive Goods"}, "position": {"x": 100, "y": 300}, "style": {"background": "#1e293b", "color": "#fff", "border": "1px solid #fff"}},
-                {"id": "5", "data": {"label": "Scan Invoice"}, "position": {"x": 400, "y": 300}, "style": {"background": "#1e293b", "color": "#fff", "border": "1px solid #fff"}},
-                {"id": "6", "data": {"label": "Clear Invoice (BOTTLENECK: 43.7d)"}, "position": {"x": 250, "y": 400}, "style": {"background": "#3f1a1a", "color": "#f87171", "border": "2px solid #ef4444", "width": 200, "boxShadow": "0 0 15px rgba(239, 68, 68, 0.4)"}, "className": "animate-pulse"},
-                {"id": "7", "type": "output", "data": {"label": "End: Pay Vendor"}, "position": {"x": 250, "y": 500}, "style": {"background": "#1e293b", "color": "#fff", "border": "1px solid #10b981"}}
-            ],
-            "edges": [
-                {"id": "e1-2", "source": "1", "target": "2", "animated": True, "style": {"stroke": "#64748b"}},
-                {"id": "e2-3", "source": "2", "target": "3", "animated": True, "style": {"stroke": "#64748b"}},
-                {"id": "e3-4", "source": "3", "target": "4", "animated": True, "style": {"stroke": "#64748b"}},
-                {"id": "e3-5", "source": "3", "target": "5", "animated": True, "style": {"stroke": "#64748b"}},
-                {"id": "e4-6", "source": "4", "target": "6", "animated": True, "style": {"stroke": "#ef4444", "strokeWidth": 2}},
-                {"id": "e5-6", "source": "5", "target": "6", "animated": True, "style": {"stroke": "#ef4444", "strokeWidth": 2}},
-                {"id": "e6-7", "source": "6", "target": "7", "animated": True, "style": {"stroke": "#10b981"}}
-            ]
+    """Returns process topology built from real process mining data."""
+    try:
+        with open('bottleneck_report.json', 'r') as f:
+            bottleneck_data = json.load(f)
+        with open('dfg_data.json', 'r') as f:
+            dfg_data = json.load(f)
+    except FileNotFoundError:
+        return {"nodes": [], "edges": []}
+    
+    activities = bottleneck_data.get('bottlenecks', [])
+    dfg_edges = dfg_data.get('edges', [])
+    
+    # Take top 8 activities by frequency for a clean graph
+    top_activities = sorted(activities, key=lambda a: a['frequency'], reverse=True)[:8]
+    activity_names = {a['activity'] for a in top_activities}
+    
+    # Build nodes with a clean vertical flow layout
+    nodes = []
+    BOTTLENECK_THRESHOLD = 0.5
+    CENTER_X = 300
+    
+    for i, act in enumerate(top_activities):
+        is_bn = act.get('bottleneck_score', 0) >= BOTTLENECK_THRESHOLD
+        avg_dur = round(act['avg_duration_hours'], 1)
+        
+        # Vertical flow: slight left/right offset for visual interest
+        offset = -120 if i % 2 == 0 else 120
+        x = CENTER_X + offset
+        y = i * 110
+        
+        # Styling
+        if is_bn:
+            style = {
+                "background": "#3f1a1a", "color": "#f87171",
+                "border": "2px solid #ef4444", "width": 220,
+                "boxShadow": "0 0 15px rgba(239, 68, 68, 0.4)"
+            }
+        elif i == 0:
+            style = {"background": "#1e293b", "color": "#fff", "border": "1px solid #06b6d4", "width": 220}
+        elif i == len(top_activities) - 1:
+            style = {"background": "#1e293b", "color": "#fff", "border": "1px solid #10b981", "width": 220}
+        else:
+            style = {"background": "#1e293b", "color": "#fff", "border": "1px solid #64748b", "width": 220}
+        
+        node = {
+            "id": str(i + 1),
+            "data": {
+                "label": act['activity'],
+                "isBottleneck": is_bn,
+                "avgDuration": avg_dur,
+                "frequency": act['frequency'],
+                "bottleneckScore": round(act.get('bottleneck_score', 0), 3),
+            },
+            "position": {"x": x, "y": y},
+            "style": style,
         }
+        if i == 0:
+            node["type"] = "input"
+        elif i == len(top_activities) - 1:
+            node["type"] = "output"
+        if is_bn:
+            node["className"] = "animate-pulse"
+        
+        nodes.append(node)
+    
+    # Build edges: only top 12 edges by frequency between selected activities
+    name_to_id = {act['activity']: str(i + 1) for i, act in enumerate(top_activities)}
+    candidate_edges = []
+    seen = set()
+    for edge in dfg_edges:
+        src, tgt = edge['source'], edge['target']
+        if src in name_to_id and tgt in name_to_id:
+            pair = (name_to_id[src], name_to_id[tgt])
+            if pair not in seen and pair[0] != pair[1]:
+                seen.add(pair)
+                candidate_edges.append({**edge, "_src_id": pair[0], "_tgt_id": pair[1]})
+    
+    # Sort by frequency and take top 12
+    candidate_edges.sort(key=lambda e: e.get('frequency', 0), reverse=True)
+    top_edges = candidate_edges[:12]
+    
+    max_freq = max((e.get('frequency', 1) for e in top_edges), default=1)
+    edges = []
+    for edge in top_edges:
+        freq = edge.get('frequency', 0)
+        is_heavy = freq > max_freq * 0.5
+        edges.append({
+            "id": f"e{edge['_src_id']}-{edge['_tgt_id']}",
+            "source": edge['_src_id'], "target": edge['_tgt_id'],
+            "animated": True,
+            "label": f"{freq:,}" if is_heavy else "",
+            "style": {
+                "stroke": "#ef4444" if is_heavy else "#64748b",
+                "strokeWidth": 2 if is_heavy else 1,
+            }
+        })
+    
+    return {"nodes": nodes, "edges": edges}
 
 @app.get("/api/telemetry")
 async def get_telemetry():
     global optimization_state
-    # Baseline
     b_cycle, b_thru, b_opex = 45, 120, 85
     
     return [
@@ -106,11 +215,16 @@ class Employee(BaseModel):
     role: str
     efficiency: int
 
-class OptimizeRequest(BaseModel):
+class SimulateRequest(BaseModel):
+    assigned: List[Employee]
+
+class SuggestRequest(BaseModel):
+    process_id: str
+    process_label: str
     assigned: List[Employee]
 
 @app.post("/api/simulate")
-async def simulate_optimization(request: OptimizeRequest):
+async def simulate_optimization(request: SimulateRequest):
     """Simulate Digital Twin results based on workforce."""
     global optimization_state
     
@@ -125,21 +239,240 @@ async def simulate_optimization(request: OptimizeRequest):
     
     return {"status": "simulated", "state": optimization_state}
 
+@app.post("/api/suggest")
+async def get_ai_suggestion(request: SuggestRequest):
+    """Simulate + get AI suggestion for employee assignment to a process."""
+    global optimization_state, chatbot
+    
+    # Run simulation
+    total_eff = sum(e.efficiency for e in request.assigned)
+    num_assigned = len(request.assigned)
+    role_bonus = sum(
+        1.5 if "Approver" in e.role else (1.2 if "Analyst" in e.role else (1.0 if "Engineer" in e.role else 0.5))
+        for e in request.assigned
+    )
+    
+    impact = (total_eff * (1 + role_bonus)) / 1000.0
+    
+    # Calculate simulation results for this specific process
+    is_bottleneck = request.process_label.lower() in ["clear invoice"]
+    base_duration = 43.7 if is_bottleneck else 10.0
+    
+    cycle_reduction = min(35, base_duration * impact * (1.5 if is_bottleneck else 0.8))
+    throughput_gain = min(80, 120 * impact * 0.6)
+    opex_change = total_eff * num_assigned * 0.15  # cost of additional staff
+    
+    simulation = {
+        "cycle_time_before": base_duration,
+        "cycle_time_after": round(max(base_duration - cycle_reduction, base_duration * 0.3), 1),
+        "cycle_reduction_pct": round((cycle_reduction / base_duration) * 100, 1),
+        "throughput_gain_pct": round(throughput_gain, 1),
+        "opex_increase": round(opex_change, 1),
+        "is_bottleneck": is_bottleneck,
+        "impact_score": round(impact * 100, 1),
+    }
+    
+    # Update global state too
+    optimization_state["cycle_time_red"] = min(25, 45 * impact)
+    optimization_state["throughput_inc"] = min(100, 120 * impact)
+    optimization_state["opex_red"] = min(30, 85 * (impact * 0.5))
+    
+    # Get AI suggestion from Gemini
+    ai_suggestion = None
+    if chatbot:
+        try:
+            employee_desc = ", ".join([f"{e.name} ({e.role}, {e.efficiency}% efficiency)" for e in request.assigned])
+            prompt = (
+                f"An operator assigned {employee_desc} to the '{request.process_label}' process step. "
+                f"{'This is a critical BOTTLENECK with {:.1f} day avg duration. '.format(base_duration) if is_bottleneck else ''}"
+                f"The Digital Twin simulation predicts: cycle time reduction of {simulation['cycle_reduction_pct']:.0f}%, "
+                f"throughput gain of {simulation['throughput_gain_pct']:.0f}%. "
+                f"Give a concise 2-3 sentence recommendation about this assignment. "
+                f"Mention if the employee roles are well-suited for this process step and suggest improvements."
+            )
+            ai_suggestion = chatbot.ask(prompt)
+        except Exception as e:
+            print(f"AI suggestion error: {e}")
+            ai_suggestion = None
+    
+    if not ai_suggestion:
+        # Provide a rule-based fallback suggestion
+        if is_bottleneck and total_eff > 85:
+            ai_suggestion = (
+                f"Good assignment. Deploying {num_assigned} resource(s) with avg {total_eff//num_assigned}% efficiency "
+                f"to the bottleneck '{request.process_label}' should reduce cycle time by ~{simulation['cycle_reduction_pct']:.0f}%. "
+                f"Consider adding a senior analyst for maximum impact on invoice clearance throughput."
+            )
+        elif is_bottleneck:
+            ai_suggestion = (
+                f"This bottleneck needs high-efficiency resources. Current assignment has avg "
+                f"{total_eff//max(num_assigned,1)}% efficiency. Consider swapping in senior staff to clear the "
+                f"'{request.process_label}' backlog faster."
+            )
+        else:
+            ai_suggestion = (
+                f"Assignment to '{request.process_label}' looks reasonable. Predicted {simulation['cycle_reduction_pct']:.0f}% "
+                f"cycle time improvement. Focus high-efficiency resources on bottleneck processes for maximum ROI."
+            )
+    
+    return {
+        "simulation": simulation,
+        "ai_suggestion": ai_suggestion,
+    }
+
+
+def _run_training_thread(progress_file: str):
+    """Run training in a background thread, writing progress to a file."""
+    global training_progress
+    training_progress["active"] = True
+    training_progress["complete"] = False
+    training_progress["messages"] = []
+    training_progress["results"] = None
+    
+    try:
+        proc = subprocess.Popen(
+            ["python", "train_gnn_agent.py", "--progress-file", progress_file],
+            stdout=subprocess.PIPE,
+            stderr=subprocess.STDOUT,
+            text=True,
+            bufsize=1,
+            cwd=os.path.dirname(os.path.abspath(__file__))
+        )
+        
+        for line in proc.stdout:
+            line = line.strip()
+            if not line:
+                continue
+            
+            msg = {"type": "log", "text": line}
+            
+            # Parse progress from PPO output or custom markers
+            if line.startswith("PROGRESS:"):
+                try:
+                    parts = line.split("PROGRESS:")[1].strip()
+                    data = json.loads(parts)
+                    msg = {"type": "progress", **data}
+                except Exception:
+                    pass
+            elif "total_timesteps" in line.lower() or "| time/" in line:
+                msg["type"] = "training_log"
+            
+            training_progress["messages"].append(msg)
+        
+        proc.wait()
+        
+        # Read final results if progress file exists
+        results = None
+        if os.path.exists(progress_file):
+            try:
+                with open(progress_file, 'r') as f:
+                    results = json.load(f)
+            except Exception:
+                pass
+        
+        training_progress["results"] = results
+        training_progress["complete"] = True
+        training_progress["messages"].append({
+            "type": "complete",
+            "text": "Training complete!",
+            "results": results
+        })
+        
+        # === UPDATE TELEMETRY based on training results ===
+        if results:
+            # Use the agent's performance to compute improvements
+            avg_reward = results.get('gelu_results', {}).get('avg_reward', 0)
+            random_reward = results.get('random_baseline', {}).get('avg_reward', -10)
+            
+            # Calculate improvement ratio (how much better than random)
+            if random_reward != 0:
+                improvement = max(0, (avg_reward - random_reward) / abs(random_reward))
+            else:
+                improvement = max(0, avg_reward / 10)
+            
+            # Clamp to reasonable range (0 to 1)
+            improvement = min(improvement, 1.0)
+            
+            # Apply improvements to telemetry
+            optimization_state["cycle_time_red"] = round(improvement * 20, 1)      # Up to 20 days reduction
+            optimization_state["throughput_inc"] = round(improvement * 60, 1)       # Up to +60/mo
+            optimization_state["opex_red"] = round(improvement * 15, 1)             # Up to $15k/mo reduction
+            
+            print(f"[OK] Telemetry updated: cycle-{optimization_state['cycle_time_red']}d, "
+                  f"thru+{optimization_state['throughput_inc']}/mo, "
+                  f"opex-{optimization_state['opex_red']}k", flush=True)
+        
+        # Reload chatbot context so it picks up latest agent_comparison.json
+        if chatbot:
+            try:
+                chatbot.reload_context()
+                print("[OK] Chatbot context reloaded with new training results.", flush=True)
+            except Exception as e:
+                print(f"[WARN] Chatbot reload failed: {e}", flush=True)
+        
+    except Exception as e:
+        training_progress["messages"].append({
+            "type": "error",
+            "text": f"Training error: {str(e)}"
+        })
+        training_progress["complete"] = True
+    finally:
+        training_progress["active"] = False
+        optimization_state["is_training"] = False
+
+
 @app.post("/api/optimize")
 async def trigger_training():
-    """Trigger the actual RL training script."""
-    global optimization_state
+    """Trigger the RL training and enable WebSocket progress streaming."""
+    global optimization_state, training_progress
+    
     if optimization_state["is_training"]:
         return {"status": "already_training"}
-        
+    
+    progress_file = os.path.join(os.path.dirname(os.path.abspath(__file__)), "training_progress.json")
+    
+    # Clean up old progress
+    if os.path.exists(progress_file):
+        os.remove(progress_file)
+    
+    training_progress["active"] = True
+    training_progress["complete"] = False
+    training_progress["messages"] = []
+    training_progress["results"] = None
+    optimization_state["is_training"] = True
+    
+    # Start training in background thread
+    thread = threading.Thread(target=_run_training_thread, args=(progress_file,), daemon=True)
+    thread.start()
+    
+    return {"status": "started"}
+
+
+@app.websocket("/ws/training")
+async def training_ws(websocket: WebSocket):
+    """WebSocket endpoint for streaming training progress to the frontend."""
+    await training_manager.connect(websocket)
+    last_idx = 0
+    
     try:
-        # Note: In production, use Celery/Redis. Here, subprocess is okay for demo.
-        subprocess.Popen(["python", "train_gnn_agent.py"])
-        optimization_state["is_training"] = True
-        return {"status": "started"}
-    except Exception as e:
-        print(e)
-        raise HTTPException(status_code=500, detail="Error processing chat request.")
+        while True:
+            # Send any new messages
+            messages = training_progress["messages"]
+            if last_idx < len(messages):
+                for msg in messages[last_idx:]:
+                    await websocket.send_json(msg)
+                last_idx = len(messages)
+            
+            # If training is complete and all messages sent, send final and close
+            if training_progress["complete"] and last_idx >= len(training_progress["messages"]):
+                break
+            
+            await asyncio.sleep(0.5)
+    except WebSocketDisconnect:
+        pass
+    finally:
+        training_manager.disconnect(websocket)
+
 
 @app.post("/api/chat/reload")
 async def reload_chat_context():
@@ -158,16 +491,25 @@ async def chat_endpoint(websocket: WebSocket):
         while True:
             data = await websocket.receive_text()
             
-            # 1. Check Chatbot availability
             global chatbot
             if not chatbot:
+                 # Check if the message looks like an API key (starts with AIza for Gemini usually, or just assume it is if we are waiting)
+                 if data.startswith("AIza") or len(data) > 20: 
+                     try:
+                         chatbot = ProcessChatbot(api_key=data)
+                         await manager.send_personal_message("✅ API Key accepted. Chatbot initialized.", websocket)
+                         continue
+                     except Exception as e:
+                         await manager.send_personal_message(f"❌ Invalid API Key: {str(e)}", websocket)
+                         continue
+                 
+                 # If no chatbot and not a key, ask for it
                  if os.getenv("GEMINI_API_KEY"):
                      chatbot = ProcessChatbot()
                  else:
-                     await manager.send_personal_message("System: API Key missing. Chat disabled.", websocket)
+                     await manager.send_personal_message("⚠️ API Key needed. Please enter your Google Gemini API Key:", websocket)
                      continue
 
-            # 2. Get Response
             response = chatbot.ask(data)
             await manager.send_personal_message(response, websocket)
             
@@ -178,7 +520,6 @@ async def chat_endpoint(websocket: WebSocket):
 FRONTEND_DIR = Path(__file__).parent / "frontend" / "dist"
 
 if FRONTEND_DIR.exists():
-    # Serve static assets (JS, CSS, images)
     app.mount("/assets", StaticFiles(directory=str(FRONTEND_DIR / "assets")), name="assets")
 
     @app.get("/{full_path:path}")

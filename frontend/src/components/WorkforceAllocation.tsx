@@ -10,11 +10,13 @@ interface Employee {
     efficiency: number; // 0-100
 }
 
-const initialEmployees: Employee[] = [
+const initialEmployees = [
     { id: 'emp-1', name: 'Alice Chen', role: 'Snr. Analyst', efficiency: 95 },
     { id: 'emp-2', name: 'Bob Smith', role: 'Approver', efficiency: 78 },
     { id: 'emp-3', name: 'Charlie D', role: 'Clerk', efficiency: 82 },
     { id: 'emp-4', name: 'Dana Lee', role: 'QA Engineer', efficiency: 88 },
+    { id: 'emp-5', name: 'Eve Park', role: 'Snr. Approver', efficiency: 91 },
+    { id: 'emp-6', name: 'Frank Wu', role: 'Analyst', efficiency: 75 },
 ];
 
 const WorkforceAllocation = () => {

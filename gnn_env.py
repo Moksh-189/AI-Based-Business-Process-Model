@@ -66,6 +66,7 @@ class GNNEnhancedEnv(gym.Env):
         # Metrics
         self.total_value_processed = 0
         self.bottlenecks_avoided = 0
+        self.max_steps = 500  # Truncate episode after 500 steps
 
     def reset(self, seed=None, options=None):
         super().reset(seed=seed)
@@ -87,31 +88,30 @@ class GNNEnhancedEnv(gym.Env):
         selected_value = selected_ticket['Value']
         selected_bottleneck = selected_ticket['bottleneck_score']
 
-        # === GNN-INFORMED REWARD SHAPING ===
+        # === GNN-INFORMED REWARD SHAPING (Normalized) ===
         # Rank by value (higher = better)
         all_values = [selected_value] + [t['Value'] for t in self.backlog]
         sorted_values = sorted(all_values, reverse=True)
         rank = sorted_values.index(selected_value)
+        n = len(sorted_values)
 
-        # Base reward (same as v4 for compatibility)
-        if rank == 0:
-            reward = 10.0 + (selected_value / self.max_value) * 5.0
-        elif rank == 1:
-            reward = 2.0
-        elif rank == 2:
-            reward = 0.0
+        # Normalized reward: best pick = +3, worst = -2, bounded range
+        if n > 1:
+            reward = 3.0 - 5.0 * (rank / (n - 1))  # Maps rank 0→+3, rank n-1→-2
         else:
-            reward = -5.0 * rank
+            reward = 1.0
+
+        # Small bonus for picking high-value tickets
+        reward += (selected_value / self.max_value) * 0.5
 
         # BONUS: Reward for processing high-bottleneck activities
-        # (clearing bottleneck activities improves overall throughput)
         if selected_bottleneck > 0.4:
-            reward += 3.0 * selected_bottleneck  # Up to +1.8 bonus
+            reward += 1.0 * selected_bottleneck  # Up to +0.6 bonus
 
-        # BONUS: Penalty for letting high-value tickets age in queue
+        # Small penalty for letting tickets age
         max_wait = max((t['Wait_Time_Simulated'] for t in self.backlog), default=0)
-        if max_wait > 36:  # If any ticket waited > 36 hours
-            reward -= 1.0
+        if max_wait > 36:
+            reward -= 0.3
 
         self.total_value_processed += selected_value
         if selected_bottleneck > 0.4:
@@ -124,7 +124,7 @@ class GNNEnhancedEnv(gym.Env):
                 self.backlog.append(new_ticket)
 
         terminated = len(self.backlog) == 0
-        truncated = False
+        truncated = self.current_step >= self.max_steps
 
         info = {
             'value_processed': self.total_value_processed,

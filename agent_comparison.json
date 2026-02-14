@@ -1,0 +1,21 @@
+{
+  "winner": "GELU",
+  "gelu_results": {
+    "avg_reward": 1385.0,
+    "std_reward": 27.55,
+    "avg_value": 742458.15,
+    "avg_bottlenecks_cleared": 0.0,
+    "max_reward": 1423.88,
+    "min_reward": 1363.34,
+    "training_time_seconds": 368.24,
+    "activation": "GELU"
+  },
+  "glu_results": {},
+  "random_baseline": {
+    "avg_reward": 172.29,
+    "avg_value": 822178.49
+  },
+  "gelu_improvement_over_random": "+703.9%",
+  "glu_improvement_over_random": "+0.0%",
+  "timesteps": 200000
+}

@@ -14,7 +14,6 @@ import {
 import '@xyflow/react/dist/style.css';
 
 
-
 const ProcessTopology = () => {
     const [nodes, setNodes, onNodesChange] = useNodesState<Node>([]);
     const [edges, setEdges, onEdgesChange] = useEdgesState<Edge>([]);
@@ -27,8 +26,8 @@ const ProcessTopology = () => {
                     throw new Error('Failed to fetch topology');
                 }
                 const data = await response.json();
-                setNodes(data.nodes);
-                setEdges(data.edges);
+                setNodes(data.nodes || []);
+                setEdges(data.edges || []);
             } catch (error) {
                 console.error("Error fetching topology:", error);
             }
@@ -64,7 +63,6 @@ const ProcessTopology = () => {
                         if (n.style?.background) return n.style.background as string;
                         if (n.type === 'input') return '#0041d0';
                         if (n.type === 'output') return '#ff0072';
-                        if (n.type === 'default') return '#1a192b';
                         return '#eee';
                     }}
                     nodeColor={(n: Node) => {
@@ -81,4 +79,3 @@ const ProcessTopology = () => {
 };
 
 export default ProcessTopology;
-
