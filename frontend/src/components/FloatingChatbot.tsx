@@ -32,7 +32,7 @@ const FloatingChatbot = () => {
         if (ws.current?.readyState === WebSocket.OPEN) return;
 
         setConnectionStatus('connecting');
-        const socket = new WebSocket('ws://localhost:8000/ws/chat');
+        const socket = new WebSocket('ws://127.0.0.1:8000/ws/chat');
         ws.current = socket;
 
         socket.onopen = () => {

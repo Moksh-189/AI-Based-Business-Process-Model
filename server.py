@@ -18,7 +18,7 @@ app = FastAPI(title="AI.BPI - Business Process Intelligence")
 
 app.add_middleware(
     CORSMiddleware,
-    allow_origins=["http://localhost:5173", "*"],
+    allow_origins=["http://localhost:5173", "http://127.0.0.1:5173", "*"],
     allow_credentials=True,
     allow_methods=["*"],
     allow_headers=["*"],
@@ -100,6 +100,7 @@ async def startup_event():
 @app.get("/api/topology")
 async def get_topology():
     """Returns process topology built from real process mining data."""
+    print("API: /api/topology called")
     try:
         with open('bottleneck_report.json', 'r') as f:
             bottleneck_data = json.load(f)
@@ -196,6 +197,7 @@ async def get_topology():
             }
         })
     
+    print(f"API: Returning {len(nodes)} nodes, {len(edges)} edges")
     return {"nodes": nodes, "edges": edges}
 
 @app.get("/api/telemetry")

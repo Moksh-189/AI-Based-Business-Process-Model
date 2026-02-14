@@ -21,7 +21,7 @@ const ProcessTopology = () => {
     useEffect(() => {
         const fetchData = async () => {
             try {
-                const response = await fetch('http://localhost:8000/api/topology');
+                const response = await fetch('http://127.0.0.1:8000/api/topology');
                 if (!response.ok) {
                     throw new Error('Failed to fetch topology');
                 }

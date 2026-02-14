@@ -130,7 +130,7 @@ const WorkforcePage = () => {
     useEffect(() => {
         const fetchTopology = async () => {
             try {
-                const res = await fetch('http://localhost:8000/api/topology');
+                const res = await fetch('http://127.0.0.1:8000/api/topology');
                 const data = await res.json();
                 setProcesses(data.nodes || []);
                 // Initialize assignments map
@@ -154,7 +154,7 @@ const WorkforcePage = () => {
         setShowSuggestion(true);
 
         try {
-            const res = await fetch('http://localhost:8000/api/suggest', {
+            const res = await fetch('http://127.0.0.1:8000/api/suggest', {
                 method: 'POST',
                 headers: { 'Content-Type': 'application/json' },
                 body: JSON.stringify({
@@ -280,7 +280,7 @@ const WorkforcePage = () => {
 
                 // Minimum 600ms per process so user can see each step
                 const [res] = await Promise.all([
-                    fetch('http://localhost:8000/api/suggest', {
+                    fetch('http://127.0.0.1:8000/api/suggest', {
                         method: 'POST',
                         headers: { 'Content-Type': 'application/json' },
                         body: JSON.stringify({ process_id: processId, process_label: label, assigned: staff }),
