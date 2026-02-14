@@ -41,7 +41,7 @@ const TrainingModal = ({ isOpen, onClose }: TrainingModalProps) => {
         // Start training
         const startTraining = async () => {
             try {
-                const res = await fetch('http://localhost:8000/api/optimize', { method: 'POST' });
+                const res = await fetch('http://127.0.0.1:8000/api/optimize', { method: 'POST' });
                 const data = await res.json();
                 if (data.status === 'already_training') {
                     setStatus('training');
@@ -54,7 +54,7 @@ const TrainingModal = ({ isOpen, onClose }: TrainingModalProps) => {
 
         // Connect WebSocket
         const connectWs = () => {
-            const ws = new WebSocket('ws://localhost:8000/ws/training');
+            const ws = new WebSocket('ws://127.0.0.1:8000/ws/training');
             wsRef.current = ws;
 
             ws.onopen = () => {
@@ -171,8 +171,8 @@ const TrainingModal = ({ isOpen, onClose }: TrainingModalProps) => {
                     <div className="h-3 bg-white/5 rounded-full overflow-hidden">
                         <div
                             className={`h-full rounded-full transition-all duration-500 ${status === 'complete'
-                                    ? 'bg-gradient-to-r from-emerald-500 to-emerald-400'
-                                    : 'bg-gradient-to-r from-primary to-cyan-400'
+                                ? 'bg-gradient-to-r from-emerald-500 to-emerald-400'
+                                : 'bg-gradient-to-r from-primary to-cyan-400'
                                 }`}
                             style={{ width: `${progress}%` }}
                         />

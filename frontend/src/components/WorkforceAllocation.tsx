@@ -62,7 +62,7 @@ const WorkforceAllocation = () => {
         const updateAllocation = async () => {
             try {
                 // Digital Twin Simulation call
-                await fetch('http://localhost:8000/api/simulate', {
+                await fetch('http://127.0.0.1:8000/api/simulate', {
                     method: 'POST',
                     headers: { 'Content-Type': 'application/json' },
                     body: JSON.stringify({ assigned: assignedStaff })
