@@ -1,0 +1,364 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PBL Presentation | 2026</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;600;800&display=swap');
+
+        body {
+            background-color: #020617;
+            color: #f8fafc;
+            font-family: 'Plus Jakarta Sans', sans-serif;
+            scroll-behavior: smooth;
+        }
+
+        .glass {
+            background: rgba(255, 255, 255, 0.03);
+            backdrop-filter: blur(15px);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+        }
+
+        .gradient-text {
+            background: linear-gradient(90deg, #60a5fa, #a855f7);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        /* TIMER UI - FIXED CONTRAST */
+        #timerContainer {
+            background: #ffffff;
+            color: #020617;
+            box-shadow: 0 10px 40px rgba(0, 0, 0, 0.8);
+            border: 3px solid #3b82f6;
+            z-index: 1000;
+        }
+
+        @keyframes flicker {
+
+            0%,
+            100% {
+                background-color: #ffffff;
+            }
+
+            50% {
+                background-color: #fca5a5;
+            }
+        }
+
+        .timer-warning {
+            animation: flicker 1s infinite;
+            border: 3px solid #ef4444 !important;
+            color: #b91c1c !important;
+        }
+
+        .timer-stop {
+            background-color: #991b1b !important;
+            color: #ffffff !important;
+            border: 3px solid #f87171 !important;
+            animation: none;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div id="timerContainer"
+        class="fixed bottom-10 right-10 px-8 py-4 rounded-3xl flex items-center gap-4 transition-all">
+        <i class="fas fa-hourglass-start text-blue-600 text-2xl" id="timerIcon"></i>
+        <span id="displayTime" class="text-4xl font-black font-mono tracking-tighter">00:00</span>
+    </div>
+
+    <nav class="fixed w-full z-50 glass border-b border-slate-800/50 px-8 py-4 flex justify-between items-center">
+        <div class="flex items-center gap-4">
+            <div class="bg-white p-1 rounded flex items-center justify-center shadow-md"
+                style="height: 48px; width: 48px;">
+                <img src="mujlogo.jpg" alt="MUJ" class="h-full w-auto object-contain"
+                    onerror="this.src='https://via.placeholder.com/50?text=MUJ'">
+            </div>
+            <div class="flex flex-col text-left">
+                <span class="text-xl font-black text-white leading-none uppercase tracking-tighter">PBL <span
+                        class="text-blue-500 italic">2026</span></span>
+                <span class="text-[9px] text-slate-400 font-bold uppercase tracking-widest mt-1">Dept. of Computer
+                    Science & Engineering</span>
+            </div>
+        </div>
+        <div class="hidden md:flex gap-8 text-[11px] uppercase tracking-widest font-bold opacity-70">
+            <a href="#problem" class="hover:text-blue-400 transition">Problem</a>
+            <a href="#methodology" class="hover:text-blue-400 transition">Methodology</a>
+            <a href="#results" class="hover:text-blue-400 transition">Results</a>
+            <a href="#team" class="hover:text-blue-400 transition">Team</a>
+        </div>
+    </nav>
+
+    <main class="max-w-6xl mx-auto px-6 pt-48 pb-32 space-y-32">
+
+        <section class="text-center">
+            <div
+                class="inline-block px-4 py-1 border border-slate-800 rounded-full text-slate-500 text-[10px] font-mono mb-6 uppercase tracking-widest">
+                ID: 2427030508</div>
+            <h1 class="text-6xl md:text-7xl font-extrabold mb-8 uppercase leading-tight"><span
+                    class="gradient-text uppercase">AI-Based Business Process Intelligence</span></h1>
+            <p
+                class="text-slate-400 max-w-2xl mx-auto italic text-lg leading-relaxed border-l-2 border-blue-500/30 pl-6 text-left">
+                "Can we combine Graph Neural Networks (GAT+GLU) and Reinforcement Learning (PPO) to shift Process Mining
+                from purely <strong>predictive</strong> diagnostics to <strong>autonomous prescriptive</strong>
+                optimization?"
+            </p>
+        </section>
+
+        <section id="problem" class="grid grid-cols-1 gap-8 items-stretch">
+            <div class="glass p-10 rounded-[2.5rem] flex flex-col justify-center border-l-4 border-blue-600">
+                <h2 class="text-3xl font-extrabold mb-6">Problem Statement</h2>
+                <p class="text-slate-400 leading-relaxed text-justify">
+                    Modern enterprises suffer from <strong>"Operational Blindness"</strong> due to fragmented data
+                    ecosystems where financial transactions in SAP, engineering workflows in Jira, and communication in
+                    Teams remain semantically disconnected. Traditional Process Mining techniques fail to capture the
+                    complex, many-to-many relationships between these silos, flattening rich graph topologies into
+                    linear event logs that obscure the root causes of revenue leakage. Furthermore, <strong>existing AI
+                        solutions in BPM are merely predictive</strong>, forecasting delays without the capability to
+                    autonomously intervene or resolve bottlenecks. This project addresses the critical need for a
+                    <strong>Prescriptive Intelligence Layer</strong> by combining <strong>Object-Centric Process
+                        Mining</strong> with <strong>Graph Neural Networks (GNN)</strong> and <strong>Reinforcement
+                        Learning (RL)</strong> to map these hidden cross-departmental dependencies and autonomously
+                    optimize resource allocation in a unified Digital Twin environment.
+                </p>
+            </div>
+            <div class="glass p-10 rounded-[2.5rem] border-r-4 border-blue-500/50">
+                <h3 class="text-blue-400 font-bold text-xs uppercase tracking-widest mb-4">Literature Review &
+                    Integration</h3>
+                <div
+                    class="text-slate-400 leading-relaxed text-justify text-sm space-y-4 h-[400px] overflow-y-auto pr-2 custom-scrollbar">
+                    <p>The domain of Business Process Intelligence (BPI) has evolved from static reporting to predictive
+                        monitoring. However, the transition to autonomous, prescriptive optimization in multi-system
+                        environments remains a significant research challenge. This project builds upon and integrates
+                        three distinct streams of literature: Object-Centric Process Mining (OCPM), Graph Representation
+                        Learning, and Deep Reinforcement Learning (DRL).</p>
+
+                    <div class="space-y-1">
+                        <strong class="text-slate-200 block">1. Object-Centric Process Mining (The Data
+                            Foundation)</strong>
+                        <p><em class="text-blue-400">Key Work:</em> Object-Centric Process Mining: Dealing with
+                            Divergence and Convergence (W. van der Aalst, 2019).</p>
+                        <p><em class="text-purple-400">Analysis:</em> Van der Aalst demonstrated that traditional
+                            process mining (based on flat event logs like XES) fails in complex environments where a
+                            single event is related to multiple objects (e.g., one Sales Order linked to multiple Items
+                            and Deliveries).</p>
+                    </div>
+
+                    <div class="space-y-1">
+                        <strong class="text-slate-200 block">2. Deep Reinforcement Learning in BPM (The Optimization
+                            Engine)</strong>
+                        <p><em class="text-blue-400">Key Work:</em> Deep Reinforcement Learning for Business Process
+                            Optimization (E. Rama-Maneiro et al., 2021).</p>
+                        <p><em class="text-purple-400">Analysis:</em> This research established the viability of using
+                            DRL agents (specifically DQN and PPO) to optimize resource allocation dynamically,
+                            outperforming static heuristics like FIFO (First-In-First-Out).</p>
+                    </div>
+
+                    <div class="space-y-1">
+                        <strong class="text-slate-200 block">3. Graph Neural Networks for Process State (The
+                            Encoder)</strong>
+                        <p><em class="text-blue-400">Key Work:</em> Process Prediction with Graph Neural Networks
+                            (Venugopal et al., 2023).</p>
+                        <p><em class="text-purple-400">Analysis:</em> Recent studies have applied Graph Neural Networks
+                            (GNNs) to encode process states, proving that treating a workflow as a graph yields higher
+                            accuracy for predictive monitoring (e.g., predicting remaining time).</p>
+                    </div>
+
+                    <div class="space-y-1">
+                        <strong class="text-slate-200 block">4. Data-Driven Digital Twins (The Environment)</strong>
+                        <p><em class="text-blue-400">Key Work:</em> Discovering Data-Driven Simulation Models (M.
+                            Camargo et al., 2020).</p>
+                        <p><em class="text-purple-400">Analysis:</em> Camargo’s work validates the use of discrete-event
+                            simulation (DES) to create "Digital Twins" automatically extracted from event logs.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="glass p-10 rounded-[2.5rem] border-r-4 border-purple-500/50">
+                <h3 class="text-purple-400 font-bold text-xs uppercase tracking-widest mb-4">Research Gap
+                    (Topology-Aware Optimization)</h3>
+                <p class="text-slate-400 leading-relaxed text-justify">
+                    <strong>Missing Link:</strong> A unified framework that uses <strong>Topology-Aware State
+                        Representation</strong> (not just sequences) to drive an <strong>Active Optimization
+                        Agent</strong> (PPO) that creates tangible business value.
+                </p>
+            </div>
+        </section>
+
+        <section id="methodology" class="space-y-12">
+            <h2 class="text-4xl font-black text-center uppercase tracking-tight">System <span
+                    class="text-blue-500">Methodology</span></h2>
+            <div class="grid grid-cols-1 gap-8">
+                <!-- Dataset -->
+                <div class="glass p-8 rounded-3xl flex flex-col md:flex-row items-center gap-8 text-left">
+                    <div class="min-w-[120px] text-center">
+                        <i class="fas fa-database text-blue-500 text-5xl mb-2"></i>
+                        <h3 class="font-bold uppercase text-[10px] tracking-widest mt-2">Dataset</h3>
+                    </div>
+                    <div class="border-l border-slate-700 pl-8">
+                        <p class="text-slate-300 text-lg font-bold mb-2">BPI Challenge 2019 (P2P) + Multi-Source Logic
+                        </p>
+                        <ul class="text-slate-500 text-sm space-y-1 list-disc list-inside">
+                            <li><strong>Core:</strong> Real-world Purchase-to-Pay Event Log (600k+ events).</li>
+                            <li><strong>Enrichment 1:</strong> 131k+ Synthetic Jira Tickets (Task Tracking).</li>
+                            <li><strong>Enrichment 2:</strong> Synthetic Microsoft Teams Logs (Sentiment Analysis).</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Architecture -->
+                <div class="glass p-8 rounded-3xl flex flex-col items-center text-center">
+                    <i class="fas fa-microchip text-purple-500 text-3xl mb-4"></i>
+                    <h3 class="font-bold mb-4 uppercase text-xs tracking-widest">Model Architecture: <span
+                            class="text-purple-400">GAT + GLU + PPO</span></h3>
+                    <p class="text-slate-400 max-w-3xl mb-6">
+                        A hybrid approach using <strong>Graph Attention Networks (GAT)</strong> with <strong>Gated
+                            Linear Units (GLU)</strong> to extract spatial dependencies from the process topology,
+                        feeding state embeddings into a <strong>PPO Reinforcement Learning Agent</strong> for autonomous
+                        decision making.
+                    </p>
+                    <div
+                        class="w-full h-80 border-2 border-dashed border-slate-700 rounded-xl flex items-center justify-center bg-black/20 overflow-hidden relative group">
+                        <!-- Prioritize SVG for infinite scalability, fallback to PNG -->
+                        <img src="img/architecture.svg"
+                            class="h-full w-auto object-contain absolute inset-0 m-auto z-10"
+                            onerror="this.onerror=null; this.src='img/architecture.png';">
+
+                        <div class="text-slate-600 text-xs uppercase tracking-widest p-4 z-0 text-center">
+                            [Place 'architecture.svg' or 'architecture.png' in 'img/' folder]<br>
+                            Waiting for Diagram...
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Live Execution -->
+                <div class="glass p-8 rounded-3xl text-center border-2 border-green-500/20 bg-green-500/5">
+                    <i class="fab fa-python text-green-500 text-3xl mb-4"></i>
+                    <h3 class="font-bold mb-4 uppercase text-xs tracking-widest text-green-400">Live Execution</h3>
+                    <a href="#"
+                        class="px-6 py-2 bg-green-600 rounded-full text-[10px] font-black hover:bg-green-500 transition shadow-lg shadow-green-900/40">Launch
+                        Digital Twin Dashboard</a>
+                </div>
+            </div>
+        </section>
+
+        <section id="results" class="glass p-12 rounded-[3.5rem] border-t-4 border-blue-500">
+            <h2 class="text-3xl font-black mb-12 text-center uppercase tracking-tight">Results & <span
+                    class="text-blue-500">Analysis</span></h2>
+            <div class="grid md:grid-cols-2 gap-16 items-center">
+                <div class="h-80"><canvas id="resultsChart"></canvas></div>
+                <div class="space-y-6">
+                    <div
+                        class="p-6 rounded-2xl bg-white/5 flex justify-between items-center border border-white/10 shadow-inner">
+                        <span class="text-slate-400 font-bold uppercase text-xs tracking-widest">Reward Lift (vs
+                            Random)</span>
+                        <span class="text-blue-400 font-mono font-black text-3xl">+796%</span>
+                    </div>
+                    <div
+                        class="p-6 rounded-2xl bg-white/5 flex justify-between items-center border border-white/10 shadow-inner">
+                        <span class="text-slate-400 font-bold uppercase text-xs tracking-widest">Bottleneck MAE</span>
+                        <span class="text-purple-400 font-mono font-black text-3xl">0.078</span>
+                    </div>
+                    <p class="text-slate-500 text-sm italic text-justify leading-relaxed">
+                        The <strong>RL Agent (PPO)</strong> achieved a massive <strong>+796% improvement</strong> in
+                        accumulated reward compared to the standard baseline. The <strong>GNN (GAT+GLU)</strong>
+                        demonstrated high fidelity in state estimation with a Mean Absolute Error of just
+                        <strong>0.078</strong>.
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <section id="team" class="text-center pt-10 border-t border-slate-900">
+            <h2 class="text-[10px] font-black text-slate-600 uppercase tracking-[0.5em] mb-12">Academic Credits</h2>
+            <div class="flex flex-wrap justify-center gap-10">
+                <div class="glass px-12 py-8 rounded-[2rem] border-b-4 border-blue-600">
+                    <p class="text-[9px] font-bold text-blue-500 mb-2 uppercase tracking-widest">Project Guide</p>
+                    <p class="font-black text-xl text-slate-100">Mr. Lav Upadhyay</p>
+                </div>
+                <div class="glass px-12 py-8 rounded-[2rem] border-b-4 border-slate-700">
+                    <p class="text-[9px] font-bold text-slate-400 mb-2 uppercase tracking-widest">Team Member 1</p>
+                    <p class="font-black text-xl text-slate-100">Moksh Reddy</p>
+                    <p class="text-[10px] text-slate-500 mt-1">Reg No: 2427030508</p>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="py-12 text-center bg-black/40 border-t border-slate-900">
+        <p class="text-slate-600 text-[10px] font-bold tracking-[0.3em] uppercase mb-2">Manipal University Jaipur</p>
+        <p class="text-slate-500 text-[9px] font-medium tracking-[0.2em] uppercase opacity-50">Department of Computer
+            Science & Engineering • 2026</p>
+    </footer>
+
+    <script>
+        // TIMER LOGIC (Auto-Start)
+        let sec = 0;
+        let timer = null;
+
+        function startTimer() {
+            // Clear any existing timer to prevent duplicates
+            if (timer) clearInterval(timer);
+
+            timer = setInterval(() => {
+                sec++;
+                let m = Math.floor(sec / 60);
+                let s = sec % 60;
+
+                const display = document.getElementById('displayTime');
+                const container = document.getElementById('timerContainer');
+                const icon = document.getElementById('timerIcon');
+
+                if (display) display.innerText = `${m.toString().padStart(2, '0')}:${s.toString().padStart(2, '0')}`;
+
+                if (sec >= 480 && sec < 600) { // 8-10 Mins Warning
+                    if (container && !container.classList.contains('timer-warning')) {
+                        container.classList.add('timer-warning');
+                        if (icon) icon.className = "fas fa-hourglass-half text-red-600 text-2xl";
+                    }
+                } else if (sec >= 600) { // 10 Mins Stop
+                    clearInterval(timer);
+                    if (container) container.classList.replace('timer-warning', 'timer-stop');
+                    if (display) display.innerText = "10:00";
+                    if (icon) icon.className = "fas fa-hourglass-end text-white text-2xl";
+                }
+            }, 1000);
+        }
+
+        // Start timer immediately
+        startTimer();
+
+        // RESULTS CHART (Real Data)
+        const ctx = document.getElementById('resultsChart').getContext('2d');
+        new Chart(ctx, {
+            type: 'bar',
+            data: {
+                labels: ['Baseline (Random)', 'AI Agent (PPO)'],
+                datasets: [{
+                    label: 'Accumulated Reward',
+                    data: [155, 1393],
+                    backgroundColor: ['#334155', '#3b82f6'],
+                    borderRadius: 15,
+                    barThickness: 50
+                }]
+            },
+            options: {
+                responsive: true,
+                maintainAspectRatio: false,
+                plugins: { legend: { display: false } },
+                scales: {
+                    y: { beginAtZero: true, grid: { color: '#ffffff05' }, ticks: { color: '#475569' } },
+                    x: { grid: { display: false }, ticks: { color: '#475569' } }
+                }
+            }
+        });
+    </script>
+</body>
+
+</html>
