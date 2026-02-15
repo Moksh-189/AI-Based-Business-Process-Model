@@ -10,7 +10,7 @@ import ToastContainer from './components/ToastContainer';
 function App() {
   return (
     <ToastProvider>
-      <BrowserRouter basename="/AI-Based-Business-Process-Model">
+      <BrowserRouter>
         <Routes>
           <Route path="/" element={<Layout />}>
             <Route index element={<Home />} />
