@@ -18,7 +18,7 @@ app = FastAPI(title="AI.BPI - Business Process Intelligence")
 
 app.add_middleware(
     CORSMiddleware,
-    allow_origins=["http://localhost:5173", "http://127.0.0.1:5173", "https://bizopt.netlify.app", "*"],
+    allow_origins=["http://localhost:5173", "http://127.0.0.1:5173", "https://moksh-189.github.io", "https://ai-bpi-backend.onrender.com", "*"],
     allow_credentials=True,
     allow_methods=["*"],
     allow_headers=["*"],
