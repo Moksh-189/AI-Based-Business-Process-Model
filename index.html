@@ -181,13 +181,26 @@
                 </div>
             </div>
             <div class="glass p-10 rounded-[2.5rem] border-r-4 border-purple-500/50">
-                <h3 class="text-purple-400 font-bold text-xs uppercase tracking-widest mb-4">Research Gap
-                    (Topology-Aware Optimization)</h3>
-                <p class="text-slate-400 leading-relaxed text-justify">
-                    <strong>Missing Link:</strong> A unified framework that uses <strong>Topology-Aware State
-                        Representation</strong> (not just sequences) to drive an <strong>Active Optimization
-                        Agent</strong> (PPO) that creates tangible business value.
-                </p>
+                <h3 class="text-purple-400 font-bold text-xs uppercase tracking-widest mb-4">Research Gap & Innovation
+                </h3>
+                <div class="text-slate-400 leading-relaxed text-justify text-sm space-y-4">
+                    <div class="space-y-1">
+                        <strong class="text-slate-200 block">1. Geometric State Encoding (vs. Flat RL)</strong>
+                        <p>While State-of-the-Art approaches (e.g., Rama-Maneiro et al.) rely on <strong>flat tabular
+                                data that loses context</strong>, my approach utilizes <strong>Graph Neural Networks
+                                (GNN)</strong> to encode the complex, non-linear dependencies between SAP orders and
+                            Jira tickets, enabling the agent to detect structural bottlenecks that standard models miss.
+                        </p>
+                    </div>
+                    <div class="space-y-1">
+                        <strong class="text-slate-200 block">2. Active Prescription (vs. Passive Prediction)</strong>
+                        <p>Unlike existing GNN-BPM models (e.g., Venugopal et al.) that only <strong>forecast
+                                delays</strong>, my system closes the loop by integrating the GNN predictor into a
+                            <strong>SimPy Digital Twin</strong>, triggering a <strong>PPO Reinforcement Learning
+                                policy</strong> to autonomously reallocate resources and resolve issues in real-time.
+                        </p>
+                    </div>
+                </div>
             </div>
         </section>
 
