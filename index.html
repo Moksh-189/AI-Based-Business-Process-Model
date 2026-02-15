@@ -237,16 +237,12 @@
                         decision making.
                     </p>
                     <div
-                        class="w-full h-80 border-2 border-dashed border-slate-700 rounded-xl flex items-center justify-center bg-black/20 overflow-hidden relative group">
+                        class="w-full h-[600px] border-2 border-dashed border-slate-700 rounded-xl flex items-center justify-center bg-black/20 overflow-hidden relative group">
                         <!-- Prioritize SVG for infinite scalability, fallback to PNG -->
+                        <!-- Added bg-white/90 to ensure diagram is visible and placeholder is covered -->
                         <img src="img/architecture.svg"
-                            class="h-full w-auto object-contain absolute inset-0 m-auto z-10"
+                            class="h-full w-auto object-contain z-10 bg-white/5 rounded-lg backdrop-blur-sm p-4"
                             onerror="this.onerror=null; this.src='img/architecture.png';">
-
-                        <div class="text-slate-600 text-xs uppercase tracking-widest p-4 z-0 text-center">
-                            [Place 'architecture.svg' or 'architecture.png' in 'img/' folder]<br>
-                            Waiting for Diagram...
-                        </div>
                     </div>
                 </div>
 
