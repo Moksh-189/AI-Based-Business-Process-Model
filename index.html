@@ -298,19 +298,21 @@
 
             <div class="space-y-6 text-justify leading-relaxed text-slate-400 text-sm border-t border-slate-800 pt-8">
                 <p>
-                    <strong>1. Reward Optimization:</strong> The <strong>RL Agent (PPO)</strong> demonstrated a massive
-                    <strong>+796% improvement</strong> in
-                    accumulated business value compared to the Random Baseline. This confirms that the agent
-                    successfully learned to prioritize high-value tickets and avoid bottlenecks, significantly
-                    outperforming standard FIFO or heuristic-based approaches.
+                    <strong>1. Reward Optimization (+796% Lift):</strong> The massive improvement over the baseline is
+                    driven by a <strong>"Strategic Value"</strong> policy. While the Random Baseline blindly processes
+                    all tickets (leading to a -9.2% volume congestion collapse), the <strong>PPO Agent</strong> learned
+                    to selectively prioritize high-value, flow-accretive tickets while penalizing low-value tasks that
+                    clog the system. This multi-objective optimization (Value vs. Congestion) is why the net accumulated
+                    reward is exponentially higher, even if raw throughput is similar.
                 </p>
                 <p>
-                    <strong>2. Bottleneck Prediction Accuracy:</strong> The <strong>GNN (GAT+GLU)</strong> achieved a
-                    Mean Absolute Error (MAE) of just <strong>0.078</strong> in predicting bottleneck scores. This is a
-                    critical improvement over State-of-the-Art (SOTA) GNN approaches (typically <strong>~0.12</strong>
-                    MAE as per Venugopal et al.). By using <strong>Geometric State Encoding</strong>, our model captures
-                    the complex, non-linear dependencies in the process graph that standard flat or sequence-based
-                    models miss, resulting in <strong>35% higher precision</strong> in identifying process friction.
+                    <strong>2. Bottleneck Prediction Accuracy (0.078 MAE):</strong> The <strong>GNN (GAT+GLU)</strong>
+                    achieved a Mean Absolute Error of just <strong>0.078</strong> in predicting bottleneck scores. This
+                    is a critical improvement over State-of-the-Art (SOTA) GNN approaches (typically
+                    <strong>~0.12</strong> MAE as per Venugopal et al.). By using <strong>Geometric State
+                        Encoding</strong>, our model captures the complex, non-linear dependencies in the process graph
+                    that standard flat or sequence-based models miss, resulting in <strong>35% higher precision</strong>
+                    in identifying process friction.
                 </p>
             </div>
         </section>
