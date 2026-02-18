@@ -7,10 +7,12 @@ __pycache__/
 .DS_Store
 .env
 node_modules/
-dist/
 .pytest_cache/
 *.pt
 chatbot_test_results.json
 frontend/test_*.txt
 frontend/test_output.txt
 frontend/playwright-report/
+r e s e a r c h _ t e s t e r . p y  
+ r e s e a r c h _ r e s u l t s . j s o n  
+ 
