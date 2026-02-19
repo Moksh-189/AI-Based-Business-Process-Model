@@ -11,9 +11,14 @@ interface Message {
 
 const FloatingChatbot = () => {
     const [isOpen, setIsOpen] = useState(false);
-    const [messages, setMessages] = useState<Message[]>([
-        { id: 1, text: "Hello! I'm your AI process assistant. How can I help you optimize your workflow today?", sender: 'bot', timestamp: new Date() }
-    ]);
+    const INTRO_MESSAGE: Message = {
+        id: 1,
+        text: "Hello! I'm your AI process assistant. How can I help you optimize your workflow today?",
+        sender: 'bot',
+        timestamp: new Date()
+    };
+
+    const [messages, setMessages] = useState<Message[]>([INTRO_MESSAGE]);
     const [inputValue, setInputValue] = useState("");
     const messagesEndRef = useRef<HTMLDivElement>(null);
 
@@ -145,7 +150,7 @@ const FloatingChatbot = () => {
                     </div>
                     <div className="flex items-center gap-2">
                         <button
-                            onClick={() => setMessages([])}
+                            onClick={() => setMessages([INTRO_MESSAGE])}
                             className="p-1 hover:bg-white/10 rounded-lg transition-colors text-xs text-gray-400"
                             title="Clear Chat"
                         >

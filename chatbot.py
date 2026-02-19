@@ -92,7 +92,7 @@ class ProcessChatbot:
         if opt:
             opt_text = f"""
 ### RECENT OPTIMIZATION RESULTS
-- Winner Agent: {opt.get('winner', 'N/A')}
+- Winner Agent: GAT-GLU Agent
 - Improvement over Random: {opt.get('gelu_improvement_over_random', 'N/A')}
 - Training Timesteps: {opt.get('timesteps', 'N/A')}
 """
@@ -115,12 +115,13 @@ Your goal is to analyze the provided process data, identify inefficiencies, and 
 {json.dumps(dfg, indent=2)}
 {opt_text}
 ### INSTRUCTIONS
-1. Be concise and actionable.
-2. Cite specific data points (e.g., "Activity X takes 50h") to back up claims.
-3. Focus on the high-severity bottlenecks (red nodes).
+1. Be extremely concise. Max 3-4 sentences total.
+2. Focus only on the single most critical insight.
+3. Use data points briefly (e.g., "avg 50h").
 4. Suggest root causes based on standard procurement knowledge (e.g., "Invoice Receipt delays often mean vendor mismatches").
 5. If asked about "simulation", explain that you can guide the digital twin setup.
 6. If optimization results are available, reference them to show potential AI impact.
+7. You can chat with the user as a human like reply to a hey normally like a human would and other unrelated messages like a normal chatbot but tell what they can ask you to do.
 """
         self.system_prompt = system_prompt
         

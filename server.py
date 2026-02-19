@@ -12,7 +12,12 @@ from typing import List, Optional
 from pathlib import Path
 
 # --- Chatbot & Context ---
+# --- Chatbot & Context ---
 from chatbot import ProcessChatbot
+
+# ==========================================
+GEMINI_API_KEY = os.getenv("GEMINI_API_KEY") # Load from environment variable for security
+
 
 app = FastAPI(title="AI.BPI - Business Process Intelligence")
 
@@ -23,6 +28,11 @@ app.add_middleware(
     allow_methods=["*"],
     allow_headers=["*"],
 )
+
+@app.get("/")
+@app.head("/")
+async def root():
+    return {"status": "ok", "message": "AI.BPI Backend Running"}
 
 # --- Global State ---
 optimization_state = {
@@ -88,10 +98,13 @@ chatbot = None
 @app.on_event("startup")
 async def startup_event():
     global chatbot
-    if os.getenv("GEMINI_API_KEY"):
+    # Priority: Hardcoded Key > Environment Variable
+    api_key = GEMINI_API_KEY if GEMINI_API_KEY and not GEMINI_API_KEY.startswith("PASTE_") else os.getenv("GEMINI_API_KEY")
+    
+    if api_key:
         try:
-            chatbot = ProcessChatbot()
-            print("Chatbot initialized.")
+            chatbot = ProcessChatbot(api_key=api_key)
+            print("Chatbot initialized with API Key.")
         except Exception as e:
             print(f"Chatbot init failed: {e}")
 
@@ -289,8 +302,9 @@ async def get_ai_suggestion(request: SuggestRequest):
                 f"{'This is a critical BOTTLENECK with {:.1f} day avg duration. '.format(base_duration) if is_bottleneck else ''}"
                 f"The Digital Twin simulation predicts: cycle time reduction of {simulation['cycle_reduction_pct']:.0f}%, "
                 f"throughput gain of {simulation['throughput_gain_pct']:.0f}%. "
-                f"Give a concise 2-3 sentence recommendation about this assignment. "
-                f"Mention if the employee roles are well-suited for this process step and suggest improvements."
+                f"Give a concise 3-4 sentence analysis of this assignment. "
+                f"Cite the projected improvements (Cycle Time -{simulation['cycle_reduction_pct']:.0f}%, Throughput +{simulation['throughput_gain_pct']:.0f}%) "
+                f"and briefly explain why this employee fits."
             )
             ai_suggestion = chatbot.ask(prompt)
         except Exception as e:
@@ -495,22 +509,33 @@ async def chat_endpoint(websocket: WebSocket):
             
             global chatbot
             if not chatbot:
-                 # Check if the message looks like an API key (starts with AIza for Gemini usually, or just assume it is if we are waiting)
-                 if data.startswith("AIza") or len(data) > 20: 
-                     try:
-                         chatbot = ProcessChatbot(api_key=data)
-                         await manager.send_personal_message("✅ API Key accepted. Chatbot initialized.", websocket)
-                         continue
-                     except Exception as e:
-                         await manager.send_personal_message(f"❌ Invalid API Key: {str(e)}", websocket)
-                         continue
-                 
-                 # If no chatbot and not a key, ask for it
-                 if os.getenv("GEMINI_API_KEY"):
-                     chatbot = ProcessChatbot()
-                 else:
-                     await manager.send_personal_message("⚠️ API Key needed. Please enter your Google Gemini API Key:", websocket)
-                     continue
+                # Check if the message looks like an API key (starts with AIza for Gemini usually, or just assume it is if we are waiting)
+                if data.startswith("AIza") or len(data) > 20: 
+                    try:
+                        chatbot = ProcessChatbot(api_key=data)
+                        await manager.send_personal_message("✅ API Key accepted. Chatbot initialized.", websocket)
+                        continue
+                    except Exception as e:
+                        await manager.send_personal_message(f"❌ Invalid API Key: {str(e)}", websocket)
+                        continue
+                
+                # If no chatbot and not a key, check if we have a hardcoded key we missed
+                api_key = GEMINI_API_KEY if GEMINI_API_KEY and not GEMINI_API_KEY.startswith("PASTE_") else os.getenv("GEMINI_API_KEY")
+                
+                if api_key:
+                    try:
+                        chatbot = ProcessChatbot(api_key=api_key)
+                        await manager.send_personal_message("✅ Chatbot ready.", websocket)
+                        # Process the pending message as a query
+                        response = chatbot.ask(data)
+                        await manager.send_personal_message(response, websocket)
+                        continue
+                    except Exception as e:
+                        await manager.send_personal_message(f"❌ Error initializing: {str(e)}", websocket)
+                        continue
+                else:
+                    await manager.send_personal_message("⚠️ API Key needed. Please paste it in server.py or here:", websocket)
+                    continue
 
             response = chatbot.ask(data)
             await manager.send_personal_message(response, websocket)
