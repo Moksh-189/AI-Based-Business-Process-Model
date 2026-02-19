@@ -1,0 +1,99 @@
+Technology Stack & Methodology
+
+This document details every software, library, dataset, and method used to build the **AI-Based Business Process Model (AI.BPI)**, along with the specific reason for its selection.
+
+---
+
+1. Programming Languages
+*   Python (3.9+): The core language for the backend, AI/ML models, and data processing. Chosen for its dominant ecosystem in Data Science and Machine Learning (PyTorch, Pandas).
+*   TypeScript: Used for the frontend (React). Chosen over JavaScript for type safety, which prevents bugs when handling complex API data structures (Employees, Nodes, Edges).
+*   HTML5 / CSS3: Fundamental web technologies for structure and styling.
+
+---
+
+2. Frontend Framework & UI
+*   React (18.x): The UI library used to build the interactive Single Page Application (SPA).
+    *   Why: Component-based architecture allows us to reuse complex widgets like the 'Process Graph' and 'Chatbot' across pages.
+*   Vite: The build tool and dev server.
+    *   Why: Extremely fast hot-reloading (HMR) compared to Create-React-App, crucial for rapid UI iteration.
+*   Tailwind CSS: A utility-first CSS framework.
+    *   Why: Enabled rapid styling of the dashboard without writing hundreds of custom CSS classes.
+*   React Flow: A library for building node-based graphs.
+    *   Why: Used to render the interactive **Process Topology** diagram. We needed a library that supports custom nodes (bottlenecks) and interactive edges.
+*   Recharts: A composable charting library.
+    *   Why: Used for the **Telemetry Dashboard** (Bar charts, live data visualization) because it is built specifically for React.
+*   Lucide React: Icon library.
+    *   Why: Lightweight, consistent icons for the UI (Users, bots, graphs).
+*   Framer Motion: Animation library.
+    *   Why: Adds professional polish (fade-ins, smooth transitions) to make the application feel premium.
+
+---
+
+3. Backend & API
+*   FastAPI: A modern, high-performance web framework for building APIs with Python.
+    *   Why: Faster than Flask/Django and includes automatic interactive documentation (Swagger UI). Native support for asynchronous requests (`async/await`) is critical for handling AI model inference without blocking the server.
+*   Uvicorn: An ASGI web server implementation.
+    *   Why: Required to run FastAPI in production.
+*   WebSockets: A communication protocol providing full-duplex communication channels.
+    *   Why: Used for the **Real-time Chatbot** and **Training Progress Bar**. Standard REST APIs would require "polling" (asking "is it done yet?" every second), which is inefficient. WebSockets push updates instantly.
+
+---
+
+4. Artificial Intelligence & Machine Learning
+*   PyTorch: The primary Deep Learning framework.
+    *   Why: Used to build and train the Graph Neural Network (GNN). Chosen for its dynamic computation graph and Pythonic feel compared to TensorFlow.
+*   PyTorch Geometric (PyG): A library for Deep Learning on Graphs.
+    *   Why: Essential for implementing the **Graph Attention Network (GAT)**. Standard PyTorch cannot easily handle graph structures (nodes/edges) with varying connections.
+*   Stable Baselines3 (SB3): A set of reliable Reinforcement Learning implementations.
+    *   Why: Provided the **PPO (Proximal Policy Optimization)** algorithm out-of-the-box. Writing RL algorithms from scratch is error-prone; SB3 is the industry standard for stable implementations.
+*   Google Gemini API (Gemini 2.5 Flash): Large Language Model (LLM).
+    *   Why: Powers the **AI Chatbot**. We chose Gemini 2.5 Flash because it is fast, free-tier accessible, and capable of analyzing structured JSON data (RAG) to provide context-aware answers.
+*   Scikit-learn: Machine Learning library.
+    *   Why: Used for data preprocessing (StandardScaler) and evaluation metrics (MAE, MSE) to verify model accuracy.
+
+---
+
+5. Simulation & Digital Twin
+*   SimPy: A process-based discrete-event simulation framework.
+    *   Why: The core of our **Digital Twin**. It allows us to model "time" and "resources" (employees) to simulate what *would* happen if we changed the workflow, without actually disrupting the real business.
+
+---
+
+6. Data Processing & Storage
+*   Pandas: Data manipulation library.
+    *   Why: Used to load, clean, and verify the massive CSV datasets (Event Logs, Employee Data).
+*   NumPy: Numerical computing library.
+    *   Why: Powering the matrix operations required by the AI models.
+
+---
+
+7. Algorithms & Methodology
+*   Graph Attention Network (GAT): A neural network architecture.
+    *   Why: Used to "read" the process map. Unlike standard networks, GATs can weigh the importance of different connections (relationships between tasks), allowing the AI to identify critical bottlenecks dynamically.
+*   Review of architecture:
+    *   We enhanced the standard GAT with a **Gated Linear Unit (GLU)**.
+    *   Why: To mitigate the "oversmoothing" problem in deep graph networks, allowing sharper distinctions between bottleneck and non-bottleneck nodes.
+*   Proximal Policy Optimization (PPO): Reinforcement Learning algorithm.
+    *   Why: Used for the **Optimization Agent**. It is a "policy gradient" method that is robust and less likely to collapse during training than methods like DQN, making it ideal for complex business environments.
+*   Process Mining (Directly-Follows Graph - DFG):
+    *   Method: We confirm the process structure by analyzing the timestamps of events. If task A is followed by task B 500 times, we draw a heavy edge.
+
+---
+
+8. Datasets
+*   BPI Challenge 2019 (IEEE Task Force on Process Mining):
+    *   What: A real-world dataset from a large coatings and paints company (purchase order handling).
+    *   Why: Provides realistic, complex, and messy data to prove our model works in the real world, not just on toy examples.
+*   Synthetic Data Generation:
+    *   Method: We referenced the BPI2019 structure but generated additional synthetic employee and workflow data.
+    *   Why: Real-world datasets often lack "Employee Performance" or "Cost" columns due to privacy. We generated these to demonstrate the **Workforce Optimization** features.
+
+---
+
+9. DevOps & Tools
+*   Docker: Platform for developing, shipping, and running applications.
+    *   Why: Packages the entire complex stack (Python, Node, libraries) into a single container, ensuring it runs identically on any machine (eliminating "it works on my machine" bugs).
+*   Git & GitHub: Version control.
+    *   Why: Tracks changes, allows for collaboration, and serves as the deployment source.
+*   Render / Netlify: Cloud Hosting Platforms.
+    *   Why: Used to host the backend (Render) and frontend (Netlify) to make the application accessible via the web.
