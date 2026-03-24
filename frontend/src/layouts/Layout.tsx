@@ -1,6 +1,7 @@
 import { Outlet } from 'react-router-dom';
 import Sidebar from '../components/Sidebar';
 import FloatingChatbot from '../components/FloatingChatbot';
+import IntegrationsDropdown from '../components/IntegrationsDropdown';
 
 const Layout = () => {
     return (
@@ -16,7 +17,10 @@ const Layout = () => {
 
             {/* Main Content Area */}
             <main className="flex-1 relative overflow-auto">
-                <div className="min-h-full p-8">
+                <div className="absolute top-6 left-8 z-50">
+                    <IntegrationsDropdown />
+                </div>
+                <div className="min-h-full p-8 pt-20">
                     <Outlet />
                 </div>
             </main>

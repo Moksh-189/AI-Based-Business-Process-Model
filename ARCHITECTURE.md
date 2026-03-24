@@ -143,13 +143,19 @@ graph TB
 
 ## Model Architecture (GNN + RL Pipeline)
 
-```mermaid
 graph TB
     subgraph Phase1["Phase 1: Process Mining"]
         SAP["SAP Event Log<br/>4.6M events"]
+        Jira["Synthetic Jira Data<br/>Task & Issue Tracking"]
+        Teams["Synthetic Teams Data<br/>Communication Logs"]
+        
+        DataMerge["Data Merger"]
         PM4Py["PM4Py Engine"]
 
-        SAP --> PM4Py
+        SAP --> DataMerge
+        Jira --> DataMerge
+        Teams --> DataMerge
+        DataMerge --> PM4Py
 
         PM4Py --> DFG["Directly-Follows Graph<br/>Frequencies + Durations"]
         PM4Py --> Bottlenecks["Bottleneck Detection<br/>42 Activities Scored"]
@@ -262,9 +268,8 @@ graph TB
     classDef phase4 fill:#ec4899,stroke:#be185d,color:#fff
     classDef model fill:#06b6d4,stroke:#0e7490,color:#fff
 
-    class SAP,PM4Py,DFG,Bottlenecks,Conformance,Resources phase1
+    class SAP,Jira,Teams,DataMerge,PM4Py,DFG,Bottlenecks,Conformance,Resources phase1
     class NodeBuilder,ActNodes,ResNodes,EdgeBuilder,DFGEdges,RAEdges,PyGData,SAP2 phase2
     class GAT1,BN1,GAT2,BN2,Predictor,GLUGAT1,GLUBN1,GLU1,GLUGAT2,GLUBN2,GLU2,GLUPred,Compare,Winner model
     class EmbeddingsFile,State,Action,Reward,PPOArch,ParallelEnv,Callback,AgentCompare,BestAgent phase3
     class DTwin,SimResources,CaseProcess,Metrics,ChatAI,Context,Gemini phase4
-```

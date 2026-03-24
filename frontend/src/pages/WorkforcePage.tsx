@@ -231,10 +231,14 @@ const WorkforcePage = () => {
                 const newAssignments = { ...assignments };
                 newAssignments[processId] = newProcessStaff;
                 setAssignments(newAssignments);
-
-                // Add back to pool
                 setAvailableStaff(prev => [...prev, draggedEmployee!]);
                 showToast(`${draggedEmployee.name} returned to pool`, 'info', 2000);
+
+                // Update AI suggestion for the affected process
+                const proc = processes.find(p => p.id === processId);
+                if (proc) {
+                    fetchSuggestion(processId, proc.data.label, newProcessStaff);
+                }
             }
         }
     };
@@ -249,6 +253,12 @@ const WorkforcePage = () => {
         setAssignments(prev => ({ ...prev, [processId]: newStaff }));
         setAvailableStaff(prev => [...prev, emp]);
         showToast(`${emp.name} returned to pool`, 'info', 2000);
+
+        // Update AI suggestion
+        const proc = processes.find(p => p.id === processId);
+        if (proc) {
+            fetchSuggestion(processId, proc.data.label, newStaff);
+        }
     };
 
     // Check if any process has employees assigned

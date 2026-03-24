@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Generate Architecture Diagram</title>
+    <script type="module">
+        import mermaid from 'https://cdn.jsdelivr.net/npm/mermaid@10/dist/mermaid.esm.min.mjs';
+        mermaid.initialize({ startOnLoad: true, theme: 'default' });
+    </script>
+    <script src="https://html2canvas.hertzen.com/dist/html2canvas.min.js"></script>
+    <style>
+        body {
+            font-family: sans-serif;
+            padding: 20px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            background: #f0f0f0;
+        }
+
+        #diagram-container {
+            background: white;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+
+        .controls {
+            margin-top: 20px;
+            display: flex;
+            gap: 10px;
+        }
+
+        button {
+            padding: 10px 20px;
+            background: #3b82f6;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-weight: bold;
+        }
+
+        button:hover {
+            background: #2563eb;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Architecture Diagram Generator</h1>
+    <p>1. Wait for diagram to render. <br> 2. Click a button below to download. <br> 3. Save to
+        <code>presentation_deploy/img/</code>
+    </p>
+
+    <div id="diagram-container">
+        <pre class="mermaid">
+graph TB
+    subgraph Phase1["Phase 1: Process Mining"]
+        SAP["SAP Event Log<br/>4.6M events"]
+        Jira["Synthetic Jira Data<br/>Task & Issue Tracking"]
+        Teams["Synthetic Teams Data<br/>Communication Logs"]
+        
+        DataMerge["Data Merger"]
+        PM4Py["PM4Py Engine"]
+
+        SAP --> DataMerge
+        Jira --> DataMerge
+        Teams --> DataMerge
+        DataMerge --> PM4Py
+
+        PM4Py --> DFG["Directly-Follows Graph<br/>Frequencies + Durations"]
+        PM4Py --> Bottlenecks["Bottleneck Detection<br/>42 Activities Scored"]
+        PM4Py --> Conformance["Token Replay<br/>Conformance Check"]
+        PM4Py --> Resources["Resource Analysis<br/>628 Resources Profiled"]
+    end
+
+    subgraph Phase2A["Phase 2A: Graph Construction"]
+        NodeBuilder["Node Feature Builder"]
+
+        Bottlenecks --> NodeBuilder
+        Resources --> NodeBuilder
+
+        NodeBuilder --> ActNodes["Activity Nodes x42<br/>8-dim features:<br/>freq, avg/med/max dur,<br/>total dur, bottleneck,<br/>avg/total value"]
+        NodeBuilder --> ResNodes["Resource Nodes x628<br/>8-dim features:<br/>events, activities, cases,<br/>diversity, utilization,<br/>total value, padding x2"]
+
+        DFG --> EdgeBuilder["Edge Builder"]
+        SAP2["SAP Event Log"] --> EdgeBuilder
+
+        EdgeBuilder --> DFGEdges["Activity to Activity Edges<br/>DFG: freq + duration"]
+        EdgeBuilder --> RAEdges["Resource to Activity Edges<br/>Assignment frequency"]
+
+        ActNodes --> PyGData["PyG Data Object<br/>process_graph.pt"]
+        ResNodes --> PyGData
+        DFGEdges --> PyGData
+        RAEdges --> PyGData
+    end
+
+    subgraph Phase2B["Phase 2B: Graph Neural Network"]
+
+
+        PyGData --> GLUModel
+
+        subgraph GLUModel["ProcessGNNWithGLU - GAT+GLU"]
+            GLUGAT1["GAT Layer 1<br/>Multi-Head, 4 heads"]
+            GLUBN1["BatchNorm"]
+            GLU1["GLU Gate<br/>sigma W1x times W2x"]
+            GLUGAT2["GAT Layer 2<br/>Single-Head"]
+            GLUBN2["BatchNorm"]
+            GLU2["GLU Gate 2"]
+            GLUPred["Prediction Head<br/>Sigmoid"]
+
+            GLUGAT1 --> GLUBN1 --> GLU1 --> GLUGAT2 --> GLUBN2 --> GLU2
+            GLU2 --> GLUPred
+        end
+
+
+        GLUModel --> GNNOutput["Trained Model<br/>+ Embeddings 670x32"]
+    end
+
+    subgraph Phase3["Phase 3: Reinforcement Learning"]
+        GNNOutput --> EmbeddingsFile["node_embeddings.pt"]
+
+        subgraph RLEnv["GNN-Enhanced RL Environment"]
+            State["State: 5 Tickets x 8 Features<br/>value, priority, wait_time,<br/>bottleneck_score, emb_mean,<br/>emb_std, emb_max, domain"]
+            Action["Action: Discrete 5<br/>Select 1 of 5 Top Tickets"]
+            Reward["GNN-Informed Reward:<br/>Rank-based +3 to -2<br/>Value bonus x0.5<br/>Bottleneck bonus x1.0<br/>Wait penalty -0.3"]
+        end
+
+        EmbeddingsFile --> State
+
+        subgraph PPOTraining["PPO Agent Training"]
+            PPOArch["PPO Architecture<br/>GELU vs GLU Activation<br/>Policy 64,64 / Value 64,64"]
+            ParallelEnv["4 Parallel Envs<br/>SubprocVecEnv"]
+            Callback["Progress Callback<br/>WebSocket Streaming"]
+
+            ParallelEnv --> PPOArch
+            PPOArch --> Callback
+        end
+
+        State --> PPOTraining
+        Action --> PPOTraining
+        Reward --> PPOTraining
+
+        PPOTraining --> AgentCompare["Agent Comparison<br/>GELU vs GLU vs Random"]
+        AgentCompare --> BestAgent["ppo_gnn_best.zip<br/>Best Trained Agent"]
+    end
+
+    subgraph Phase4["Phase 4: Digital Twin + Chatbot"]
+        BestAgent --> DTwin
+
+        subgraph DTwin["Digital Twin - SimPy"]
+            SimResources["SimPy Resources<br/>Worker Pool per Activity"]
+            CaseProcess["Case Processing<br/>Simulation"]
+            Metrics["Output Metrics:<br/>avg_throughput, avg_wait,<br/>bottleneck reduction pct"]
+        end
+
+        subgraph ChatAI["AI Chatbot - Gemini 2.5 Flash"]
+            Context["RAG Context Injection:<br/>Process Stats<br/>Bottleneck Report<br/>DFG Data<br/>Optimization Results"]
+            Gemini["Gemini 2.5 Flash<br/>Reasoning Engine"]
+            Context --> Gemini
+        end
+    end
+
+    classDef phase1 fill:#6366f1,stroke:#4338ca,color:#fff
+    classDef phase2 fill:#10b981,stroke:#047857,color:#fff
+    classDef phase3 fill:#f59e0b,stroke:#d97706,color:#fff
+    classDef phase4 fill:#ec4899,stroke:#be185d,color:#fff
+    classDef model fill:#06b6d4,stroke:#0e7490,color:#fff
+
+    class SAP,Jira,Teams,DataMerge,PM4Py,DFG,Bottlenecks,Conformance,Resources phase1
+    class NodeBuilder,ActNodes,ResNodes,EdgeBuilder,DFGEdges,RAEdges,PyGData,SAP2 phase2
+    class GLUGAT1,GLUBN1,GLU1,GLUGAT2,GLUBN2,GLU2,GLUPred,GNNOutput model
+    class EmbeddingsFile,State,Action,Reward,PPOArch,ParallelEnv,Callback,AgentCompare,BestAgent phase3
+    class DTwin,SimResources,CaseProcess,Metrics,ChatAI,Context,Gemini phase4
+        </pre>
+    </div>
+
+    <div class="controls">
+        <button onclick="downloadSVG()">Download SVG (Best Quality)</button>
+        <!-- <button onclick="downloadPNG()">Download PNG</button> -->
+    </div>
+
+    <script>
+        function downloadSVG() {
+            const svg = document.querySelector('#diagram-container svg');
+            if (!svg) { alert('Diagram not rendered yet!'); return; }
+
+            const serializer = new XMLSerializer();
+            const source = serializer.serializeToString(svg);
+            const blob = new Blob([source], { type: "image/svg+xml;charset=utf-8" });
+            const url = URL.createObjectURL(blob);
+
+            const a = document.createElement('a');
+            a.href = url;
+            a.download = "architecture.svg";
+            document.body.appendChild(a);
+            a.click();
+            document.body.removeChild(a);
+        }
+    </script>
+</body>
+
+</html>
