@@ -1,38 +1,22 @@
 {
+  "mode": "classic",
   "winner": "GAT",
   "gat_results": {
     "model_name": "GAT",
-    "best_loss": 0.009370102547109127,
-    "final_mae": 0.078617,
-    "final_mse": 0.015683,
-    "final_correlation": 0.6503,
-    "epochs": 300,
-    "training_time_seconds": 4.11
+    "best_loss": 0.1077863946557045,
+    "final_mae": 0.354795,
+    "final_mse": 0.147264,
+    "final_correlation": -0.1838,
+    "epochs": 2,
+    "training_time_seconds": 0.14
   },
   "glu_results": {
     "model_name": "GAT+GLU",
-    "best_loss": 0.014501059427857399,
-    "final_mae": 0.103137,
-    "final_mse": 0.017352,
-    "final_correlation": 0.5797,
-    "epochs": 300,
-    "training_time_seconds": 5.16
-  },
-  "comparison": {
-    "final_mae": {
-      "gat": 0.078617,
-      "glu": 0.103137,
-      "winner": "GAT"
-    },
-    "final_mse": {
-      "gat": 0.015683,
-      "glu": 0.017352,
-      "winner": "GAT"
-    },
-    "final_correlation": {
-      "gat": 0.6503,
-      "glu": 0.5797,
-      "winner": "GAT"
-    }
+    "best_loss": 0.07467092573642731,
+    "final_mae": 0.354952,
+    "final_mse": 0.14732,
+    "final_correlation": -0.1794,
+    "epochs": 2,
+    "training_time_seconds": 0.05
   }
 }

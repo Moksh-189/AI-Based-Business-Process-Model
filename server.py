@@ -337,17 +337,30 @@ async def get_ai_suggestion(request: SuggestRequest):
     }
 
 
-def _run_training_thread(progress_file: str):
-    """Run training in a background thread, writing progress to a file."""
+def _run_training_thread(progress_file: str, mode: str = "hetero"):
+    """Run training in a background thread, writing progress to a file.
+    
+    Modes:
+        classic: Original single-agent PPO with homogeneous GAT
+        hetero:  Single-agent PPO with HeteroGNN (default, fast)
+        marl:    Multi-agent PPO with independent policies (slow)
+    """
     global training_progress
     training_progress["active"] = True
     training_progress["complete"] = False
     training_progress["messages"] = []
     training_progress["results"] = None
+    training_progress["mode"] = mode
     
     try:
+        # Select training script based on mode
+        if mode == "marl":
+            cmd = ["python", "train_marl_agent.py", "--progress-file", progress_file]
+        else:
+            cmd = ["python", "train_gnn_agent.py", "--progress-file", progress_file]
+        
         proc = subprocess.Popen(
-            ["python", "train_gnn_agent.py", "--progress-file", progress_file],
+            cmd,
             stdout=subprocess.PIPE,
             stderr=subprocess.STDOUT,
             text=True,
@@ -396,8 +409,13 @@ def _run_training_thread(progress_file: str):
         
         # === UPDATE TELEMETRY based on training results ===
         if results:
-            # Use the agent's performance to compute improvements
-            avg_reward = results.get('gelu_results', {}).get('avg_reward', 0)
+            # Extract rewards based on training mode
+            if mode == 'marl':
+                # MARL: use combined agent reward
+                marl_res = results.get('marl_results', {}).get('combined', {})
+                avg_reward = marl_res.get('avg_reward', 0)
+            else:
+                avg_reward = results.get('gelu_results', {}).get('avg_reward', 0)
             random_reward = results.get('random_baseline', {}).get('avg_reward', -10)
             
             # Calculate improvement ratio (how much better than random)
@@ -437,13 +455,26 @@ def _run_training_thread(progress_file: str):
         optimization_state["is_training"] = False
 
 
+class OptimizeRequest(BaseModel):
+    mode: str = "hetero"  # classic, hetero, marl
+
 @app.post("/api/optimize")
-async def trigger_training():
-    """Trigger the RL training and enable WebSocket progress streaming."""
+async def trigger_training(request: OptimizeRequest = OptimizeRequest()):
+    """Trigger the RL training and enable WebSocket progress streaming.
+    
+    Modes:
+        classic: Original single-agent PPO (backward compat)
+        hetero:  HeteroGNN + single-agent PPO (default, fast)
+        marl:    HeteroGNN + TGN + multi-agent PPO (slow, ~20 min)
+    """
     global optimization_state, training_progress
     
     if optimization_state["is_training"]:
         return {"status": "already_training"}
+    
+    mode = request.mode
+    if mode not in ("classic", "hetero", "marl"):
+        mode = "hetero"
     
     progress_file = os.path.join(os.path.dirname(os.path.abspath(__file__)), "training_progress.json")
     
@@ -458,10 +489,63 @@ async def trigger_training():
     optimization_state["is_training"] = True
     
     # Start training in background thread
-    thread = threading.Thread(target=_run_training_thread, args=(progress_file,), daemon=True)
+    thread = threading.Thread(
+        target=_run_training_thread,
+        args=(progress_file, mode),
+        daemon=True
+    )
     thread.start()
     
-    return {"status": "started"}
+    return {"status": "started", "mode": mode}
+
+
+@app.get("/api/agent-status")
+async def get_agent_status():
+    """Return which AI agents are active and their capabilities."""
+    agents = []
+    
+    # Check for single-agent PPO
+    if os.path.exists('ppo_gnn_best.zip'):
+        agents.append({
+            'id': 'single_ppo',
+            'name': 'GNN-Enhanced PPO Agent',
+            'status': 'trained',
+            'domains': ['All'],
+            'type': 'single'
+        })
+    
+    # Check for MARL agents
+    if os.path.exists('ppo_marl_jira.zip'):
+        agents.append({
+            'id': 'jira_agent',
+            'name': 'Jira Agent (MARL)',
+            'status': 'trained',
+            'domains': ['Logistics', 'Quality', 'Sales'],
+            'type': 'marl'
+        })
+    if os.path.exists('ppo_marl_sap.zip'):
+        agents.append({
+            'id': 'sap_agent',
+            'name': 'SAP Agent (MARL)',
+            'status': 'trained',
+            'domains': ['Procurement', 'Finance'],
+            'type': 'marl'
+        })
+    
+    # Architecture info
+    arch = 'unknown'
+    try:
+        import torch
+        cp = torch.load('gnn_process_model.pt', weights_only=False)
+        arch = cp.get('architecture', cp.get('model_type', 'classic'))
+    except Exception:
+        pass
+    
+    return {
+        'agents': agents,
+        'gnn_architecture': arch,
+        'is_training': optimization_state['is_training'],
+    }
 
 
 @app.websocket("/ws/training")

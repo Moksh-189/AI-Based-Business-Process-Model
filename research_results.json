@@ -1,24 +1,42 @@
 {
   "gnn_accuracy": {
-    "mae": 0.078617,
-    "mse": 0.015683,
-    "correlation": 0.6503,
-    "model_type": "GAT"
+    "architecture": "classic",
+    "model_type": "GAT",
+    "mae": 0.354795,
+    "mse": 0.147264,
+    "correlation": -0.1838
   },
-  "agent_performance": {
+  "single_agent_performance": {
     "agent_metrics": {
-      "avg_reward": 1386.62,
-      "std_reward": 18.02,
-      "avg_value": 783273.62,
+      "avg_reward": 1383.28,
+      "std_reward": 20.88,
+      "avg_value": 925300.57,
       "avg_bottlenecks_cleared": 0.0,
-      "max_reward": 1421.5,
-      "min_reward": 1360.91
+      "max_reward": 1427.49,
+      "min_reward": 1351.91
     },
     "random_metrics": {
-      "avg_reward": 145.71,
-      "avg_value": 944909.35
+      "avg_reward": 148.48,
+      "avg_value": 995071.13
     },
-    "reward_improvement_pct": 851.6,
-    "value_improvement_pct": -17.1
+    "reward_improvement_pct": 831.6
+  },
+  "marl_performance": {
+    "jira_agent": {
+      "avg_reward": 1403.6,
+      "std_reward": 28.27,
+      "avg_value": 808619.21,
+      "avg_bottlenecks": 0.0
+    },
+    "sap_agent": {
+      "avg_reward": 1376.27,
+      "std_reward": 23.17,
+      "avg_value": 750326.54,
+      "avg_bottlenecks": 0.0
+    },
+    "combined": {
+      "avg_reward": 2779.87,
+      "avg_value": 1558945.75
+    }
   }
 }

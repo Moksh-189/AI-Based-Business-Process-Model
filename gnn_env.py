@@ -31,11 +31,17 @@ class GNNEnhancedEnv(gym.Env):
         self.current_step = 0
         self.backlog = []
 
-        # Load GNN embeddings
+        # Load GNN embeddings (supports both classic and TGN formats)
         emb_data = torch.load(embeddings_path, weights_only=False)
-        self.embeddings = emb_data['embeddings'].numpy()  # (670, 32)
+        self.embeddings = emb_data['embeddings'].numpy()
         self.activity_names = emb_data['activity_names']
         self.n_activities = emb_data['n_activities']
+        self.architecture = emb_data.get('architecture', 'classic')
+
+        # TGN temporal memory (if available)
+        self.temporal_memory = None
+        if 'temporal_memory' in emb_data:
+            self.temporal_memory = emb_data['temporal_memory'].numpy()
 
         # Build activity name -> embedding index mapping
         self.act_to_idx = {name: i for i, name in enumerate(self.activity_names)}
@@ -180,6 +186,11 @@ class GNNEnhancedEnv(gym.Env):
         if activity in self.act_to_idx:
             idx = self.act_to_idx[activity]
             embedding = self.embeddings[idx]
+            # Enrich with temporal memory if TGN is active
+            if self.temporal_memory is not None and idx < len(self.temporal_memory):
+                temporal = self.temporal_memory[idx]
+                # Use temporal signal as modulation of static embedding
+                embedding = embedding + 0.1 * temporal[:len(embedding)]
         else:
             embedding = np.zeros(32)
 
