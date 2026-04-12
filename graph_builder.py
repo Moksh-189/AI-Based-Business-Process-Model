@@ -18,6 +18,9 @@ Edge types:
 Output:
   - process_graph.pt       (PyG Data object — legacy)
   - process_graph_hetero.pt (PyG HeteroData object — v2)
+
+Note: bottleneck_score is EXCLUDED from input features to prevent
+feature-label leakage. Labels are log-transformed to reduce skew.
 """
 
 import json
@@ -50,24 +53,38 @@ def load_mining_outputs():
 
 
 def build_node_features(bottlenecks, resources):
-    """Build node feature tensors for activities and resources."""
-    print("[2/4] Building node features...")
+    """Build node feature tensors for activities and resources.
+    
+    NOTE: bottleneck_score is EXCLUDED from features to prevent label leakage.
+    Engineered features (log_freq, dur/freq ratio, value/event) are added instead.
+    Activity and resource features are normalized SEPARATELY to preserve scale alignment.
+    """
+    print("[2/4] Building node features (leakage-free)...")
 
     # === ACTIVITY NODES (indices 0 to N_act-1) ===
     activity_names = []
     activity_features = []
 
+    # Pre-compute activity-scope max values for ratio features
+    all_freqs = [b.get('frequency', 0) for b in bottlenecks]
+    all_durs = [b.get('avg_duration_hours', 0) for b in bottlenecks]
+    max_act_freq = max(all_freqs) if all_freqs else 1
+    max_act_dur = max(all_durs) if all_durs else 1
+
     for b in bottlenecks:
         activity_names.append(b['activity'])
+        freq = b.get('frequency', 0)
+        avg_dur = b.get('avg_duration_hours', 0)
+        avg_val = b.get('avg_value_eur', 0)
         activity_features.append([
-            b.get('frequency', 0),
-            b.get('avg_duration_hours', 0),
-            b.get('median_duration_hours', 0),
-            b.get('max_duration_hours', 0),
-            b.get('total_duration_hours', 0),
-            b.get('bottleneck_score', 0),
-            b.get('avg_value_eur', 0),
-            b.get('total_value_eur', 0),
+            freq,                                                      # raw frequency
+            avg_dur,                                                   # avg duration
+            b.get('median_duration_hours', 0),                         # median duration
+            b.get('max_duration_hours', 0),                            # max duration
+            b.get('total_duration_hours', 0),                          # total duration
+            np.log1p(freq),                                            # log-scaled frequency (engineered)
+            freq / max(max_act_freq, 1),                               # activity-scope freq ratio
+            avg_dur / max(max_act_dur, 1),                             # activity-scope dur ratio
         ])
 
     n_activities = len(activity_names)
@@ -91,15 +108,21 @@ def build_node_features(bottlenecks, resources):
 
     n_resources = len(resource_names)
 
-    # Combine into unified feature matrix
-    all_features = activity_features + resource_features
-    feature_tensor = torch.tensor(all_features, dtype=torch.float32)
-
-    # Normalize each feature column to [0, 1]
-    for col in range(feature_tensor.shape[1]):
-        col_max = feature_tensor[:, col].max()
+    # Normalize SEPARATELY per node type to preserve scale alignment
+    act_tensor = torch.tensor(activity_features, dtype=torch.float32)
+    for col in range(act_tensor.shape[1]):
+        col_max = act_tensor[:, col].max()
         if col_max > 0:
-            feature_tensor[:, col] = feature_tensor[:, col] / col_max
+            act_tensor[:, col] = act_tensor[:, col] / col_max
+
+    res_tensor = torch.tensor(resource_features, dtype=torch.float32)
+    for col in range(res_tensor.shape[1]):
+        col_max = res_tensor[:, col].max()
+        if col_max > 0:
+            res_tensor[:, col] = res_tensor[:, col] / col_max
+
+    # Combine into unified feature matrix
+    feature_tensor = torch.cat([act_tensor, res_tensor], dim=0)
 
     # Node type labels: 0 = activity, 1 = resource
     node_types = torch.cat([
@@ -202,7 +225,7 @@ def build_graph():
     )
 
     # Build training labels for activity nodes
-    # Label: bottleneck_score (regression target)
+    # Label: raw bottleneck_score — features now have aligned activity-scope ratios
     activity_labels = torch.tensor(
         [b.get('bottleneck_score', 0) for b in bottlenecks],
         dtype=torch.float32
@@ -265,20 +288,30 @@ def build_hetero_graph():
 
     bottlenecks, resources, dfg, stats = load_mining_outputs()
 
-    # === ACTIVITY NODE FEATURES (8-dim) ===
+    # === ACTIVITY NODE FEATURES (8-dim, NO bottleneck_score to prevent leakage) ===
     activity_names = []
     activity_features = []
+
+    # Pre-compute activity-scope max for ratio features
+    all_freqs = [b.get('frequency', 0) for b in bottlenecks]
+    all_durs = [b.get('avg_duration_hours', 0) for b in bottlenecks]
+    max_act_freq = max(all_freqs) if all_freqs else 1
+    max_act_dur = max(all_durs) if all_durs else 1
+
     for b in bottlenecks:
         activity_names.append(b['activity'])
+        freq = b.get('frequency', 0)
+        avg_dur = b.get('avg_duration_hours', 0)
+        avg_val = b.get('avg_value_eur', 0)
         activity_features.append([
-            b.get('frequency', 0),
-            b.get('avg_duration_hours', 0),
-            b.get('median_duration_hours', 0),
-            b.get('max_duration_hours', 0),
-            b.get('total_duration_hours', 0),
-            b.get('bottleneck_score', 0),
-            b.get('avg_value_eur', 0),
-            b.get('total_value_eur', 0),
+            freq,                                                      # raw frequency
+            avg_dur,                                                   # avg duration
+            b.get('median_duration_hours', 0),                         # median duration
+            b.get('max_duration_hours', 0),                            # max duration
+            b.get('total_duration_hours', 0),                          # total duration
+            np.log1p(freq),                                            # log-scaled frequency (engineered)
+            freq / max(max_act_freq, 1),                               # activity-scope freq ratio
+            avg_dur / max(max_act_dur, 1),                             # activity-scope dur ratio
         ])
     n_activities = len(activity_names)
 
@@ -369,7 +402,7 @@ def build_hetero_graph():
     ) if ra_src else torch.zeros((2, 0), dtype=torch.long)
     data['resource', 'performs', 'activity'].edge_attr = ra_edge_attr
 
-    # Training labels (bottleneck score per activity)
+    # Training labels (raw bottleneck score — features aligned with activity-scope ratios)
     data['activity'].y = torch.tensor(
         [b.get('bottleneck_score', 0) for b in bottlenecks],
         dtype=torch.float32

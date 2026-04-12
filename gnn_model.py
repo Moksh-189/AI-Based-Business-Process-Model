@@ -16,6 +16,7 @@ from torch_geometric.nn import GATConv, global_mean_pool
 class ProcessGNN(nn.Module):
     """
     2-layer Graph Attention Network for process graph analysis.
+    Includes skip connection from original features to predictor head.
     
     Input:  Node features (8-dim) + edge features
     Output: Bottleneck score prediction + node embeddings
@@ -26,6 +27,7 @@ class ProcessGNN(nn.Module):
         super().__init__()
         
         self.dropout = dropout
+        self.in_channels = in_channels
         
         # Layer 1: Multi-head GAT
         self.conv1 = GATConv(
@@ -41,9 +43,9 @@ class ProcessGNN(nn.Module):
         )
         self.bn2 = nn.BatchNorm1d(out_channels)
         
-        # Prediction head: bottleneck score (regression)
+        # Prediction head with skip connection: [GNN_embedding + original_features]
         self.predictor = nn.Sequential(
-            nn.Linear(out_channels, 16),
+            nn.Linear(out_channels + in_channels, 16),
             nn.ReLU(),
             nn.Dropout(dropout),
             nn.Linear(16, 1),
@@ -69,9 +71,11 @@ class ProcessGNN(nn.Module):
         return x  # Node embeddings (num_nodes, out_channels)
     
     def forward(self, x, edge_index, edge_attr=None):
-        """Full forward: embeddings + prediction."""
+        """Full forward: embeddings + prediction with skip connection."""
         embeddings = self.encode(x, edge_index, edge_attr)
-        predictions = self.predictor(embeddings).squeeze(-1)
+        # Skip connection: concat original features with GNN embeddings
+        combined = torch.cat([embeddings, x], dim=-1)
+        predictions = self.predictor(combined).squeeze(-1)
         return predictions, embeddings
     
     def get_attention_weights(self, x, edge_index, edge_attr=None):
@@ -87,6 +91,7 @@ class ProcessGNN(nn.Module):
 class ProcessGNNWithGLU(nn.Module):
     """
     GAT + GLU (Gated Linear Unit) variant for comparison with standard GAT.
+    Includes skip connection from original features to predictor head.
     
     GLU applies gating: output = σ(W₁x) ⊙ (W₂x)
     This helps suppress noisy features and learn which patterns matter.
@@ -97,6 +102,7 @@ class ProcessGNNWithGLU(nn.Module):
         super().__init__()
         
         self.dropout = dropout
+        self.in_channels = in_channels
         
         # Layer 1: Multi-head GAT
         self.conv1 = GATConv(
@@ -120,9 +126,9 @@ class ProcessGNNWithGLU(nn.Module):
         self.glu_gate2 = nn.Linear(out_channels, out_channels)
         self.glu_value2 = nn.Linear(out_channels, out_channels)
         
-        # Prediction head
+        # Prediction head with skip connection: [GNN_embedding + original_features]
         self.predictor = nn.Sequential(
-            nn.Linear(out_channels, 16),
+            nn.Linear(out_channels + in_channels, 16),
             nn.ReLU(),
             nn.Dropout(dropout),
             nn.Linear(16, 1),
@@ -153,7 +159,9 @@ class ProcessGNNWithGLU(nn.Module):
         return x
     
     def forward(self, x, edge_index, edge_attr=None):
-        """Full forward: embeddings + prediction."""
+        """Full forward: embeddings + prediction with skip connection."""
         embeddings = self.encode(x, edge_index, edge_attr)
-        predictions = self.predictor(embeddings).squeeze(-1)
+        # Skip connection: concat original features with GNN embeddings
+        combined = torch.cat([embeddings, x], dim=-1)
+        predictions = self.predictor(combined).squeeze(-1)
         return predictions, embeddings

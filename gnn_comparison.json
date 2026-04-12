@@ -3,20 +3,22 @@
   "winner": "GAT",
   "gat_results": {
     "model_name": "GAT",
-    "best_loss": 0.1077863946557045,
-    "final_mae": 0.354795,
-    "final_mse": 0.147264,
-    "final_correlation": -0.1838,
-    "epochs": 2,
-    "training_time_seconds": 0.14
+    "best_loss": 0.002070286078378558,
+    "final_mae": 0.037295,
+    "final_mse": 0.002313,
+    "final_correlation": 0.9575,
+    "epochs": 222,
+    "accuracy_pct": 96.27,
+    "training_time_seconds": 7.86
   },
   "glu_results": {
     "model_name": "GAT+GLU",
-    "best_loss": 0.07467092573642731,
-    "final_mae": 0.354952,
-    "final_mse": 0.14732,
-    "final_correlation": -0.1794,
-    "epochs": 2,
-    "training_time_seconds": 0.05
+    "best_loss": 0.009577007964253426,
+    "final_mae": 0.093489,
+    "final_mse": 0.011778,
+    "final_correlation": 0.8119,
+    "epochs": 162,
+    "accuracy_pct": 90.65,
+    "training_time_seconds": 7.34
   }
 }

@@ -29,9 +29,13 @@ from tgn_model import ProcessTGN
 # =====================================================================
 
 def train_classic_model(model, data, epochs=300, lr=0.005, model_name="Model"):
-    """Train a homogeneous GNN model on the process graph."""
-    optimizer = torch.optim.Adam(model.parameters(), lr=lr, weight_decay=1e-4)
-    scheduler = torch.optim.lr_scheduler.CosineAnnealingLR(optimizer, T_max=epochs)
+    """Train a homogeneous GNN model on the process graph.
+    
+    Uses MSE loss, early stopping, and light feature noise augmentation
+    to maximize accuracy on small datasets.
+    """
+    optimizer = torch.optim.Adam(model.parameters(), lr=lr, weight_decay=1e-3)
+    scheduler = torch.optim.lr_scheduler.CosineAnnealingWarmRestarts(optimizer, T_0=50, T_mult=2)
     criterion = nn.MSELoss()
 
     n_act = data.num_activity_nodes
@@ -39,11 +43,20 @@ def train_classic_model(model, data, epochs=300, lr=0.005, model_name="Model"):
 
     best_loss = float('inf')
     best_state = None
+    patience = 50
+    patience_counter = 0
 
     model.train()
     for epoch in range(1, epochs + 1):
         optimizer.zero_grad()
-        predictions, embeddings = model(data.x, data.edge_index, data.edge_attr)
+        
+        # === Data augmentation: light feature noise ===
+        x_aug = data.x.clone()
+        if model.training:
+            noise = torch.randn_like(x_aug) * 0.005
+            x_aug = x_aug + noise
+        
+        predictions, embeddings = model(x_aug, data.edge_index, data.edge_attr)
         pred_act = predictions[:n_act]
         loss = criterion(pred_act, labels)
         loss.backward()
@@ -53,6 +66,9 @@ def train_classic_model(model, data, epochs=300, lr=0.005, model_name="Model"):
         if loss.item() < best_loss:
             best_loss = loss.item()
             best_state = {k: v.clone() for k, v in model.state_dict().items()}
+            patience_counter = 0
+        else:
+            patience_counter += 1
 
         if epoch % 50 == 0 or epoch == 1:
             with torch.no_grad():
@@ -60,13 +76,19 @@ def train_classic_model(model, data, epochs=300, lr=0.005, model_name="Model"):
                 pred, emb = model(data.x, data.edge_index, data.edge_attr)
                 pred_a = pred[:n_act]
                 mae = (pred_a - labels).abs().mean().item()
+                mse = ((pred_a - labels) ** 2).mean().item()
                 if labels.std() > 0 and pred_a.std() > 0:
                     corr = np.corrcoef(pred_a.numpy(), labels.numpy())[0, 1]
                 else:
                     corr = 0.0
                 print(f"   [{model_name}] Epoch {epoch:3d} | "
-                      f"Loss: {loss.item():.6f} | MAE: {mae:.4f} | Corr: {corr:.4f}")
+                      f"Loss: {loss.item():.6f} | MAE: {mae:.4f} | MSE: {mse:.6f} | Corr: {corr:.4f}")
                 model.train()
+        
+        # Early stopping
+        if patience_counter >= patience and epoch > 50:
+            print(f"   [{model_name}] Early stopping at epoch {epoch} (no improvement for {patience} epochs)")
+            break
 
     model.load_state_dict(best_state)
     model.eval()
@@ -86,7 +108,8 @@ def train_classic_model(model, data, epochs=300, lr=0.005, model_name="Model"):
         "final_mae": round(final_mae, 6),
         "final_mse": round(final_mse, 6),
         "final_correlation": round(final_corr, 4),
-        "epochs": epochs,
+        "epochs": epoch,
+        "accuracy_pct": round((1 - final_mae) * 100, 2),
     }
 
 
@@ -113,9 +136,12 @@ def _get_hetero_data_dicts(data):
 
 
 def train_hetero_model(model, data, epochs=300, lr=0.005, model_name="HeteroGAT"):
-    """Train a heterogeneous GNN model."""
-    optimizer = torch.optim.Adam(model.parameters(), lr=lr, weight_decay=1e-4)
-    scheduler = torch.optim.lr_scheduler.CosineAnnealingLR(optimizer, T_max=epochs)
+    """Train a heterogeneous GNN model.
+    
+    Uses MSE loss, early stopping, and light feature noise augmentation.
+    """
+    optimizer = torch.optim.Adam(model.parameters(), lr=lr, weight_decay=1e-3)
+    scheduler = torch.optim.lr_scheduler.CosineAnnealingWarmRestarts(optimizer, T_0=50, T_mult=2)
     criterion = nn.MSELoss()
 
     labels = data['activity'].y
@@ -123,12 +149,22 @@ def train_hetero_model(model, data, epochs=300, lr=0.005, model_name="HeteroGAT"
 
     best_loss = float('inf')
     best_state = None
+    patience = 50
+    patience_counter = 0
 
     model.train()
     for epoch in range(1, epochs + 1):
         optimizer.zero_grad()
+        
+        # === Data augmentation: feature noise ===
+        x_aug = {}
+        for ntype, x in x_dict.items():
+            if model.training:
+                x_aug[ntype] = x + torch.randn_like(x) * 0.005
+            else:
+                x_aug[ntype] = x
 
-        predictions, h = model(x_dict, edge_index_dict, edge_attr_dict)
+        predictions, h = model(x_aug, edge_index_dict, edge_attr_dict)
         loss = criterion(predictions, labels)
         loss.backward()
         optimizer.step()
@@ -137,19 +173,28 @@ def train_hetero_model(model, data, epochs=300, lr=0.005, model_name="HeteroGAT"
         if loss.item() < best_loss:
             best_loss = loss.item()
             best_state = {k: v.clone() for k, v in model.state_dict().items()}
+            patience_counter = 0
+        else:
+            patience_counter += 1
 
         if epoch % 50 == 0 or epoch == 1:
             with torch.no_grad():
                 model.eval()
                 pred, _ = model(x_dict, edge_index_dict, edge_attr_dict)
                 mae = (pred - labels).abs().mean().item()
+                mse = ((pred - labels) ** 2).mean().item()
                 if labels.std() > 0 and pred.std() > 0:
                     corr = float(np.corrcoef(pred.numpy(), labels.numpy())[0, 1])
                 else:
                     corr = 0.0
                 print(f"   [{model_name}] Epoch {epoch:3d} | "
-                      f"Loss: {loss.item():.6f} | MAE: {mae:.4f} | Corr: {corr:.4f}")
+                      f"Loss: {loss.item():.6f} | MAE: {mae:.4f} | MSE: {mse:.6f} | Corr: {corr:.4f}")
                 model.train()
+        
+        # Early stopping
+        if patience_counter >= patience and epoch > 50:
+            print(f"   [{model_name}] Early stopping at epoch {epoch}")
+            break
 
     model.load_state_dict(best_state)
     model.eval()
@@ -171,7 +216,8 @@ def train_hetero_model(model, data, epochs=300, lr=0.005, model_name="HeteroGAT"
         "final_mae": round(final_mae, 6),
         "final_mse": round(final_mse, 6),
         "final_correlation": round(final_corr, 4),
-        "epochs": epochs,
+        "epochs": epoch,
+        "accuracy_pct": round((1 - final_mae) * 100, 2),
     }
 
 
@@ -298,7 +344,7 @@ def run_classic(epochs=300):
     in_channels = metadata['n_features']
     edge_dim = metadata['n_edge_features']
 
-    # Train standard GAT
+    # Train standard GAT (optimized for 42-sample dataset)
     gat_model = ProcessGNN(in_channels=in_channels, hidden_channels=64,
                            out_channels=32, heads=4, dropout=0.2, edge_dim=edge_dim)
     start = time.time()
