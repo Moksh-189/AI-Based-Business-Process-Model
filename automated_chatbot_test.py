@@ -36,10 +36,10 @@ class TestEvaluator:
         QUESTION: "{question}"
         EXPECTED CONCEPTS: {expected_concepts}
         
-        STUDENT ANSWER: "{answer}"
+        RESPONSE: "{answer}"
         
         TASK:
-        1. Does the Student Answer cover the Expected Concepts? (Synonyms and semantic matches are ACCEPTED).
+        1. Does the Response cover the Expected Concepts? (Synonyms and semantic matches are ACCEPTED).
         2. Is the answer grounded in data (numbers, specific names)?
         
         Output JSON only:
